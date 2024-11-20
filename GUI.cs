@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Drawing.Drawing2D;
 
 namespace LoginCRUMAR
 {
@@ -17,6 +18,7 @@ namespace LoginCRUMAR
         {
             InitializeComponent();
             abrirFormHija(new inicio());
+       
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -113,5 +115,26 @@ namespace LoginCRUMAR
         {
             abrirFormHija(new EditarInventario());
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            abrirFormHija(new provedores());
+        }
+
+        private void menuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void barraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+       
     }
 }

@@ -11,7 +11,7 @@ namespace LoginCRUMAR
         {
         }
 
-        static string cadena = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=dbEmpresaWX;Integrated Security=True";
+        static string cadena = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=db_CRUMAR;Integrated Security=True";
 
         public SqlConnection conexion = new SqlConnection(cadena);
 
@@ -65,7 +65,7 @@ namespace LoginCRUMAR
                 sentencia = "delete from usuariosAdmin.tbUsuarios where idUsuario = @id;";
                 comando = new SqlCommand(sentencia, conexion);
                 comando.Parameters.AddWithValue("@id", id);
-                
+
                 conexion.Open();
 
                 if (comando.ExecuteNonQuery() != -1)
@@ -120,10 +120,10 @@ namespace LoginCRUMAR
                 }
             }
             catch (Exception ex)
-            { 
+            {
                 MessageBox.Show(ex.Message);
-            
-            }finally {
+
+            } finally {
                 conexion.Close();
             }
             return false;
@@ -135,7 +135,7 @@ namespace LoginCRUMAR
             {
                 /*
                  */
-                comando.Connection = conexion; 
+                comando.Connection = conexion;
                 comando.CommandText = "spBuscarUsuario";
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@usrName", usuario);
@@ -179,32 +179,76 @@ namespace LoginCRUMAR
             {
                 conexion.Close();
             }
-            return null; 
+            return null;
         }
 
+        //public bool AutenticarUsuarios(string usuario, string pass)
+        //{
+        //    try
+        //    {
+        //        bool bandera = false;
+
+        //        sentencia = "SELECT * FROM dbo.tbEmpleados WHERE usuario = @usuario AND pass = @contrasenha AND activo = 1";
+
+        //        comando = new SqlCommand(sentencia, conexion);
+
+        //        comando.Parameters.AddWithValue("@usuario", usuario);
+        //        comando.Parameters.AddWithValue("@contrasenha", pass);
+        //        conexion.Open();
+        //        lector = comando.ExecuteReader();
+        //        if (lector.Read())
+        //        {
+        //            bandera = true;
+        //        }
+        //        else
+        //        {
+        //            bandera = false;
+
+        //        }
+        //        return bandera;
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show("Error de SQL: " + ex.Message);
+        //        return false;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error general: " + ex.Message);
+        //        return false;
+        //    }
+
+        //    finally
+        //    {
+        //        conexion.Close();
+        //    }
+        //}
         public bool AutenticarUsuarios(string usuario, string pass)
         {
             try
             {
                 bool bandera = false;
 
-                sentencia = "SELECT * FROM usuariosAdmin.tbUsuarios WHERE usuario = @urs AND pass = @pass AND activo = 1";
+                sentencia = "SELECT * FROM dbo.tbEmpleados WHERE usuario = @usuario AND contraseña = @contrasenha AND activo = 1";
 
                 comando = new SqlCommand(sentencia, conexion);
 
-                comando.Parameters.AddWithValue("@urs", usuario);
-                comando.Parameters.AddWithValue("@pass", pass);
+                // Agregar parámetros
+                comando.Parameters.AddWithValue("@usuario", usuario);
+                comando.Parameters.AddWithValue("@contrasenha", pass);
+
                 conexion.Open();
                 lector = comando.ExecuteReader();
-                if (lector.Read())
+
+                if (lector.Read()) // Si encuentra un registro
                 {
                     bandera = true;
                 }
                 else
                 {
                     bandera = false;
-
                 }
+
                 return bandera;
             }
             catch (SqlException ex)
@@ -217,12 +261,155 @@ namespace LoginCRUMAR
                 MessageBox.Show("Error general: " + ex.Message);
                 return false;
             }
+            finally
+            {
 
+                conexion.Close();
+            }
+        }
+        #endregion
+        public bool agregarproveedor(int idprovee, string nombre, string numtelefono, string ladapais, string correo, bool activo, DataGridView dgv)
+        {
+            try
+            {
+                conexion.Open();
+                comando.Connection = conexion;
+                comando.CommandText = "InsertarProveedorYContacto";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                // Agregar parámetros al comando
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@idproveedor", idprovee);
+                comando.Parameters.AddWithValue("@nombre", nombre);
+                comando.Parameters.AddWithValue("@numTelefono", numtelefono);
+                comando.Parameters.AddWithValue("@ladaPais", ladapais);
+                comando.Parameters.AddWithValue("@correoElectronico", correo);
+                comando.Parameters.AddWithValue("@activo", activo);
+
+                // Ejecutar el comando
+                int filasAfectadas = comando.ExecuteNonQuery();
+                actualizarGrid(dgv);
+                return filasAfectadas > 0;
+            }
+            catch (Exception ex)
+            {
+                // Registrar o mostrar el error
+                MessageBox.Show($"Error al agregar proveedor: {ex.Message}");
+                return false;
+            }
             finally
             {
                 conexion.Close();
             }
         }
-        #endregion
+        public DataTable obtenerProveedores()
+        {
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                try
+                {
+
+                    DataTable dt = new DataTable();
+                    using (SqlCommand cmd = new SqlCommand("sp_ObtenerProveedoresContactos2", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            conn.Open();
+                            adapter.Fill(dt);
+                            return dt;
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al obtener proveedores: {ex.Message}");
+                    return null;
+                }
+
+
+            }
+        }
+
+
+        public bool actualizarProveedor(int idprovee, string nombre, string numtelefono, string ladapais, string correo, bool activo, DataGridView dgv)
+        {
+            try
+            {
+                conexion.Open();
+                comando.Connection = conexion;
+                comando.CommandText = "sp_ActualizarProveedorYContacto";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@idproveedor", idprovee);
+                comando.Parameters.AddWithValue("@nombre", nombre);
+                comando.Parameters.AddWithValue("@numTelefono", numtelefono);
+                comando.Parameters.AddWithValue("@ladaPais", ladapais);
+                comando.Parameters.AddWithValue("@correoElectronico", correo);
+                comando.Parameters.AddWithValue("@activo", activo);
+
+                int filasAfectadas = comando.ExecuteNonQuery();
+                actualizarGrid(dgv);
+                return filasAfectadas > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar proveedor: {ex.Message}");
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+        public bool eliminarProveedor(int idprovee, DataGridView dgv)
+        {
+            try
+            {
+                conexion.Open();
+                comando.Connection = conexion;
+                comando.CommandText = "EliminarProveedoryContacto";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@idproveedor", idprovee);
+
+                int filasAfectadas = comando.ExecuteNonQuery();
+
+                if (filasAfectadas > 0)
+                {
+                    actualizarGrid(dgv);
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al eliminar proveedor: {ex.Message}");
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+
+        // Método privado para actualizar el grid
+        private void actualizarGrid(DataGridView dgv)
+        {
+            DataTable dt = obtenerProveedores();
+            if (dt != null)
+            {
+                dgv.DataSource = dt;
+            }
+        }
+
+
     }
+
 }
+
