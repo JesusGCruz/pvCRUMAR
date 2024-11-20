@@ -33,5 +33,16 @@ namespace LoginCRUMAR.Properties {
                 return ((string)(this["dbEmpresaWXConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=db_CRUMAR;Integrated Security=Tr" +
+            "ue;TrustServerCertificate=True")]
+        public string db_CRUMARConnectionString {
+            get {
+                return ((string)(this["db_CRUMARConnectionString"]));
+            }
+        }
     }
 }

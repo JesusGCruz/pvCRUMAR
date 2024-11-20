@@ -203,5 +203,10 @@ namespace LoginCRUMAR
                 MessageBox.Show("Se debe seleccionar una fila");
             }
         }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
