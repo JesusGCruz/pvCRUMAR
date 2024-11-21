@@ -10,5 +10,7 @@ namespace LoginCRUMAR.utilidades
     {
         public string Texto {  get; set; }
         public object valor { get; set; }
+
+        //mi culo esta en problemas 
     }
 }
