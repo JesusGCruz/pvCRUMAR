@@ -65,8 +65,9 @@
             this.barraTitulo.Controls.Add(this.btnMax);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.barraTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(800, 40);
+            this.barraTitulo.Size = new System.Drawing.Size(1200, 62);
             this.barraTitulo.TabIndex = 0;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
@@ -74,9 +75,10 @@
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Image = global::LoginCRUMAR.Properties.Resources.forbidden_497830;
-            this.btnMin.Location = new System.Drawing.Point(695, 0);
+            this.btnMin.Location = new System.Drawing.Point(1042, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(30, 40);
+            this.btnMin.Size = new System.Drawing.Size(45, 62);
             this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMin.TabIndex = 2;
             this.btnMin.TabStop = false;
@@ -88,9 +90,10 @@
             this.btnCerrar.AutoSize = true;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(767, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(1150, 8);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(30, 32);
+            this.btnCerrar.Size = new System.Drawing.Size(46, 49);
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.Text = "X";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -99,9 +102,10 @@
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Image = global::LoginCRUMAR.Properties.Resources.exclude_1014931;
-            this.btnRestaurar.Location = new System.Drawing.Point(731, 0);
+            this.btnRestaurar.Location = new System.Drawing.Point(1096, 0);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(30, 40);
+            this.btnRestaurar.Size = new System.Drawing.Size(45, 62);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRestaurar.TabIndex = 3;
             this.btnRestaurar.TabStop = false;
@@ -112,9 +116,10 @@
             // 
             this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMax.Image = global::LoginCRUMAR.Properties.Resources.maximize;
-            this.btnMax.Location = new System.Drawing.Point(731, 0);
+            this.btnMax.Location = new System.Drawing.Point(1096, 0);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(30, 40);
+            this.btnMax.Size = new System.Drawing.Size(45, 62);
             this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMax.TabIndex = 1;
             this.btnMax.TabStop = false;
@@ -132,9 +137,10 @@
             this.menuVertical.Controls.Add(this.btnInsert);
             this.menuVertical.Controls.Add(this.btnInicio);
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuVertical.Location = new System.Drawing.Point(0, 40);
+            this.menuVertical.Location = new System.Drawing.Point(0, 62);
+            this.menuVertical.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.menuVertical.Name = "menuVertical";
-            this.menuVertical.Size = new System.Drawing.Size(220, 610);
+            this.menuVertical.Size = new System.Drawing.Size(330, 938);
             this.menuVertical.TabIndex = 1;
             // 
             // subMenuEliminar
@@ -143,18 +149,20 @@
             this.subMenuEliminar.Controls.Add(this.btnDeleteData);
             this.subMenuEliminar.Controls.Add(this.panel5);
             this.subMenuEliminar.Controls.Add(this.btnDeleteUs);
-            this.subMenuEliminar.Location = new System.Drawing.Point(57, 235);
+            this.subMenuEliminar.Location = new System.Drawing.Point(86, 362);
+            this.subMenuEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.subMenuEliminar.Name = "subMenuEliminar";
-            this.subMenuEliminar.Size = new System.Drawing.Size(163, 69);
+            this.subMenuEliminar.Size = new System.Drawing.Size(244, 106);
             this.subMenuEliminar.TabIndex = 7;
             this.subMenuEliminar.Visible = false;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel6.Location = new System.Drawing.Point(0, 34);
+            this.panel6.Location = new System.Drawing.Point(0, 52);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 28);
+            this.panel6.Size = new System.Drawing.Size(15, 43);
             this.panel6.TabIndex = 11;
             // 
             // btnDeleteData
@@ -166,9 +174,10 @@
             this.btnDeleteData.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteData.ForeColor = System.Drawing.Color.White;
             this.btnDeleteData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteData.Location = new System.Drawing.Point(3, 34);
+            this.btnDeleteData.Location = new System.Drawing.Point(4, 52);
+            this.btnDeleteData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteData.Name = "btnDeleteData";
-            this.btnDeleteData.Size = new System.Drawing.Size(160, 28);
+            this.btnDeleteData.Size = new System.Drawing.Size(240, 43);
             this.btnDeleteData.TabIndex = 10;
             this.btnDeleteData.Text = "Eliminar Dato";
             this.btnDeleteData.UseVisualStyleBackColor = false;
@@ -178,8 +187,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 28);
+            this.panel5.Size = new System.Drawing.Size(15, 43);
             this.panel5.TabIndex = 9;
             // 
             // btnDeleteUs
@@ -191,9 +201,10 @@
             this.btnDeleteUs.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteUs.ForeColor = System.Drawing.Color.White;
             this.btnDeleteUs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteUs.Location = new System.Drawing.Point(3, 0);
+            this.btnDeleteUs.Location = new System.Drawing.Point(4, 0);
+            this.btnDeleteUs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteUs.Name = "btnDeleteUs";
-            this.btnDeleteUs.Size = new System.Drawing.Size(160, 28);
+            this.btnDeleteUs.Size = new System.Drawing.Size(240, 43);
             this.btnDeleteUs.TabIndex = 8;
             this.btnDeleteUs.Text = "Eliminar Usuario";
             this.btnDeleteUs.UseVisualStyleBackColor = false;
@@ -202,9 +213,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(0, 197);
+            this.panel3.Location = new System.Drawing.Point(0, 303);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 32);
+            this.panel3.Size = new System.Drawing.Size(8, 49);
             this.panel3.TabIndex = 6;
             // 
             // btnDelete
@@ -216,9 +228,10 @@
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(3, 197);
+            this.btnDelete.Location = new System.Drawing.Point(4, 303);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(217, 32);
+            this.btnDelete.Size = new System.Drawing.Size(326, 49);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -227,9 +240,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(0, 159);
+            this.panel2.Location = new System.Drawing.Point(0, 245);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 32);
+            this.panel2.Size = new System.Drawing.Size(8, 49);
             this.panel2.TabIndex = 4;
             // 
             // button1
@@ -241,19 +255,22 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 159);
+            this.button1.Location = new System.Drawing.Point(4, 245);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 32);
+            this.button1.Size = new System.Drawing.Size(326, 49);
             this.button1.TabIndex = 3;
             this.button1.Text = "Venta";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(0, 121);
+            this.panel1.Location = new System.Drawing.Point(0, 186);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 32);
+            this.panel1.Size = new System.Drawing.Size(8, 49);
             this.panel1.TabIndex = 2;
             // 
             // btnInsert
@@ -266,9 +283,10 @@
             this.btnInsert.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
             this.btnInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsert.Location = new System.Drawing.Point(3, 121);
+            this.btnInsert.Location = new System.Drawing.Point(4, 186);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(217, 32);
+            this.btnInsert.Size = new System.Drawing.Size(326, 49);
             this.btnInsert.TabIndex = 1;
             this.btnInsert.Text = "Insertar";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -278,9 +296,10 @@
             // 
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = global::LoginCRUMAR.Properties.Resources.LogoCRUMAR;
-            this.btnInicio.Location = new System.Drawing.Point(12, 6);
+            this.btnInicio.Location = new System.Drawing.Point(18, 9);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(202, 90);
+            this.btnInicio.Size = new System.Drawing.Size(303, 138);
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
@@ -290,20 +309,22 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(220, 40);
+            this.panelContenedor.Location = new System.Drawing.Point(330, 62);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(580, 610);
+            this.panelContenedor.Size = new System.Drawing.Size(870, 938);
             this.panelContenedor.TabIndex = 2;
             // 
             // GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 650);
+            this.ClientSize = new System.Drawing.Size(1200, 1000);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.menuVertical);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI";

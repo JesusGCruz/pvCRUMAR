@@ -5,6 +5,16 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginCRUMAR", "LoginCRUMAR.csproj", "{BE8ED641-6731-4084-8143-08DF2B7BD15A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaEntidad", "..\CapaEntidad\CapaEntidad.csproj", "{6E9E7669-1DB7-49F5-902A-0CE538C27B91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaNegocio", "..\CapaNegocio\CapaNegocio.csproj", "{F4C19A86-7B1A-4832-9E1F-4CC02EA901ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaDatos", "..\CapaDatos\CapaDatos.csproj", "{84B34701-AB44-46E3-8423-3D5836C7D464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEn", "..\CapaEn\CapaEn.csproj", "{C471FF17-4EC5-419D-8BF4-D4DEA23D506A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNeg", "..\CapaNeg\CapaNeg.csproj", "{43328E50-BD9E-44FB-BB85-F5607D80E9DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{BE8ED641-6731-4084-8143-08DF2B7BD15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE8ED641-6731-4084-8143-08DF2B7BD15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE8ED641-6731-4084-8143-08DF2B7BD15A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9E7669-1DB7-49F5-902A-0CE538C27B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9E7669-1DB7-49F5-902A-0CE538C27B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9E7669-1DB7-49F5-902A-0CE538C27B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9E7669-1DB7-49F5-902A-0CE538C27B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C19A86-7B1A-4832-9E1F-4CC02EA901ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C19A86-7B1A-4832-9E1F-4CC02EA901ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C19A86-7B1A-4832-9E1F-4CC02EA901ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C19A86-7B1A-4832-9E1F-4CC02EA901ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B34701-AB44-46E3-8423-3D5836C7D464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B34701-AB44-46E3-8423-3D5836C7D464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B34701-AB44-46E3-8423-3D5836C7D464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B34701-AB44-46E3-8423-3D5836C7D464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C471FF17-4EC5-419D-8BF4-D4DEA23D506A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C471FF17-4EC5-419D-8BF4-D4DEA23D506A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C471FF17-4EC5-419D-8BF4-D4DEA23D506A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C471FF17-4EC5-419D-8BF4-D4DEA23D506A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43328E50-BD9E-44FB-BB85-F5607D80E9DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43328E50-BD9E-44FB-BB85-F5607D80E9DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43328E50-BD9E-44FB-BB85-F5607D80E9DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43328E50-BD9E-44FB-BB85-F5607D80E9DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

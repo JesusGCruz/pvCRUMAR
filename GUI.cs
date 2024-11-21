@@ -96,5 +96,12 @@ namespace LoginCRUMAR
         {
             abrirFormHija(new Form1());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormVentas form = new FormVentas();
+             form.Show();
+            this.Hide();
+        }
     }
 }

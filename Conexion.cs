@@ -11,7 +11,7 @@ namespace LoginCRUMAR
         {
         }
 
-        static string cadena = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=dbEmpresaWX;Integrated Security=True";
+        static string cadena = @"Data source=DEYDEY\SQLSERVERY;Initial Catalog=db_CRUMAR;Integrated Security=True";
 
         public SqlConnection conexion = new SqlConnection(cadena);
 
@@ -222,6 +222,11 @@ namespace LoginCRUMAR
             {
                 conexion.Close();
             }
+        }
+
+        public System.Collections.Generic.List<global::CapaEn.Producto> Listar()
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }
