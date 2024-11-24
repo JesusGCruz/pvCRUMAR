@@ -268,7 +268,7 @@ namespace LoginCRUMAR
             }
         }
         #endregion
-        public bool agregarproveedor(int idprovee, string nombre, string numtelefono, string ladapais, string correo, bool activo, DataGridView dgv)
+        public bool agregarproveedor(int idprovee, string nombre, string numtelefono, int ladapais, string correo, bool activo, DataGridView dgv)
         {
             try
             {

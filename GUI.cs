@@ -62,24 +62,17 @@ namespace LoginCRUMAR
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (subMenuEliminar.Visible == false)
-            {
-                subMenuEliminar.Visible = true;
-            }
-            else
-            {
-                subMenuEliminar.Visible = false;
-            }
+      
         }
 
         private void btnDeleteUs_Click(object sender, EventArgs e)
         {
-            subMenuEliminar.Visible = false;
+           
         }
 
         private void btnDeleteData_Click(object sender, EventArgs e)
         {
-            subMenuEliminar.Visible = false;
+          
         }
 
         private void abrirFormHija(object formHija)
@@ -135,6 +128,10 @@ namespace LoginCRUMAR
         {
 
         }
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

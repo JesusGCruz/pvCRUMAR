@@ -175,7 +175,7 @@ namespace LoginCRUMAR
                 int idProveedor = Convert.ToInt32(txtidpro.Text);
                 string nombre = txtnombrepro.Text;
                 string numTelefono = txtnnumpro.Text;
-                string ladaPais = txtladapro.Text;
+                int ladaPais =int.Parse (txtladapro.Text);
                 string correo = txtcorreopro.Text;
                 bool activo = rbactivo.Checked; // Un CheckBox para marcar si está activo
                 bool noactivo = rbnoact.Checked;
@@ -464,6 +464,25 @@ namespace LoginCRUMAR
             }
         }
 
+        private void txtnnumpro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcorreopro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtidpro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
