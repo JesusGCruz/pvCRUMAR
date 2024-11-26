@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace LoginCRUMAR
 {
-    public partial class EditarInventario : Form
+    public partial class EditarUsuarios : Form
     {
-        public EditarInventario()
+        public EditarUsuarios()
         {
             InitializeComponent();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            gestionInventario gesInven = new gestionInventario();
+            GestionarUsuarios gesInven = new GestionarUsuarios();
             AddOwnedForm(gesInven);
             gesInven.FormBorderStyle = FormBorderStyle.None;
             gesInven.TopLevel = false;

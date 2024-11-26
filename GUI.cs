@@ -13,10 +13,12 @@ namespace LoginCRUMAR
 {
     public partial class GUI : Form
     {
-        public GUI()
+        static private string usuario;
+        public GUI(string uss)
         {
             InitializeComponent();
             abrirFormHija(new inicio());
+            usuario = uss;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -78,6 +80,7 @@ namespace LoginCRUMAR
         private void btnDeleteData_Click(object sender, EventArgs e)
         {
             subMenuEliminar.Visible = false;
+            
         }
 
         private void abrirFormHija(object formHija)
@@ -96,7 +99,8 @@ namespace LoginCRUMAR
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            abrirFormHija(new test());
+            //abrirFormHija(new test());
+            abrirFormHija(new GestionarUsuarios());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -106,12 +110,39 @@ namespace LoginCRUMAR
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ajustes de usuario.");
+            if (panelPerfil.Visible == false)
+            {
+                panelPerfil.Visible = true;
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            abrirFormHija(new EditarInventario());
+            //abrirFormHija(new EditarUsuarios());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelPerfil.Visible = false;
+            abrirFormHija(new Perfil(usuario));
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Cerrar sesión en su perfil?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                this.Hide();
+                login.ShowDialog();
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
         }
     }
 }

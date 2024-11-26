@@ -549,7 +549,7 @@ SELECT idUsuario, usuario, pass, nombre, apellidos, activo FROM usuariosAdmin.tb
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dbEmpresaWXDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="dbEmpresaWXDataSet" msprop:Generator_DataSetName="dbEmpresaWXDataSet">
+  <xs:element name="dbEmpresaWXDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dbEmpresaWXDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbEmpresaWXDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tbClientes" msprop:Generator_RowEvHandlerName="tbClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbClientesRowDeleted" msprop:Generator_RowDeletingName="tbClientesRowDeleting" msprop:Generator_RowEvArgName="tbClientesRowChangeEvent" msprop:Generator_TablePropName="tbClientes" msprop:Generator_RowChangedName="tbClientesRowChanged" msprop:Generator_RowChangingName="tbClientesRowChanging" msprop:Generator_TableClassName="tbClientesDataTable" msprop:Generator_RowClassName="tbClientesRow" msprop:Generator_TableVarName="tabletbClientes" msprop:Generator_UserTableName="tbClientes">

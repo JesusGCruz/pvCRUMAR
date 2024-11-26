@@ -13,7 +13,7 @@ namespace LoginCRUMAR
 {
     public partial class test : Form
     {
-        Conexion coBD = new Conexion();
+        ConexionUsuarios coBD = new ConexionUsuarios();
         public test()
         {
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace LoginCRUMAR
         {
             try
             {
-                bool res = coBD.eliminarUsuario(int.Parse(tbIdUssE.Text));
+                bool res = coBD.eliminarUsuario(tbIdUssE.Text);
                 if (res)
                 {
                     MessageBox.Show("Usuario Eliminado");
@@ -152,6 +152,7 @@ namespace LoginCRUMAR
 
         private void btnActuAct_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 bool activo = false;
@@ -183,6 +184,7 @@ namespace LoginCRUMAR
             {
                 MessageBox.Show("Error de SQL: " + ex.Message);
             }
+             */
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace LoginCRUMAR
 {
-    partial class EditarInventario
+    partial class EditarUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // tbExis
@@ -75,6 +76,7 @@
             // 
             // tbIdFab
             // 
+            this.tbIdFab.Enabled = false;
             this.tbIdFab.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIdFab.Location = new System.Drawing.Point(138, 31);
             this.tbIdFab.Name = "tbIdFab";
@@ -137,15 +139,28 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 22;
-            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Text = "Regresar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // EditarInventario
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(395, 155);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(75, 23);
+            this.iconButton1.TabIndex = 23;
+            this.iconButton1.Text = "Guardar";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // EditarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.tbExis);
             this.Controls.Add(this.tbPrecio);
@@ -158,7 +173,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EditarInventario";
+            this.Name = "EditarUsuarios";
             this.Text = "EditarInventario";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,5 +193,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
