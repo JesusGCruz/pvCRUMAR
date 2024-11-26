@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lBtnEye = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.tbUsuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -179,12 +180,29 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Olvidé la contraseña";
             // 
-            // Form1
+            // lBtnEye
+            // 
+            this.lBtnEye.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.lBtnEye.FlatAppearance.BorderSize = 0;
+            this.lBtnEye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lBtnEye.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.lBtnEye.IconColor = System.Drawing.Color.DimGray;
+            this.lBtnEye.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.lBtnEye.IconSize = 20;
+            this.lBtnEye.Location = new System.Drawing.Point(700, 161);
+            this.lBtnEye.Name = "lBtnEye";
+            this.lBtnEye.Size = new System.Drawing.Size(26, 20);
+            this.lBtnEye.TabIndex = 58;
+            this.lBtnEye.UseVisualStyleBackColor = false;
+            this.lBtnEye.Click += new System.EventHandler(this.lBtnEye_Click);
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.lBtnEye);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -194,7 +212,7 @@
             this.Controls.Add(this.btnAcc);
             this.Controls.Add(this.txtUss);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -222,6 +240,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private FontAwesome.Sharp.IconButton lBtnEye;
     }
 }
 

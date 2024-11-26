@@ -33,29 +33,40 @@ namespace LoginCRUMAR
 
         }
 
-        Conexion coBD = new Conexion();
+        ConexionUsuarios coBD = new ConexionUsuarios();
 
         private void button1_Click(object sender, EventArgs e)
         {
 
             try
             {
-                bool res = coBD.AutenticarUsuarios(txtUss.Text, txtPass.Text);
-                if (res)
+                int rol = coBD.AutenticarUsuarios(txtUss.Text, txtPass.Text);
+                if (rol == 0)
                 {
-                    GUI miform2 = new GUI();
-                    this.Hide();
-                    miform2.ShowDialog();
-
-                }
-                else
-                {
-                    MessageBox.Show("Verificar Usuario y contrtaseña", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Verificar Usuario y/o contraseña", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUss.Focus();
-
+                }
+                else if (rol == 1)
+                {
+                    MessageBox.Show("Bienvenido Admin", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    GUI gui = new GUI(txtUss.Text);
+                    this.Hide();
+                    gui.ShowDialog();
+                }
+                else if (rol == 2)
+                {
+                    MessageBox.Show("Bienvenido Cajero", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else if (rol == 3)
+                {
+                    MessageBox.Show("Bienvenido Capturista", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else if (rol == 4)
+                {
+                    MessageBox.Show("Bienvenido Repositor", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -143,6 +154,19 @@ namespace LoginCRUMAR
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lBtnEye_Click(object sender, EventArgs e)
+        {
+            if (txtPass.UseSystemPasswordChar)
+            {
+                txtPass.UseSystemPasswordChar = false;
+                lBtnEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            }else if(txtPass.Text != "Contraseña")
+            {
+                txtPass.UseSystemPasswordChar = true;
+                lBtnEye.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            }
         }
     }
 }
