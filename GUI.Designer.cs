@@ -378,7 +378,7 @@
             // 
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = global::LoginCRUMAR.Properties.Resources.LogoCRUMAR;
-            this.btnInicio.Location = new System.Drawing.Point(12, 6);
+            this.btnInicio.Location = new System.Drawing.Point(5, 6);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(208, 90);
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

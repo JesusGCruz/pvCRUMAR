@@ -22,7 +22,7 @@ namespace LoginCRUMAR
         string sentencia = "";
         public ConexionUsuarios()
         {
-            cadena = @"Data Source=JesusCruz\SQLEXPRESS;Initial Catalog=dbCrumar;Integrated Security=True";
+            cadena = @"Data Source=JesusCruz\SQLEXPRESS;Initial Catalog=Crumarpv;Integrated Security=True";
             conexion = new SqlConnection(cadena);
             comando = new SqlCommand();
         }
@@ -105,7 +105,7 @@ namespace LoginCRUMAR
             return false;
         }
 
-        public bool agregarUsuario(string rfc, string nombres, string apellidos, int id, string horario, string rolNom, string usuario, string contrasenha, bool activo)
+        public bool agregarUsuario(string rfc, string nombres, string apellidos, string horario, string rolNom, string usuario, string contrasenha, bool activo)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace LoginCRUMAR
                 comando.Parameters.AddWithValue("@RFC", rfc);
                 comando.Parameters.AddWithValue("@Nombres", nombres);
                 comando.Parameters.AddWithValue("@Apellidos", apellidos);
-                comando.Parameters.AddWithValue("@idEmpleado", id);
+                //comando.Parameters.AddWithValue("@idEmpleado", id);
                 comando.Parameters.AddWithValue("@Horario", horario);
                 comando.Parameters.AddWithValue("@RolNom", rolNom);
                 comando.Parameters.AddWithValue("@Usuario", usuario);

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="dbCrumarDataSet" targetNamespace="http://tempuri.org/dbCrumarDataSet.xsd" xmlns:mstns="http://tempuri.org/dbCrumarDataSet.xsd" xmlns="http://tempuri.org/dbCrumarDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="CRUMARpvDataSet" targetNamespace="http://tempuri.org/CRUMARpvDataSet.xsd" xmlns:mstns="http://tempuri.org/CRUMARpvDataSet.xsd" xmlns="http://tempuri.org/CRUMARpvDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbCrumarConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbCrumarConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LoginCRUMAR.Properties.Settings.GlobalReference.Default.dbCrumarConnectionString" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=JESUSCRUZ\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=True;TrustServerCertificate=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="jesuscruz\sqlexpress.CRUMARpv.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbContactosTableAdapter" GeneratorDataComponentClassName="tbContactosTableAdapter" Name="tbContactos" UserDataComponentName="tbContactosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbContactos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbContactos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbContactos] WHERE (([idContacto] = @Original_idContacto) AND ([numTelefono] = @Original_numTelefono) AND ([ladaPais] = @Original_ladaPais) AND ([correoElectronico] = @Original_correoElectronico))</CommandText>
@@ -67,86 +67,85 @@ SELECT idContacto, numTelefono, ladaPais, correoElectronico FROM tbContactos WHE
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbEmpleadosTableAdapter" GeneratorDataComponentClassName="tbEmpleadosTableAdapter" Name="tbEmpleados" UserDataComponentName="tbEmpleadosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbEmpleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbEmpleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[tbEmpleados] WHERE (([idEmpleado] = @Original_idEmpleado) AND ([horario] = @Original_horario) AND ([rol] = @Original_rol) AND ([RFC] = @Original_RFC) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL) OR ([usuario] = @Original_usuario)) AND ((@IsNull_contrasenha = 1 AND [contrasenha] IS NULL) OR ([contrasenha] = @Original_contrasenha)) AND ((@IsNull_activo = 1 AND [activo] IS NULL) OR ([activo] = @Original_activo)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[tbEmpleados] WHERE (([horario] = @Original_horario) AND ([rol] = @Original_rol) AND ([RFC] = @Original_RFC) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL) OR ([usuario] = @Original_usuario)) AND ((@IsNull_contrasenha = 1 AND [contrasenha] IS NULL) OR ([contrasenha] = @Original_contrasenha)) AND ((@IsNull_activo = 1 AND [activo] IS NULL) OR ([activo] = @Original_activo)) AND ([idEmp] = @Original_idEmp))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEmpleado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpleado" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_horario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_rol" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rol" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RFC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_usuario" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_contrasenha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_contrasenha" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_contrasenha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_activo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_activo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEmp" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmp" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[tbEmpleados] ([idEmpleado], [horario], [rol], [RFC], [usuario], [contrasenha], [activo]) VALUES (@idEmpleado, @horario, @rol, @RFC, @usuario, @contrasenha, @activo);
-SELECT idEmpleado, horario, rol, RFC, usuario, contrasenha, activo FROM tbEmpleados WHERE (idEmpleado = @idEmpleado)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[tbEmpleados] ([horario], [rol], [RFC], [usuario], [contrasenha], [activo]) VALUES (@horario, @rol, @RFC, @usuario, @contrasenha, @activo);
+SELECT horario, rol, RFC, usuario, contrasenha, activo, idEmp FROM tbEmpleados WHERE (idEmp = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEmpleado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@horario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@rol" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rol" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@usuario" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@contrasenha" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@contrasenha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@activo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT idEmpleado, horario, rol, RFC, usuario, contrasenha, activo FROM dbo.tbEmpleados</CommandText>
+                    <CommandText>SELECT horario, rol, RFC, usuario, contrasenha, activo, idEmp FROM dbo.tbEmpleados</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[tbEmpleados] SET [idEmpleado] = @idEmpleado, [horario] = @horario, [rol] = @rol, [RFC] = @RFC, [usuario] = @usuario, [contrasenha] = @contrasenha, [activo] = @activo WHERE (([idEmpleado] = @Original_idEmpleado) AND ([horario] = @Original_horario) AND ([rol] = @Original_rol) AND ([RFC] = @Original_RFC) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL) OR ([usuario] = @Original_usuario)) AND ((@IsNull_contrasenha = 1 AND [contrasenha] IS NULL) OR ([contrasenha] = @Original_contrasenha)) AND ((@IsNull_activo = 1 AND [activo] IS NULL) OR ([activo] = @Original_activo)));
-SELECT idEmpleado, horario, rol, RFC, usuario, contrasenha, activo FROM tbEmpleados WHERE (idEmpleado = @idEmpleado)</CommandText>
+                    <CommandText>UPDATE [dbo].[tbEmpleados] SET [horario] = @horario, [rol] = @rol, [RFC] = @RFC, [usuario] = @usuario, [contrasenha] = @contrasenha, [activo] = @activo WHERE (([horario] = @Original_horario) AND ([rol] = @Original_rol) AND ([RFC] = @Original_RFC) AND ((@IsNull_usuario = 1 AND [usuario] IS NULL) OR ([usuario] = @Original_usuario)) AND ((@IsNull_contrasenha = 1 AND [contrasenha] IS NULL) OR ([contrasenha] = @Original_contrasenha)) AND ((@IsNull_activo = 1 AND [activo] IS NULL) OR ([activo] = @Original_activo)) AND ([idEmp] = @Original_idEmp));
+SELECT horario, rol, RFC, usuario, contrasenha, activo, idEmp FROM tbEmpleados WHERE (idEmp = @idEmp)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idEmpleado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpleado" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@horario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@rol" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rol" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@usuario" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@contrasenha" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@contrasenha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@activo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEmpleado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmpleado" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_horario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_rol" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rol" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_RFC" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_usuario" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_contrasenha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_contrasenha" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_contrasenha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="contrasenha" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_activo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_activo" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="activo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idEmp" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idEmp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="idEmp" ColumnName="idEmp" DataSourceName="CRUMARpv.dbo.tbEmpleados" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEmp" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="idEmp" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
               <Mapping SourceColumn="horario" DataSetColumn="horario" />
               <Mapping SourceColumn="rol" DataSetColumn="rol" />
               <Mapping SourceColumn="RFC" DataSetColumn="RFC" />
               <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
               <Mapping SourceColumn="contrasenha" DataSetColumn="contrasenha" />
               <Mapping SourceColumn="activo" DataSetColumn="activo" />
+              <Mapping SourceColumn="idEmp" DataSetColumn="idEmp" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbPersonasTableAdapter" GeneratorDataComponentClassName="tbPersonasTableAdapter" Name="tbPersonas" UserDataComponentName="tbPersonasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbPersonas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbPersonas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbPersonas] WHERE (([RFC] = @Original_RFC) AND ([nombres] = @Original_nombres) AND ([apellidos] = @Original_apellidos))</CommandText>
@@ -199,7 +198,7 @@ SELECT RFC, nombres, apellidos FROM tbPersonas WHERE (RFC = @RFC)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbProductosTableAdapter" GeneratorDataComponentClassName="tbProductosTableAdapter" Name="tbProductos" UserDataComponentName="tbProductosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbProductos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbProductos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbProductos] WHERE (([codigoBarras] = @Original_codigoBarras) AND ([nombre] = @Original_nombre) AND ([marca] = @Original_marca) AND ([iva] = @Original_iva) AND ([existencia] = @Original_existencia) AND ([precioCompra] = @Original_precioCompra) AND ([precioVenta] = @Original_precioVenta) AND ((@IsNull_fechaCaducidad = 1 AND [fechaCaducidad] IS NULL) OR ([fechaCaducidad] = @Original_fechaCaducidad)))</CommandText>
@@ -279,7 +278,7 @@ SELECT codigoBarras, nombre, marca, iva, existencia, precioCompra, precioVenta, 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbProductos_ProveedoresTableAdapter" GeneratorDataComponentClassName="tbProductos_ProveedoresTableAdapter" Name="tbProductos_Proveedores" UserDataComponentName="tbProductos_ProveedoresTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbProductos_Proveedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbProductos_Proveedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbProductos_Proveedores] WHERE (([idProductoProve] = @Original_idProductoProve) AND ([idSuministro] = @Original_idSuministro) AND ([idProveedor] = @Original_idProveedor) AND ([codigpBarras] = @Original_codigpBarras) AND ((@IsNull_fecha = 1 AND [fecha] IS NULL) OR ([fecha] = @Original_fecha)))</CommandText>
@@ -344,7 +343,7 @@ SELECT idProductoProve, idSuministro, idProveedor, codigpBarras, fecha FROM tbPr
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbProductos_VentasTableAdapter" GeneratorDataComponentClassName="tbProductos_VentasTableAdapter" Name="tbProductos_Ventas" UserDataComponentName="tbProductos_VentasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbProductos_Ventas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbProductos_Ventas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbProductos_Ventas] WHERE (([idProducVenta] = @Original_idProducVenta) AND ([idVenta] = @Original_idVenta) AND ([codigoBarras] = @Original_codigoBarras))</CommandText>
@@ -397,7 +396,7 @@ SELECT idProducVenta, idVenta, codigoBarras FROM tbProductos_Ventas WHERE (idPro
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbProveedoresTableAdapter" GeneratorDataComponentClassName="tbProveedoresTableAdapter" Name="tbProveedores" UserDataComponentName="tbProveedoresTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbProveedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbProveedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbProveedores] WHERE (([idProvedor] = @Original_idProvedor) AND ([nombre] = @Original_nombre) AND ([idContacto] = @Original_idContacto))</CommandText>
@@ -450,7 +449,7 @@ SELECT idProvedor, nombre, idContacto FROM tbProveedores WHERE (idProvedor = @id
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbRolesTableAdapter" GeneratorDataComponentClassName="tbRolesTableAdapter" Name="tbRoles" UserDataComponentName="tbRolesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbRoles" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbRoles" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbRoles] WHERE (([noRol] = @Original_noRol) AND ([nombre] = @Original_nombre))</CommandText>
@@ -498,7 +497,7 @@ SELECT noRol, nombre FROM tbRoles WHERE (noRol = @noRol)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbVentasTableAdapter" GeneratorDataComponentClassName="tbVentasTableAdapter" Name="tbVentas" UserDataComponentName="tbVentasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbVentas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbVentas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbVentas] WHERE (([idVenta] = @Original_idVenta) AND ([descuento] = @Original_descuento) AND ([iva] = @Original_iva) AND ([monto] = @Original_monto) AND ((@IsNull_fecha = 1 AND [fecha] IS NULL) OR ([fecha] = @Original_fecha)))</CommandText>
@@ -563,7 +562,7 @@ SELECT idVenta, descuento, iva, monto, fecha FROM tbVentas WHERE (idVenta = @idV
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbVentas_EmpleadosTableAdapter" GeneratorDataComponentClassName="tbVentas_EmpleadosTableAdapter" Name="tbVentas_Empleados" UserDataComponentName="tbVentas_EmpleadosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.tbVentas_Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.tbVentas_Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tbVentas_Empleados] WHERE (([idVentaEple] = @Original_idVentaEple) AND ([idVenta] = @Original_idVenta) AND ([idEmpleado] = @Original_idEmpleado))</CommandText>
@@ -614,9 +613,33 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vEmpleadosTableAdapter" GeneratorDataComponentClassName="vEmpleadosTableAdapter" Name="vEmpleados" UserDataComponentName="vEmpleadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.vEmpleados" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idEmp, RFC, nombres, apellidos, horario, Rol, usuario, Contraseña, activo FROM dbo.vEmpleados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEmp" DataSetColumn="idEmp" />
+              <Mapping SourceColumn="RFC" DataSetColumn="RFC" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+              <Mapping SourceColumn="apellidos" DataSetColumn="apellidos" />
+              <Mapping SourceColumn="horario" DataSetColumn="horario" />
+              <Mapping SourceColumn="Rol" DataSetColumn="Rol" />
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="Contraseña" DataSetColumn="Contraseña" />
+              <Mapping SourceColumn="activo" DataSetColumn="activo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spAplicarDescuentoTableAdapter" GeneratorDataComponentClassName="spAplicarDescuentoTableAdapter" Name="spAplicarDescuento" UserDataComponentName="spAplicarDescuentoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.spAplicarDescuento" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spAplicarDescuento" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.spAplicarDescuento</CommandText>
@@ -637,7 +660,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="coincidirEmpleadoTableAdapter" GeneratorDataComponentClassName="coincidirEmpleadoTableAdapter" Name="coincidirEmpleado" UserDataComponentName="coincidirEmpleadoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.coincidirEmpleado" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.coincidirEmpleado" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT nombres, idEmpleado, horario, rol, RFC, usuario, contrasenha, activo FROM dbo.coincidirEmpleado(@nombre)</CommandText>
@@ -662,7 +685,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="consultarCaducidadMesTableAdapter" GeneratorDataComponentClassName="consultarCaducidadMesTableAdapter" Name="consultarCaducidadMes" UserDataComponentName="consultarCaducidadMesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.consultarCaducidadMes" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.consultarCaducidadMes" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT codigoBarras, nombre, fechaCaducidad FROM dbo.consultarCaducidadMes(@fecha)</CommandText>
@@ -680,33 +703,48 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vEmpleadosTableAdapter" GeneratorDataComponentClassName="vEmpleadosTableAdapter" Name="vEmpleados" UserDataComponentName="vEmpleadosTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="fDatosPerfilTableAdapter" GeneratorDataComponentClassName="fDatosPerfilTableAdapter" Name="fDatosPerfil" UserDataComponentName="fDatosPerfilTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.vEmpleados" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.fDatosPerfil" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT idEmpleado, RFC, nombres, apellidos, horario, Rol, usuario, activo, Contraseña FROM vEmpleados</CommandText>
-                    <Parameters />
+                    <CommandText>SELECT nombres, apellidos, usuario, contrasenha FROM dbo.fDatosPerfil(@Usuario)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Usuario" ColumnName="" DataSourceName="" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@Usuario" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
-              <Mapping SourceColumn="RFC" DataSetColumn="RFC" />
               <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
               <Mapping SourceColumn="apellidos" DataSetColumn="apellidos" />
-              <Mapping SourceColumn="horario" DataSetColumn="horario" />
-              <Mapping SourceColumn="Rol" DataSetColumn="Rol" />
               <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
-              <Mapping SourceColumn="activo" DataSetColumn="activo" />
-              <Mapping SourceColumn="Contraseña" DataSetColumn="Contraseña" />
+              <Mapping SourceColumn="contrasenha" DataSetColumn="contrasenha" />
             </Mappings>
             <Sources />
           </TableAdapter>
         </Tables>
         <Sources>
-          <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.spAumentarExistencias" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spAumentarExistencias" MethodsParameterType="CLR" Modifier="Public" Name="spAumentarExistencias" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="spAumentarExistencias">
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spActualizarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spActualizarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="spActualizarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="spActualizarEmpleado">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.spActualizarEmpleado</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Horario" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@RolNom" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Usuario" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Contrasenha" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Activo" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spAumentarExistencias" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spAumentarExistencias" MethodsParameterType="CLR" Modifier="Public" Name="spAumentarExistencias" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="spAumentarExistencias">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.spAumentarExistencias</CommandText>
@@ -718,7 +756,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.spCambiarNombre" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spCambiarNombre" MethodsParameterType="CLR" Modifier="Public" Name="spCambiarNombre" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="spCambiarNombre">
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spCambiarNombre" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spCambiarNombre" MethodsParameterType="CLR" Modifier="Public" Name="spCambiarNombre" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="spCambiarNombre">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.spCambiarNombre</CommandText>
@@ -731,7 +769,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.spEliminarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spEliminarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="spEliminarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="spEliminarEmpleado">
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spEliminarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spEliminarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="spEliminarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="spEliminarEmpleado">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.spEliminarEmpleado</CommandText>
@@ -742,7 +780,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.spEstadoEmp" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spEstadoEmp" MethodsParameterType="CLR" Modifier="Public" Name="spEstadoEmp" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="spEstadoEmp">
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spEstadoEmp" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spEstadoEmp" MethodsParameterType="CLR" Modifier="Public" Name="spEstadoEmp" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="spEstadoEmp">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.spEstadoEmp</CommandText>
@@ -754,7 +792,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.spRegistrarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spRegistrarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="spRegistrarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="spRegistrarEmpleado">
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spRegistrarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spRegistrarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="spRegistrarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="spRegistrarEmpleado">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.spRegistrarEmpleado</CommandText>
@@ -763,7 +801,6 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Nombres" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Apellidos" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idEmpleado" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@Horario" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@RolNom" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@Usuario" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -773,7 +810,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.consultarCaducidad" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="consultarCaducidad" MethodsParameterType="CLR" Modifier="Public" Name="consultarCaducidad" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="consultarCaducidad">
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.consultarCaducidad" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="consultarCaducidad" MethodsParameterType="CLR" Modifier="Public" Name="consultarCaducidad" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="consultarCaducidad">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.consultarCaducidad</CommandText>
@@ -784,7 +821,18 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="dbCrumarConnectionString (Settings)" DbObjectName="dbCrumar.dbo.spAutenticarUsuario" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="spAutenticarUsuario" MethodsParameterType="CLR" Modifier="Public" Name="spAutenticarUsuario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="spAutenticarUsuario">
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.fEmpleadoExis" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="fEmpleadoExis" MethodsParameterType="CLR" Modifier="Public" Name="fEmpleadoExis" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="fEmpleadoExis">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.fEmpleadoExis</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="jesuscruz\sqlexpress.CRUMARpv.dbo" DbObjectName="CRUMARpv.dbo.spAutenticarUsuario" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="spAutenticarUsuario" MethodsParameterType="CLR" Modifier="Public" Name="spAutenticarUsuario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="spAutenticarUsuario">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.spAutenticarUsuario</CommandText>
@@ -800,22 +848,22 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dbCrumarDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dbCrumarDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbCrumarDataSet">
+  <xs:element name="CRUMARpvDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="CRUMARpvDataSet" msprop:Generator_DataSetName="CRUMARpvDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbContactos" msprop:Generator_RowEvHandlerName="tbContactosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbContactosRowDeleted" msprop:Generator_RowDeletingName="tbContactosRowDeleting" msprop:Generator_RowEvArgName="tbContactosRowChangeEvent" msprop:Generator_TablePropName="tbContactos" msprop:Generator_RowChangedName="tbContactosRowChanged" msprop:Generator_UserTableName="tbContactos" msprop:Generator_RowChangingName="tbContactosRowChanging" msprop:Generator_RowClassName="tbContactosRow" msprop:Generator_TableClassName="tbContactosDataTable" msprop:Generator_TableVarName="tabletbContactos">
+        <xs:element name="tbContactos" msprop:Generator_RowEvHandlerName="tbContactosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbContactosRowDeleted" msprop:Generator_RowDeletingName="tbContactosRowDeleting" msprop:Generator_RowEvArgName="tbContactosRowChangeEvent" msprop:Generator_TablePropName="tbContactos" msprop:Generator_RowChangedName="tbContactosRowChanged" msprop:Generator_RowChangingName="tbContactosRowChanging" msprop:Generator_TableClassName="tbContactosDataTable" msprop:Generator_RowClassName="tbContactosRow" msprop:Generator_TableVarName="tabletbContactos" msprop:Generator_UserTableName="tbContactos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idContacto" msprop:Generator_ColumnPropNameInTable="idContactoColumn" msprop:Generator_ColumnPropNameInRow="idContacto" msprop:Generator_UserColumnName="idContacto" msprop:Generator_ColumnVarNameInTable="columnidContacto" type="xs:int" />
-              <xs:element name="numTelefono" msprop:Generator_ColumnPropNameInTable="numTelefonoColumn" msprop:Generator_ColumnPropNameInRow="numTelefono" msprop:Generator_UserColumnName="numTelefono" msprop:Generator_ColumnVarNameInTable="columnnumTelefono">
+              <xs:element name="idContacto" msprop:Generator_ColumnPropNameInRow="idContacto" msprop:Generator_ColumnPropNameInTable="idContactoColumn" msprop:Generator_ColumnVarNameInTable="columnidContacto" msprop:Generator_UserColumnName="idContacto" type="xs:int" />
+              <xs:element name="numTelefono" msprop:Generator_ColumnPropNameInRow="numTelefono" msprop:Generator_ColumnPropNameInTable="numTelefonoColumn" msprop:Generator_ColumnVarNameInTable="columnnumTelefono" msprop:Generator_UserColumnName="numTelefono">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ladaPais" msprop:Generator_ColumnPropNameInTable="ladaPaisColumn" msprop:Generator_ColumnPropNameInRow="ladaPais" msprop:Generator_UserColumnName="ladaPais" msprop:Generator_ColumnVarNameInTable="columnladaPais" type="xs:unsignedByte" />
-              <xs:element name="correoElectronico" msprop:Generator_ColumnPropNameInTable="correoElectronicoColumn" msprop:Generator_ColumnPropNameInRow="correoElectronico" msprop:Generator_UserColumnName="correoElectronico" msprop:Generator_ColumnVarNameInTable="columncorreoElectronico">
+              <xs:element name="ladaPais" msprop:Generator_ColumnPropNameInRow="ladaPais" msprop:Generator_ColumnPropNameInTable="ladaPaisColumn" msprop:Generator_ColumnVarNameInTable="columnladaPais" msprop:Generator_UserColumnName="ladaPais" type="xs:unsignedByte" />
+              <xs:element name="correoElectronico" msprop:Generator_ColumnPropNameInRow="correoElectronico" msprop:Generator_ColumnPropNameInTable="correoElectronicoColumn" msprop:Generator_ColumnVarNameInTable="columncorreoElectronico" msprop:Generator_UserColumnName="correoElectronico">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -825,136 +873,61 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbEmpleados" msprop:Generator_RowEvHandlerName="tbEmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbEmpleadosRowDeleted" msprop:Generator_RowDeletingName="tbEmpleadosRowDeleting" msprop:Generator_RowEvArgName="tbEmpleadosRowChangeEvent" msprop:Generator_TablePropName="tbEmpleados" msprop:Generator_RowChangedName="tbEmpleadosRowChanged" msprop:Generator_UserTableName="tbEmpleados" msprop:Generator_RowChangingName="tbEmpleadosRowChanging" msprop:Generator_RowClassName="tbEmpleadosRow" msprop:Generator_TableClassName="tbEmpleadosDataTable" msprop:Generator_TableVarName="tabletbEmpleados">
+        <xs:element name="tbEmpleados" msprop:Generator_RowEvHandlerName="tbEmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbEmpleadosRowDeleted" msprop:Generator_RowDeletingName="tbEmpleadosRowDeleting" msprop:Generator_RowEvArgName="tbEmpleadosRowChangeEvent" msprop:Generator_TablePropName="tbEmpleados" msprop:Generator_RowChangedName="tbEmpleadosRowChanged" msprop:Generator_RowChangingName="tbEmpleadosRowChanging" msprop:Generator_TableClassName="tbEmpleadosDataTable" msprop:Generator_RowClassName="tbEmpleadosRow" msprop:Generator_TableVarName="tabletbEmpleados" msprop:Generator_UserTableName="tbEmpleados">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
-              <xs:element name="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_UserColumnName="horario" msprop:Generator_ColumnVarNameInTable="columnhorario">
+              <xs:element name="horario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_UserColumnName="horario">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="rol" msprop:Generator_ColumnPropNameInTable="rolColumn" msprop:Generator_ColumnPropNameInRow="rol" msprop:Generator_UserColumnName="rol" msprop:Generator_ColumnVarNameInTable="columnrol" type="xs:int" />
-              <xs:element name="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC">
+              <xs:element name="rol" msprop:Generator_ColumnPropNameInRow="rol" msprop:Generator_ColumnPropNameInTable="rolColumn" msprop:Generator_ColumnVarNameInTable="columnrol" msprop:Generator_UserColumnName="rol" type="xs:int" />
+              <xs:element name="RFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_UserColumnName="RFC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_UserColumnName="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" minOccurs="0">
+              <xs:element name="usuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_UserColumnName="usuario" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="contrasenha" msprop:Generator_ColumnPropNameInTable="contrasenhaColumn" msprop:Generator_ColumnPropNameInRow="contrasenha" msprop:Generator_UserColumnName="contrasenha" msprop:Generator_ColumnVarNameInTable="columncontrasenha" minOccurs="0">
+              <xs:element name="contrasenha" msprop:Generator_ColumnPropNameInRow="contrasenha" msprop:Generator_ColumnPropNameInTable="contrasenhaColumn" msprop:Generator_ColumnVarNameInTable="columncontrasenha" msprop:Generator_UserColumnName="contrasenha" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="activo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_UserColumnName="activo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="idEmp" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="idEmp" msprop:Generator_ColumnPropNameInTable="idEmpColumn" msprop:Generator_ColumnVarNameInTable="columnidEmp" msprop:Generator_UserColumnName="idEmp" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbPersonas" msprop:Generator_RowEvHandlerName="tbPersonasRowChangeEventHandler" msprop:Generator_RowDeletedName="tbPersonasRowDeleted" msprop:Generator_RowDeletingName="tbPersonasRowDeleting" msprop:Generator_RowEvArgName="tbPersonasRowChangeEvent" msprop:Generator_TablePropName="tbPersonas" msprop:Generator_RowChangedName="tbPersonasRowChanged" msprop:Generator_UserTableName="tbPersonas" msprop:Generator_RowChangingName="tbPersonasRowChanging" msprop:Generator_RowClassName="tbPersonasRow" msprop:Generator_TableClassName="tbPersonasDataTable" msprop:Generator_TableVarName="tabletbPersonas">
+        <xs:element name="tbPersonas" msprop:Generator_RowEvHandlerName="tbPersonasRowChangeEventHandler" msprop:Generator_RowDeletedName="tbPersonasRowDeleted" msprop:Generator_RowDeletingName="tbPersonasRowDeleting" msprop:Generator_RowEvArgName="tbPersonasRowChangeEvent" msprop:Generator_TablePropName="tbPersonas" msprop:Generator_RowChangedName="tbPersonasRowChanged" msprop:Generator_RowChangingName="tbPersonasRowChanging" msprop:Generator_TableClassName="tbPersonasDataTable" msprop:Generator_RowClassName="tbPersonasRow" msprop:Generator_TableVarName="tabletbPersonas" msprop:Generator_UserTableName="tbPersonas">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC">
+              <xs:element name="RFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_UserColumnName="RFC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_UserColumnName="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres">
+              <xs:element name="nombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_UserColumnName="nombres">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_UserColumnName="apellidos" msprop:Generator_ColumnVarNameInTable="columnapellidos">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="tbProductos" msprop:Generator_RowEvHandlerName="tbProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProductosRowDeleted" msprop:Generator_RowDeletingName="tbProductosRowDeleting" msprop:Generator_RowEvArgName="tbProductosRowChangeEvent" msprop:Generator_TablePropName="tbProductos" msprop:Generator_RowChangedName="tbProductosRowChanged" msprop:Generator_UserTableName="tbProductos" msprop:Generator_RowChangingName="tbProductosRowChanging" msprop:Generator_RowClassName="tbProductosRow" msprop:Generator_TableClassName="tbProductosDataTable" msprop:Generator_TableVarName="tabletbProductos">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="codigoBarras" msprop:Generator_ColumnPropNameInTable="codigoBarrasColumn" msprop:Generator_ColumnPropNameInRow="codigoBarras" msprop:Generator_UserColumnName="codigoBarras" msprop:Generator_ColumnVarNameInTable="columncodigoBarras" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_UserColumnName="marca" msprop:Generator_ColumnVarNameInTable="columnmarca">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="iva" msprop:Generator_ColumnPropNameInTable="ivaColumn" msprop:Generator_ColumnPropNameInRow="iva" msprop:Generator_UserColumnName="iva" msprop:Generator_ColumnVarNameInTable="columniva" type="xs:int" />
-              <xs:element name="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_UserColumnName="existencia" msprop:Generator_ColumnVarNameInTable="columnexistencia" type="xs:int" />
-              <xs:element name="precioCompra" msprop:Generator_ColumnPropNameInTable="precioCompraColumn" msprop:Generator_ColumnPropNameInRow="precioCompra" msprop:Generator_UserColumnName="precioCompra" msprop:Generator_ColumnVarNameInTable="columnprecioCompra" type="xs:decimal" />
-              <xs:element name="precioVenta" msprop:Generator_ColumnPropNameInTable="precioVentaColumn" msprop:Generator_ColumnPropNameInRow="precioVenta" msprop:Generator_UserColumnName="precioVenta" msprop:Generator_ColumnVarNameInTable="columnprecioVenta" type="xs:decimal" />
-              <xs:element name="fechaCaducidad" msprop:Generator_ColumnPropNameInTable="fechaCaducidadColumn" msprop:Generator_ColumnPropNameInRow="fechaCaducidad" msprop:Generator_UserColumnName="fechaCaducidad" msprop:Generator_ColumnVarNameInTable="columnfechaCaducidad" type="xs:dateTime" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="tbProductos_Proveedores" msprop:Generator_RowEvHandlerName="tbProductos_ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProductos_ProveedoresRowDeleted" msprop:Generator_RowDeletingName="tbProductos_ProveedoresRowDeleting" msprop:Generator_RowEvArgName="tbProductos_ProveedoresRowChangeEvent" msprop:Generator_TablePropName="tbProductos_Proveedores" msprop:Generator_RowChangedName="tbProductos_ProveedoresRowChanged" msprop:Generator_UserTableName="tbProductos_Proveedores" msprop:Generator_RowChangingName="tbProductos_ProveedoresRowChanging" msprop:Generator_RowClassName="tbProductos_ProveedoresRow" msprop:Generator_TableClassName="tbProductos_ProveedoresDataTable" msprop:Generator_TableVarName="tabletbProductos_Proveedores">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="idProductoProve" msprop:Generator_ColumnPropNameInTable="idProductoProveColumn" msprop:Generator_ColumnPropNameInRow="idProductoProve" msprop:Generator_UserColumnName="idProductoProve" msprop:Generator_ColumnVarNameInTable="columnidProductoProve" type="xs:int" />
-              <xs:element name="idSuministro" msprop:Generator_ColumnPropNameInTable="idSuministroColumn" msprop:Generator_ColumnPropNameInRow="idSuministro" msprop:Generator_UserColumnName="idSuministro" msprop:Generator_ColumnVarNameInTable="columnidSuministro" type="xs:int" />
-              <xs:element name="idProveedor" msprop:Generator_ColumnPropNameInTable="idProveedorColumn" msprop:Generator_ColumnPropNameInRow="idProveedor" msprop:Generator_UserColumnName="idProveedor" msprop:Generator_ColumnVarNameInTable="columnidProveedor" type="xs:int" />
-              <xs:element name="codigpBarras" msprop:Generator_ColumnPropNameInTable="codigpBarrasColumn" msprop:Generator_ColumnPropNameInRow="codigpBarras" msprop:Generator_UserColumnName="codigpBarras" msprop:Generator_ColumnVarNameInTable="columncodigpBarras" type="xs:int" />
-              <xs:element name="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_UserColumnName="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" type="xs:dateTime" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="tbProductos_Ventas" msprop:Generator_RowEvHandlerName="tbProductos_VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProductos_VentasRowDeleted" msprop:Generator_RowDeletingName="tbProductos_VentasRowDeleting" msprop:Generator_RowEvArgName="tbProductos_VentasRowChangeEvent" msprop:Generator_TablePropName="tbProductos_Ventas" msprop:Generator_RowChangedName="tbProductos_VentasRowChanged" msprop:Generator_UserTableName="tbProductos_Ventas" msprop:Generator_RowChangingName="tbProductos_VentasRowChanging" msprop:Generator_RowClassName="tbProductos_VentasRow" msprop:Generator_TableClassName="tbProductos_VentasDataTable" msprop:Generator_TableVarName="tabletbProductos_Ventas">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="idProducVenta" msprop:Generator_ColumnPropNameInTable="idProducVentaColumn" msprop:Generator_ColumnPropNameInRow="idProducVenta" msprop:Generator_UserColumnName="idProducVenta" msprop:Generator_ColumnVarNameInTable="columnidProducVenta" type="xs:int" />
-              <xs:element name="idVenta" msprop:Generator_ColumnPropNameInTable="idVentaColumn" msprop:Generator_ColumnPropNameInRow="idVenta" msprop:Generator_UserColumnName="idVenta" msprop:Generator_ColumnVarNameInTable="columnidVenta" type="xs:int" />
-              <xs:element name="codigoBarras" msprop:Generator_ColumnPropNameInTable="codigoBarrasColumn" msprop:Generator_ColumnPropNameInRow="codigoBarras" msprop:Generator_UserColumnName="codigoBarras" msprop:Generator_ColumnVarNameInTable="columncodigoBarras" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="tbProveedores" msprop:Generator_RowEvHandlerName="tbProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProveedoresRowDeleted" msprop:Generator_RowDeletingName="tbProveedoresRowDeleting" msprop:Generator_RowEvArgName="tbProveedoresRowChangeEvent" msprop:Generator_TablePropName="tbProveedores" msprop:Generator_RowChangedName="tbProveedoresRowChanged" msprop:Generator_UserTableName="tbProveedores" msprop:Generator_RowChangingName="tbProveedoresRowChanging" msprop:Generator_RowClassName="tbProveedoresRow" msprop:Generator_TableClassName="tbProveedoresDataTable" msprop:Generator_TableVarName="tabletbProveedores">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="idProvedor" msprop:Generator_ColumnPropNameInTable="idProvedorColumn" msprop:Generator_ColumnPropNameInRow="idProvedor" msprop:Generator_UserColumnName="idProvedor" msprop:Generator_ColumnVarNameInTable="columnidProvedor" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="idContacto" msprop:Generator_ColumnPropNameInTable="idContactoColumn" msprop:Generator_ColumnPropNameInRow="idContacto" msprop:Generator_UserColumnName="idContacto" msprop:Generator_ColumnVarNameInTable="columnidContacto" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="tbRoles" msprop:Generator_RowEvHandlerName="tbRolesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbRolesRowDeleted" msprop:Generator_RowDeletingName="tbRolesRowDeleting" msprop:Generator_RowEvArgName="tbRolesRowChangeEvent" msprop:Generator_TablePropName="tbRoles" msprop:Generator_RowChangedName="tbRolesRowChanged" msprop:Generator_UserTableName="tbRoles" msprop:Generator_RowChangingName="tbRolesRowChanging" msprop:Generator_RowClassName="tbRolesRow" msprop:Generator_TableClassName="tbRolesDataTable" msprop:Generator_TableVarName="tabletbRoles">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="noRol" msprop:Generator_ColumnPropNameInTable="noRolColumn" msprop:Generator_ColumnPropNameInRow="noRol" msprop:Generator_UserColumnName="noRol" msprop:Generator_ColumnVarNameInTable="columnnoRol" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
+              <xs:element name="apellidos" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_ColumnVarNameInTable="columnapellidos" msprop:Generator_UserColumnName="apellidos">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -964,150 +937,259 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbVentas" msprop:Generator_RowEvHandlerName="tbVentasRowChangeEventHandler" msprop:Generator_RowDeletedName="tbVentasRowDeleted" msprop:Generator_RowDeletingName="tbVentasRowDeleting" msprop:Generator_RowEvArgName="tbVentasRowChangeEvent" msprop:Generator_TablePropName="tbVentas" msprop:Generator_RowChangedName="tbVentasRowChanged" msprop:Generator_UserTableName="tbVentas" msprop:Generator_RowChangingName="tbVentasRowChanging" msprop:Generator_RowClassName="tbVentasRow" msprop:Generator_TableClassName="tbVentasDataTable" msprop:Generator_TableVarName="tabletbVentas">
+        <xs:element name="tbProductos" msprop:Generator_RowEvHandlerName="tbProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProductosRowDeleted" msprop:Generator_RowDeletingName="tbProductosRowDeleting" msprop:Generator_RowEvArgName="tbProductosRowChangeEvent" msprop:Generator_TablePropName="tbProductos" msprop:Generator_RowChangedName="tbProductosRowChanged" msprop:Generator_RowChangingName="tbProductosRowChanging" msprop:Generator_TableClassName="tbProductosDataTable" msprop:Generator_RowClassName="tbProductosRow" msprop:Generator_TableVarName="tabletbProductos" msprop:Generator_UserTableName="tbProductos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idVenta" msprop:Generator_ColumnPropNameInTable="idVentaColumn" msprop:Generator_ColumnPropNameInRow="idVenta" msprop:Generator_UserColumnName="idVenta" msprop:Generator_ColumnVarNameInTable="columnidVenta" type="xs:int" />
-              <xs:element name="descuento" msprop:Generator_ColumnPropNameInTable="descuentoColumn" msprop:Generator_ColumnPropNameInRow="descuento" msprop:Generator_UserColumnName="descuento" msprop:Generator_ColumnVarNameInTable="columndescuento" type="xs:int" />
-              <xs:element name="iva" msprop:Generator_ColumnPropNameInTable="ivaColumn" msprop:Generator_ColumnPropNameInRow="iva" msprop:Generator_UserColumnName="iva" msprop:Generator_ColumnVarNameInTable="columniva" type="xs:int" />
-              <xs:element name="monto" msprop:Generator_ColumnPropNameInTable="montoColumn" msprop:Generator_ColumnPropNameInRow="monto" msprop:Generator_UserColumnName="monto" msprop:Generator_ColumnVarNameInTable="columnmonto" type="xs:decimal" />
-              <xs:element name="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_UserColumnName="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" type="xs:dateTime" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="tbVentas_Empleados" msprop:Generator_RowEvHandlerName="tbVentas_EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbVentas_EmpleadosRowDeleted" msprop:Generator_RowDeletingName="tbVentas_EmpleadosRowDeleting" msprop:Generator_RowEvArgName="tbVentas_EmpleadosRowChangeEvent" msprop:Generator_TablePropName="tbVentas_Empleados" msprop:Generator_RowChangedName="tbVentas_EmpleadosRowChanged" msprop:Generator_UserTableName="tbVentas_Empleados" msprop:Generator_RowChangingName="tbVentas_EmpleadosRowChanging" msprop:Generator_RowClassName="tbVentas_EmpleadosRow" msprop:Generator_TableClassName="tbVentas_EmpleadosDataTable" msprop:Generator_TableVarName="tabletbVentas_Empleados">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="idVentaEple" msprop:Generator_ColumnPropNameInTable="idVentaEpleColumn" msprop:Generator_ColumnPropNameInRow="idVentaEple" msprop:Generator_UserColumnName="idVentaEple" msprop:Generator_ColumnVarNameInTable="columnidVentaEple" type="xs:int" />
-              <xs:element name="idVenta" msprop:Generator_ColumnPropNameInTable="idVentaColumn" msprop:Generator_ColumnPropNameInRow="idVenta" msprop:Generator_UserColumnName="idVenta" msprop:Generator_ColumnVarNameInTable="columnidVenta" type="xs:int" />
-              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="spAplicarDescuento" msprop:Generator_RowEvHandlerName="spAplicarDescuentoRowChangeEventHandler" msprop:Generator_RowDeletedName="spAplicarDescuentoRowDeleted" msprop:Generator_RowDeletingName="spAplicarDescuentoRowDeleting" msprop:Generator_RowEvArgName="spAplicarDescuentoRowChangeEvent" msprop:Generator_TablePropName="spAplicarDescuento" msprop:Generator_RowChangedName="spAplicarDescuentoRowChanged" msprop:Generator_UserTableName="spAplicarDescuento" msprop:Generator_RowChangingName="spAplicarDescuentoRowChanging" msprop:Generator_RowClassName="spAplicarDescuentoRow" msprop:Generator_TableClassName="spAplicarDescuentoDataTable" msprop:Generator_TableVarName="tablespAplicarDescuento">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
+              <xs:element name="codigoBarras" msprop:Generator_ColumnPropNameInRow="codigoBarras" msprop:Generator_ColumnPropNameInTable="codigoBarrasColumn" msprop:Generator_ColumnVarNameInTable="columncodigoBarras" msprop:Generator_UserColumnName="codigoBarras" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Precio_x0020_Descuento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="Precio_DescuentoColumn" msprop:Generator_ColumnPropNameInRow="Precio_Descuento" msprop:Generator_UserColumnName="Precio Descuento" msprop:Generator_ColumnVarNameInTable="columnPrecio_Descuento" type="xs:decimal" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="coincidirEmpleado" msprop:Generator_RowEvHandlerName="coincidirEmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="coincidirEmpleadoRowDeleted" msprop:Generator_RowDeletingName="coincidirEmpleadoRowDeleting" msprop:Generator_RowEvArgName="coincidirEmpleadoRowChangeEvent" msprop:Generator_TablePropName="coincidirEmpleado" msprop:Generator_RowChangedName="coincidirEmpleadoRowChanged" msprop:Generator_UserTableName="coincidirEmpleado" msprop:Generator_RowChangingName="coincidirEmpleadoRowChanging" msprop:Generator_RowClassName="coincidirEmpleadoRow" msprop:Generator_TableClassName="coincidirEmpleadoDataTable" msprop:Generator_TableVarName="tablecoincidirEmpleado">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_UserColumnName="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres">
+              <xs:element name="marca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_UserColumnName="marca">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
-              <xs:element name="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_UserColumnName="horario" msprop:Generator_ColumnVarNameInTable="columnhorario">
+              <xs:element name="iva" msprop:Generator_ColumnPropNameInRow="iva" msprop:Generator_ColumnPropNameInTable="ivaColumn" msprop:Generator_ColumnVarNameInTable="columniva" msprop:Generator_UserColumnName="iva" type="xs:int" />
+              <xs:element name="existencia" msprop:Generator_ColumnPropNameInRow="existencia" msprop:Generator_ColumnPropNameInTable="existenciaColumn" msprop:Generator_ColumnVarNameInTable="columnexistencia" msprop:Generator_UserColumnName="existencia" type="xs:int" />
+              <xs:element name="precioCompra" msprop:Generator_ColumnPropNameInRow="precioCompra" msprop:Generator_ColumnPropNameInTable="precioCompraColumn" msprop:Generator_ColumnVarNameInTable="columnprecioCompra" msprop:Generator_UserColumnName="precioCompra" type="xs:decimal" />
+              <xs:element name="precioVenta" msprop:Generator_ColumnPropNameInRow="precioVenta" msprop:Generator_ColumnPropNameInTable="precioVentaColumn" msprop:Generator_ColumnVarNameInTable="columnprecioVenta" msprop:Generator_UserColumnName="precioVenta" type="xs:decimal" />
+              <xs:element name="fechaCaducidad" msprop:Generator_ColumnPropNameInRow="fechaCaducidad" msprop:Generator_ColumnPropNameInTable="fechaCaducidadColumn" msprop:Generator_ColumnVarNameInTable="columnfechaCaducidad" msprop:Generator_UserColumnName="fechaCaducidad" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbProductos_Proveedores" msprop:Generator_RowEvHandlerName="tbProductos_ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProductos_ProveedoresRowDeleted" msprop:Generator_RowDeletingName="tbProductos_ProveedoresRowDeleting" msprop:Generator_RowEvArgName="tbProductos_ProveedoresRowChangeEvent" msprop:Generator_TablePropName="tbProductos_Proveedores" msprop:Generator_RowChangedName="tbProductos_ProveedoresRowChanged" msprop:Generator_RowChangingName="tbProductos_ProveedoresRowChanging" msprop:Generator_TableClassName="tbProductos_ProveedoresDataTable" msprop:Generator_RowClassName="tbProductos_ProveedoresRow" msprop:Generator_TableVarName="tabletbProductos_Proveedores" msprop:Generator_UserTableName="tbProductos_Proveedores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idProductoProve" msprop:Generator_ColumnPropNameInRow="idProductoProve" msprop:Generator_ColumnPropNameInTable="idProductoProveColumn" msprop:Generator_ColumnVarNameInTable="columnidProductoProve" msprop:Generator_UserColumnName="idProductoProve" type="xs:int" />
+              <xs:element name="idSuministro" msprop:Generator_ColumnPropNameInRow="idSuministro" msprop:Generator_ColumnPropNameInTable="idSuministroColumn" msprop:Generator_ColumnVarNameInTable="columnidSuministro" msprop:Generator_UserColumnName="idSuministro" type="xs:int" />
+              <xs:element name="idProveedor" msprop:Generator_ColumnPropNameInRow="idProveedor" msprop:Generator_ColumnPropNameInTable="idProveedorColumn" msprop:Generator_ColumnVarNameInTable="columnidProveedor" msprop:Generator_UserColumnName="idProveedor" type="xs:int" />
+              <xs:element name="codigpBarras" msprop:Generator_ColumnPropNameInRow="codigpBarras" msprop:Generator_ColumnPropNameInTable="codigpBarrasColumn" msprop:Generator_ColumnVarNameInTable="columncodigpBarras" msprop:Generator_UserColumnName="codigpBarras" type="xs:int" />
+              <xs:element name="fecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbProductos_Ventas" msprop:Generator_RowEvHandlerName="tbProductos_VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProductos_VentasRowDeleted" msprop:Generator_RowDeletingName="tbProductos_VentasRowDeleting" msprop:Generator_RowEvArgName="tbProductos_VentasRowChangeEvent" msprop:Generator_TablePropName="tbProductos_Ventas" msprop:Generator_RowChangedName="tbProductos_VentasRowChanged" msprop:Generator_RowChangingName="tbProductos_VentasRowChanging" msprop:Generator_TableClassName="tbProductos_VentasDataTable" msprop:Generator_RowClassName="tbProductos_VentasRow" msprop:Generator_TableVarName="tabletbProductos_Ventas" msprop:Generator_UserTableName="tbProductos_Ventas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idProducVenta" msprop:Generator_ColumnPropNameInRow="idProducVenta" msprop:Generator_ColumnPropNameInTable="idProducVentaColumn" msprop:Generator_ColumnVarNameInTable="columnidProducVenta" msprop:Generator_UserColumnName="idProducVenta" type="xs:int" />
+              <xs:element name="idVenta" msprop:Generator_ColumnPropNameInRow="idVenta" msprop:Generator_ColumnPropNameInTable="idVentaColumn" msprop:Generator_ColumnVarNameInTable="columnidVenta" msprop:Generator_UserColumnName="idVenta" type="xs:int" />
+              <xs:element name="codigoBarras" msprop:Generator_ColumnPropNameInRow="codigoBarras" msprop:Generator_ColumnPropNameInTable="codigoBarrasColumn" msprop:Generator_ColumnVarNameInTable="columncodigoBarras" msprop:Generator_UserColumnName="codigoBarras" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbProveedores" msprop:Generator_RowEvHandlerName="tbProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="tbProveedoresRowDeleted" msprop:Generator_RowDeletingName="tbProveedoresRowDeleting" msprop:Generator_RowEvArgName="tbProveedoresRowChangeEvent" msprop:Generator_TablePropName="tbProveedores" msprop:Generator_RowChangedName="tbProveedoresRowChanged" msprop:Generator_RowChangingName="tbProveedoresRowChanging" msprop:Generator_TableClassName="tbProveedoresDataTable" msprop:Generator_RowClassName="tbProveedoresRow" msprop:Generator_TableVarName="tabletbProveedores" msprop:Generator_UserTableName="tbProveedores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idProvedor" msprop:Generator_ColumnPropNameInRow="idProvedor" msprop:Generator_ColumnPropNameInTable="idProvedorColumn" msprop:Generator_ColumnVarNameInTable="columnidProvedor" msprop:Generator_UserColumnName="idProvedor" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idContacto" msprop:Generator_ColumnPropNameInRow="idContacto" msprop:Generator_ColumnPropNameInTable="idContactoColumn" msprop:Generator_ColumnVarNameInTable="columnidContacto" msprop:Generator_UserColumnName="idContacto" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbRoles" msprop:Generator_RowEvHandlerName="tbRolesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbRolesRowDeleted" msprop:Generator_RowDeletingName="tbRolesRowDeleting" msprop:Generator_RowEvArgName="tbRolesRowChangeEvent" msprop:Generator_TablePropName="tbRoles" msprop:Generator_RowChangedName="tbRolesRowChanged" msprop:Generator_RowChangingName="tbRolesRowChanging" msprop:Generator_TableClassName="tbRolesDataTable" msprop:Generator_RowClassName="tbRolesRow" msprop:Generator_TableVarName="tabletbRoles" msprop:Generator_UserTableName="tbRoles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="noRol" msprop:Generator_ColumnPropNameInRow="noRol" msprop:Generator_ColumnPropNameInTable="noRolColumn" msprop:Generator_ColumnVarNameInTable="columnnoRol" msprop:Generator_UserColumnName="noRol" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbVentas" msprop:Generator_RowEvHandlerName="tbVentasRowChangeEventHandler" msprop:Generator_RowDeletedName="tbVentasRowDeleted" msprop:Generator_RowDeletingName="tbVentasRowDeleting" msprop:Generator_RowEvArgName="tbVentasRowChangeEvent" msprop:Generator_TablePropName="tbVentas" msprop:Generator_RowChangedName="tbVentasRowChanged" msprop:Generator_RowChangingName="tbVentasRowChanging" msprop:Generator_TableClassName="tbVentasDataTable" msprop:Generator_RowClassName="tbVentasRow" msprop:Generator_TableVarName="tabletbVentas" msprop:Generator_UserTableName="tbVentas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idVenta" msprop:Generator_ColumnPropNameInRow="idVenta" msprop:Generator_ColumnPropNameInTable="idVentaColumn" msprop:Generator_ColumnVarNameInTable="columnidVenta" msprop:Generator_UserColumnName="idVenta" type="xs:int" />
+              <xs:element name="descuento" msprop:Generator_ColumnPropNameInRow="descuento" msprop:Generator_ColumnPropNameInTable="descuentoColumn" msprop:Generator_ColumnVarNameInTable="columndescuento" msprop:Generator_UserColumnName="descuento" type="xs:int" />
+              <xs:element name="iva" msprop:Generator_ColumnPropNameInRow="iva" msprop:Generator_ColumnPropNameInTable="ivaColumn" msprop:Generator_ColumnVarNameInTable="columniva" msprop:Generator_UserColumnName="iva" type="xs:int" />
+              <xs:element name="monto" msprop:Generator_ColumnPropNameInRow="monto" msprop:Generator_ColumnPropNameInTable="montoColumn" msprop:Generator_ColumnVarNameInTable="columnmonto" msprop:Generator_UserColumnName="monto" type="xs:decimal" />
+              <xs:element name="fecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbVentas_Empleados" msprop:Generator_RowEvHandlerName="tbVentas_EmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbVentas_EmpleadosRowDeleted" msprop:Generator_RowDeletingName="tbVentas_EmpleadosRowDeleting" msprop:Generator_RowEvArgName="tbVentas_EmpleadosRowChangeEvent" msprop:Generator_TablePropName="tbVentas_Empleados" msprop:Generator_RowChangedName="tbVentas_EmpleadosRowChanged" msprop:Generator_RowChangingName="tbVentas_EmpleadosRowChanging" msprop:Generator_TableClassName="tbVentas_EmpleadosDataTable" msprop:Generator_RowClassName="tbVentas_EmpleadosRow" msprop:Generator_TableVarName="tabletbVentas_Empleados" msprop:Generator_UserTableName="tbVentas_Empleados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idVentaEple" msprop:Generator_ColumnPropNameInRow="idVentaEple" msprop:Generator_ColumnPropNameInTable="idVentaEpleColumn" msprop:Generator_ColumnVarNameInTable="columnidVentaEple" msprop:Generator_UserColumnName="idVentaEple" type="xs:int" />
+              <xs:element name="idVenta" msprop:Generator_ColumnPropNameInRow="idVenta" msprop:Generator_ColumnPropNameInTable="idVentaColumn" msprop:Generator_ColumnVarNameInTable="columnidVenta" msprop:Generator_UserColumnName="idVenta" type="xs:int" />
+              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vEmpleados" msprop:Generator_RowEvHandlerName="vEmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="vEmpleadosRowDeleted" msprop:Generator_RowDeletingName="vEmpleadosRowDeleting" msprop:Generator_RowEvArgName="vEmpleadosRowChangeEvent" msprop:Generator_TablePropName="vEmpleados" msprop:Generator_RowChangedName="vEmpleadosRowChanged" msprop:Generator_RowChangingName="vEmpleadosRowChanging" msprop:Generator_TableClassName="vEmpleadosDataTable" msprop:Generator_RowClassName="vEmpleadosRow" msprop:Generator_TableVarName="tablevEmpleados" msprop:Generator_UserTableName="vEmpleados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEmp" msprop:Generator_ColumnPropNameInRow="idEmp" msprop:Generator_ColumnPropNameInTable="idEmpColumn" msprop:Generator_ColumnVarNameInTable="columnidEmp" msprop:Generator_UserColumnName="idEmp" type="xs:int" />
+              <xs:element name="RFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_UserColumnName="RFC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellidos" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_ColumnVarNameInTable="columnapellidos" msprop:Generator_UserColumnName="apellidos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="horario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_UserColumnName="horario">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="rol" msprop:Generator_ColumnPropNameInTable="rolColumn" msprop:Generator_ColumnPropNameInRow="rol" msprop:Generator_UserColumnName="rol" msprop:Generator_ColumnVarNameInTable="columnrol" type="xs:int" />
-              <xs:element name="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC">
+              <xs:element name="Rol" msprop:Generator_ColumnPropNameInRow="Rol" msprop:Generator_ColumnPropNameInTable="RolColumn" msprop:Generator_ColumnVarNameInTable="columnRol" msprop:Generator_UserColumnName="Rol">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_UserColumnName="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" minOccurs="0">
+              <xs:element name="usuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_UserColumnName="usuario" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="contrasenha" msprop:Generator_ColumnPropNameInTable="contrasenhaColumn" msprop:Generator_ColumnPropNameInRow="contrasenha" msprop:Generator_UserColumnName="contrasenha" msprop:Generator_ColumnVarNameInTable="columncontrasenha" minOccurs="0">
+              <xs:element name="Contraseña" msprop:Generator_ColumnPropNameInRow="Contraseña" msprop:Generator_ColumnPropNameInTable="ContraseñaColumn" msprop:Generator_ColumnVarNameInTable="columnContraseña" msprop:Generator_UserColumnName="Contraseña" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="activo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_UserColumnName="activo" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="consultarCaducidadMes" msprop:Generator_RowEvHandlerName="consultarCaducidadMesRowChangeEventHandler" msprop:Generator_RowDeletedName="consultarCaducidadMesRowDeleted" msprop:Generator_RowDeletingName="consultarCaducidadMesRowDeleting" msprop:Generator_RowEvArgName="consultarCaducidadMesRowChangeEvent" msprop:Generator_TablePropName="consultarCaducidadMes" msprop:Generator_RowChangedName="consultarCaducidadMesRowChanged" msprop:Generator_UserTableName="consultarCaducidadMes" msprop:Generator_RowChangingName="consultarCaducidadMesRowChanging" msprop:Generator_RowClassName="consultarCaducidadMesRow" msprop:Generator_TableClassName="consultarCaducidadMesDataTable" msprop:Generator_TableVarName="tableconsultarCaducidadMes">
+        <xs:element name="spAplicarDescuento" msprop:Generator_RowEvHandlerName="spAplicarDescuentoRowChangeEventHandler" msprop:Generator_RowDeletedName="spAplicarDescuentoRowDeleted" msprop:Generator_RowDeletingName="spAplicarDescuentoRowDeleting" msprop:Generator_RowEvArgName="spAplicarDescuentoRowChangeEvent" msprop:Generator_TablePropName="spAplicarDescuento" msprop:Generator_RowChangedName="spAplicarDescuentoRowChanged" msprop:Generator_RowChangingName="spAplicarDescuentoRowChanging" msprop:Generator_TableClassName="spAplicarDescuentoDataTable" msprop:Generator_RowClassName="spAplicarDescuentoRow" msprop:Generator_TableVarName="tablespAplicarDescuento" msprop:Generator_UserTableName="spAplicarDescuento">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="codigoBarras" msprop:Generator_ColumnPropNameInTable="codigoBarrasColumn" msprop:Generator_ColumnPropNameInRow="codigoBarras" msprop:Generator_UserColumnName="codigoBarras" msprop:Generator_ColumnVarNameInTable="columncodigoBarras" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fechaCaducidad" msprop:Generator_ColumnPropNameInTable="fechaCaducidadColumn" msprop:Generator_ColumnPropNameInRow="fechaCaducidad" msprop:Generator_UserColumnName="fechaCaducidad" msprop:Generator_ColumnVarNameInTable="columnfechaCaducidad" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Precio_x0020_Descuento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Precio_Descuento" msprop:Generator_ColumnPropNameInTable="Precio_DescuentoColumn" msprop:Generator_ColumnVarNameInTable="columnPrecio_Descuento" msprop:Generator_UserColumnName="Precio Descuento" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vEmpleados" msprop:Generator_RowEvHandlerName="vEmpleadosRowChangeEventHandler" msprop:Generator_RowDeletedName="vEmpleadosRowDeleted" msprop:Generator_RowDeletingName="vEmpleadosRowDeleting" msprop:Generator_RowEvArgName="vEmpleadosRowChangeEvent" msprop:Generator_TablePropName="vEmpleados" msprop:Generator_RowChangedName="vEmpleadosRowChanged" msprop:Generator_UserTableName="vEmpleados" msprop:Generator_RowChangingName="vEmpleadosRowChanging" msprop:Generator_RowClassName="vEmpleadosRow" msprop:Generator_TableClassName="vEmpleadosDataTable" msprop:Generator_TableVarName="tablevEmpleados">
+        <xs:element name="coincidirEmpleado" msprop:Generator_RowEvHandlerName="coincidirEmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="coincidirEmpleadoRowDeleted" msprop:Generator_RowDeletingName="coincidirEmpleadoRowDeleting" msprop:Generator_RowEvArgName="coincidirEmpleadoRowChangeEvent" msprop:Generator_TablePropName="coincidirEmpleado" msprop:Generator_RowChangedName="coincidirEmpleadoRowChanged" msprop:Generator_RowChangingName="coincidirEmpleadoRowChanging" msprop:Generator_TableClassName="coincidirEmpleadoDataTable" msprop:Generator_RowClassName="coincidirEmpleadoRow" msprop:Generator_TableVarName="tablecoincidirEmpleado" msprop:Generator_UserTableName="coincidirEmpleado">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
-              <xs:element name="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_UserColumnName="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_UserColumnName="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres">
+              <xs:element name="nombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_UserColumnName="nombres">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_UserColumnName="apellidos" msprop:Generator_ColumnVarNameInTable="columnapellidos">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_UserColumnName="horario" msprop:Generator_ColumnVarNameInTable="columnhorario">
+              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_UserColumnName="idEmpleado">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Rol" msprop:Generator_ColumnPropNameInTable="RolColumn" msprop:Generator_ColumnPropNameInRow="Rol" msprop:Generator_UserColumnName="Rol" msprop:Generator_ColumnVarNameInTable="columnRol">
+              <xs:element name="horario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_UserColumnName="horario" type="xs:int" />
+              <xs:element name="rol" msprop:Generator_ColumnPropNameInRow="rol" msprop:Generator_ColumnPropNameInTable="rolColumn" msprop:Generator_ColumnVarNameInTable="columnrol" msprop:Generator_UserColumnName="rol">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_UserColumnName="RFC" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_UserColumnName="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" minOccurs="0">
+              <xs:element name="usuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_UserColumnName="usuario" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" type="xs:boolean" minOccurs="0" />
-              <xs:element name="Contraseña" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Contraseña" msprop:Generator_ColumnPropNameInTable="ContraseñaColumn" msprop:Generator_ColumnVarNameInTable="columnContraseña" msprop:Generator_UserColumnName="Contraseña" minOccurs="0">
+              <xs:element name="contrasenha" msprop:Generator_ColumnPropNameInRow="contrasenha" msprop:Generator_ColumnPropNameInTable="contrasenhaColumn" msprop:Generator_ColumnVarNameInTable="columncontrasenha" msprop:Generator_UserColumnName="contrasenha" type="xs:boolean" minOccurs="0" />
+              <xs:element name="activo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_UserColumnName="activo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="consultarCaducidadMes" msprop:Generator_RowEvHandlerName="consultarCaducidadMesRowChangeEventHandler" msprop:Generator_RowDeletedName="consultarCaducidadMesRowDeleted" msprop:Generator_RowDeletingName="consultarCaducidadMesRowDeleting" msprop:Generator_RowEvArgName="consultarCaducidadMesRowChangeEvent" msprop:Generator_TablePropName="consultarCaducidadMes" msprop:Generator_RowChangedName="consultarCaducidadMesRowChanged" msprop:Generator_RowChangingName="consultarCaducidadMesRowChanging" msprop:Generator_TableClassName="consultarCaducidadMesDataTable" msprop:Generator_RowClassName="consultarCaducidadMesRow" msprop:Generator_TableVarName="tableconsultarCaducidadMes" msprop:Generator_UserTableName="consultarCaducidadMes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigoBarras" msprop:Generator_ColumnPropNameInRow="codigoBarras" msprop:Generator_ColumnPropNameInTable="codigoBarrasColumn" msprop:Generator_ColumnVarNameInTable="columncodigoBarras" msprop:Generator_UserColumnName="codigoBarras" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaCaducidad" msprop:Generator_ColumnPropNameInRow="fechaCaducidad" msprop:Generator_ColumnPropNameInTable="fechaCaducidadColumn" msprop:Generator_ColumnVarNameInTable="columnfechaCaducidad" msprop:Generator_UserColumnName="fechaCaducidad" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fDatosPerfil" msprop:Generator_RowEvHandlerName="fDatosPerfilRowChangeEventHandler" msprop:Generator_RowDeletedName="fDatosPerfilRowDeleted" msprop:Generator_RowDeletingName="fDatosPerfilRowDeleting" msprop:Generator_RowEvArgName="fDatosPerfilRowChangeEvent" msprop:Generator_TablePropName="fDatosPerfil" msprop:Generator_RowChangedName="fDatosPerfilRowChanged" msprop:Generator_RowChangingName="fDatosPerfilRowChanging" msprop:Generator_TableClassName="fDatosPerfilDataTable" msprop:Generator_RowClassName="fDatosPerfilRow" msprop:Generator_TableVarName="tablefDatosPerfil" msprop:Generator_UserTableName="fDatosPerfil">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellidos" msprop:Generator_ColumnPropNameInRow="apellidos" msprop:Generator_ColumnPropNameInTable="apellidosColumn" msprop:Generator_ColumnVarNameInTable="columnapellidos" msprop:Generator_UserColumnName="apellidos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_UserColumnName="usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contrasenha" msprop:Generator_ColumnPropNameInRow="contrasenha" msprop:Generator_ColumnPropNameInTable="contrasenhaColumn" msprop:Generator_ColumnVarNameInTable="columncontrasenha" msprop:Generator_UserColumnName="contrasenha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1122,7 +1204,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
     </xs:unique>
     <xs:unique name="tbEmpleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tbEmpleados" />
-      <xs:field xpath="mstns:idEmpleado" />
+      <xs:field xpath="mstns:idEmp" />
     </xs:unique>
     <xs:unique name="tbPersonas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tbPersonas" />
@@ -1156,30 +1238,30 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
       <xs:selector xpath=".//mstns:tbVentas_Empleados" />
       <xs:field xpath="mstns:idVentaEple" />
     </xs:unique>
+    <xs:unique name="vEmpleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vEmpleados" />
+      <xs:field xpath="mstns:idEmp" />
+    </xs:unique>
     <xs:unique name="coincidirEmpleado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:coincidirEmpleado" />
-      <xs:field xpath="mstns:idEmpleado" />
+      <xs:field xpath="mstns:activo" />
     </xs:unique>
     <xs:unique name="consultarCaducidadMes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:consultarCaducidadMes" />
       <xs:field xpath="mstns:codigoBarras" />
     </xs:unique>
-    <xs:unique name="vEmpleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:vEmpleados" />
-      <xs:field xpath="mstns:idEmpleado" />
-    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_tbEmpleados_tbDepartamentos" msdata:parent="tbRoles" msdata:child="tbEmpleados" msdata:parentkey="noRol" msdata:childkey="rol" msprop:Generator_UserParentTable="tbRoles" msprop:Generator_UserChildTable="tbEmpleados" msprop:Generator_RelationVarName="relationFK_tbEmpleados_tbDepartamentos" msprop:Generator_ChildPropName="GettbEmpleadosRows" msprop:Generator_ParentPropName="tbRolesRow" msprop:Generator_UserRelationName="FK_tbEmpleados_tbDepartamentos" />
-      <msdata:Relationship name="FK_tbEmpleados_tbPersonas" msdata:parent="tbPersonas" msdata:child="tbEmpleados" msdata:parentkey="RFC" msdata:childkey="RFC" msprop:Generator_UserParentTable="tbPersonas" msprop:Generator_UserChildTable="tbEmpleados" msprop:Generator_RelationVarName="relationFK_tbEmpleados_tbPersonas" msprop:Generator_ChildPropName="GettbEmpleadosRows" msprop:Generator_ParentPropName="tbPersonasRow" msprop:Generator_UserRelationName="FK_tbEmpleados_tbPersonas" />
-      <msdata:Relationship name="FK_tbProductos_Proveedores_tbProductos" msdata:parent="tbProductos" msdata:child="tbProductos_Proveedores" msdata:parentkey="codigoBarras" msdata:childkey="codigpBarras" msprop:Generator_UserParentTable="tbProductos" msprop:Generator_UserChildTable="tbProductos_Proveedores" msprop:Generator_RelationVarName="relationFK_tbProductos_Proveedores_tbProductos" msprop:Generator_ChildPropName="GettbProductos_ProveedoresRows" msprop:Generator_UserRelationName="FK_tbProductos_Proveedores_tbProductos" msprop:Generator_ParentPropName="tbProductosRow" />
-      <msdata:Relationship name="FK_tbProductos_Proveedores_tbProveedores" msdata:parent="tbProveedores" msdata:child="tbProductos_Proveedores" msdata:parentkey="idProvedor" msdata:childkey="idProveedor" msprop:Generator_UserParentTable="tbProveedores" msprop:Generator_UserChildTable="tbProductos_Proveedores" msprop:Generator_RelationVarName="relationFK_tbProductos_Proveedores_tbProveedores" msprop:Generator_ChildPropName="GettbProductos_ProveedoresRows" msprop:Generator_ParentPropName="tbProveedoresRow" msprop:Generator_UserRelationName="FK_tbProductos_Proveedores_tbProveedores" />
-      <msdata:Relationship name="FK_tbProductos_Ventas_tbProductos" msdata:parent="tbVentas" msdata:child="tbProductos_Ventas" msdata:parentkey="idVenta" msdata:childkey="idVenta" msprop:Generator_UserParentTable="tbVentas" msprop:Generator_UserChildTable="tbProductos_Ventas" msprop:Generator_RelationVarName="relationFK_tbProductos_Ventas_tbProductos" msprop:Generator_ChildPropName="GettbProductos_VentasRows" msprop:Generator_ParentPropName="tbVentasRow" msprop:Generator_UserRelationName="FK_tbProductos_Ventas_tbProductos" />
-      <msdata:Relationship name="FK_tbProductos_Ventas_tbProductos1" msdata:parent="tbProductos" msdata:child="tbProductos_Ventas" msdata:parentkey="codigoBarras" msdata:childkey="codigoBarras" msprop:Generator_UserParentTable="tbProductos" msprop:Generator_UserChildTable="tbProductos_Ventas" msprop:Generator_RelationVarName="relationFK_tbProductos_Ventas_tbProductos1" msprop:Generator_ChildPropName="GettbProductos_VentasRows" msprop:Generator_UserRelationName="FK_tbProductos_Ventas_tbProductos1" msprop:Generator_ParentPropName="tbProductosRow" />
-      <msdata:Relationship name="FK_tbProveedores_tbContactos" msdata:parent="tbContactos" msdata:child="tbProveedores" msdata:parentkey="idContacto" msdata:childkey="idContacto" msprop:Generator_UserParentTable="tbContactos" msprop:Generator_UserChildTable="tbProveedores" msprop:Generator_RelationVarName="relationFK_tbProveedores_tbContactos" msprop:Generator_ChildPropName="GettbProveedoresRows" msprop:Generator_UserRelationName="FK_tbProveedores_tbContactos" msprop:Generator_ParentPropName="tbContactosRow" />
-      <msdata:Relationship name="FK_tbVentas_Empleados_tbEmpleados" msdata:parent="tbEmpleados" msdata:child="tbVentas_Empleados" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbEmpleados" msprop:Generator_UserChildTable="tbVentas_Empleados" msprop:Generator_RelationVarName="relationFK_tbVentas_Empleados_tbEmpleados" msprop:Generator_ChildPropName="GettbVentas_EmpleadosRows" msprop:Generator_UserRelationName="FK_tbVentas_Empleados_tbEmpleados" msprop:Generator_ParentPropName="tbEmpleadosRow" />
-      <msdata:Relationship name="FK_tbVentas_Empleados_tbVentas" msdata:parent="tbVentas" msdata:child="tbVentas_Empleados" msdata:parentkey="idVenta" msdata:childkey="idVenta" msprop:Generator_UserParentTable="tbVentas" msprop:Generator_UserChildTable="tbVentas_Empleados" msprop:Generator_RelationVarName="relationFK_tbVentas_Empleados_tbVentas" msprop:Generator_ChildPropName="GettbVentas_EmpleadosRows" msprop:Generator_UserRelationName="FK_tbVentas_Empleados_tbVentas" msprop:Generator_ParentPropName="tbVentasRow" />
+      <msdata:Relationship name="FK_tbEmpleados_tbDepartamentos" msdata:parent="tbRoles" msdata:child="tbEmpleados" msdata:parentkey="noRol" msdata:childkey="rol" msprop:Generator_UserParentTable="tbRoles" msprop:Generator_UserChildTable="tbEmpleados" msprop:Generator_RelationVarName="relationFK_tbEmpleados_tbDepartamentos" msprop:Generator_UserRelationName="FK_tbEmpleados_tbDepartamentos" msprop:Generator_ChildPropName="GettbEmpleadosRows" msprop:Generator_ParentPropName="tbRolesRow" />
+      <msdata:Relationship name="FK_tbEmpleados_tbPersonas1" msdata:parent="tbPersonas" msdata:child="tbEmpleados" msdata:parentkey="RFC" msdata:childkey="RFC" msprop:Generator_UserParentTable="tbPersonas" msprop:Generator_UserChildTable="tbEmpleados" msprop:Generator_RelationVarName="relationFK_tbEmpleados_tbPersonas1" msprop:Generator_UserRelationName="FK_tbEmpleados_tbPersonas1" msprop:Generator_ChildPropName="GettbEmpleadosRows" msprop:Generator_ParentPropName="tbPersonasRow" />
+      <msdata:Relationship name="FK_tbProductos_Proveedores_tbProductos" msdata:parent="tbProductos" msdata:child="tbProductos_Proveedores" msdata:parentkey="codigoBarras" msdata:childkey="codigpBarras" msprop:Generator_UserParentTable="tbProductos" msprop:Generator_UserChildTable="tbProductos_Proveedores" msprop:Generator_RelationVarName="relationFK_tbProductos_Proveedores_tbProductos" msprop:Generator_ChildPropName="GettbProductos_ProveedoresRows" msprop:Generator_ParentPropName="tbProductosRow" msprop:Generator_UserRelationName="FK_tbProductos_Proveedores_tbProductos" />
+      <msdata:Relationship name="FK_tbProductos_Proveedores_tbProveedores" msdata:parent="tbProveedores" msdata:child="tbProductos_Proveedores" msdata:parentkey="idProvedor" msdata:childkey="idProveedor" msprop:Generator_UserParentTable="tbProveedores" msprop:Generator_UserChildTable="tbProductos_Proveedores" msprop:Generator_RelationVarName="relationFK_tbProductos_Proveedores_tbProveedores" msprop:Generator_UserRelationName="FK_tbProductos_Proveedores_tbProveedores" msprop:Generator_ChildPropName="GettbProductos_ProveedoresRows" msprop:Generator_ParentPropName="tbProveedoresRow" />
+      <msdata:Relationship name="FK_tbProductos_Ventas_tbProductos" msdata:parent="tbVentas" msdata:child="tbProductos_Ventas" msdata:parentkey="idVenta" msdata:childkey="idVenta" msprop:Generator_UserParentTable="tbVentas" msprop:Generator_UserChildTable="tbProductos_Ventas" msprop:Generator_RelationVarName="relationFK_tbProductos_Ventas_tbProductos" msprop:Generator_UserRelationName="FK_tbProductos_Ventas_tbProductos" msprop:Generator_ChildPropName="GettbProductos_VentasRows" msprop:Generator_ParentPropName="tbVentasRow" />
+      <msdata:Relationship name="FK_tbProductos_Ventas_tbProductos1" msdata:parent="tbProductos" msdata:child="tbProductos_Ventas" msdata:parentkey="codigoBarras" msdata:childkey="codigoBarras" msprop:Generator_UserParentTable="tbProductos" msprop:Generator_UserChildTable="tbProductos_Ventas" msprop:Generator_RelationVarName="relationFK_tbProductos_Ventas_tbProductos1" msprop:Generator_ChildPropName="GettbProductos_VentasRows" msprop:Generator_ParentPropName="tbProductosRow" msprop:Generator_UserRelationName="FK_tbProductos_Ventas_tbProductos1" />
+      <msdata:Relationship name="FK_tbProveedores_tbContactos" msdata:parent="tbContactos" msdata:child="tbProveedores" msdata:parentkey="idContacto" msdata:childkey="idContacto" msprop:Generator_UserParentTable="tbContactos" msprop:Generator_UserChildTable="tbProveedores" msprop:Generator_RelationVarName="relationFK_tbProveedores_tbContactos" msprop:Generator_ChildPropName="GettbProveedoresRows" msprop:Generator_ParentPropName="tbContactosRow" msprop:Generator_UserRelationName="FK_tbProveedores_tbContactos" />
+      <msdata:Relationship name="FK_tbVentas_Empleados_tbEmpleados" msdata:parent="tbEmpleados" msdata:child="tbVentas_Empleados" msdata:parentkey="idEmp" msdata:childkey="idVentaEple" msprop:Generator_UserParentTable="tbEmpleados" msprop:Generator_UserChildTable="tbVentas_Empleados" msprop:Generator_RelationVarName="relationFK_tbVentas_Empleados_tbEmpleados" msprop:Generator_ChildPropName="GettbVentas_EmpleadosRows" msprop:Generator_ParentPropName="tbEmpleadosRow" msprop:Generator_UserRelationName="FK_tbVentas_Empleados_tbEmpleados" />
+      <msdata:Relationship name="FK_tbVentas_Empleados_tbVentas" msdata:parent="tbVentas" msdata:child="tbVentas_Empleados" msdata:parentkey="idVenta" msdata:childkey="idVenta" msprop:Generator_UserParentTable="tbVentas" msprop:Generator_UserChildTable="tbVentas_Empleados" msprop:Generator_RelationVarName="relationFK_tbVentas_Empleados_tbVentas" msprop:Generator_ChildPropName="GettbVentas_EmpleadosRows" msprop:Generator_ParentPropName="tbVentasRow" msprop:Generator_UserRelationName="FK_tbVentas_Empleados_tbVentas" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

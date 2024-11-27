@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uBtnEditar = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEmpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,13 +45,9 @@
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.vEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbCrumarDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbCrumarDataSet = new LoginCRUMAR.dbCrumarDataSet();
-            this.tbEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cRUMARpvDataSet = new LoginCRUMAR.CRUMARpvDataSet();
             this.uBtnNuevo = new System.Windows.Forms.Button();
             this.uBtnEliminar = new System.Windows.Forms.Button();
-            this.tbProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbEmpresaWXDataSet = new LoginCRUMAR.dbEmpresaWXDataSet();
             this.uTbNombres = new System.Windows.Forms.TextBox();
             this.uTbApellidos = new System.Windows.Forms.TextBox();
             this.uTbContra = new System.Windows.Forms.TextBox();
@@ -72,9 +68,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.uTbId = new System.Windows.Forms.TextBox();
             this.uBtnLimpiar = new System.Windows.Forms.Button();
-            this.tbEmpleadosTableAdapter = new LoginCRUMAR.dbCrumarDataSetTableAdapters.tbEmpleadosTableAdapter();
-            this.vEmpleadosTableAdapter = new LoginCRUMAR.dbCrumarDataSetTableAdapters.vEmpleadosTableAdapter();
-            this.vEmpleadosBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -82,14 +75,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.vEmpleadosTableAdapter = new LoginCRUMAR.CRUMARpvDataSetTableAdapters.vEmpleadosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEmpleadosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCrumarDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCrumarDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbEmpleadosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbProductosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vEmpleadosBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRUMARpvDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -127,18 +116,18 @@
             this.dgvEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmpleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmpleados.ColumnHeadersHeight = 30;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idEmpleadoDataGridViewTextBoxColumn,
+            this.idEmpDataGridViewTextBoxColumn,
             this.rFCDataGridViewTextBoxColumn,
             this.nombresDataGridViewTextBoxColumn,
             this.apellidosDataGridViewTextBoxColumn,
@@ -148,14 +137,14 @@
             this.contraseñaDataGridViewTextBoxColumn,
             this.activoDataGridViewCheckBoxColumn});
             this.dgvEmpleados.DataSource = this.vEmpleadosBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvEmpleados.EnableHeadersVisualStyles = false;
             this.dgvEmpleados.GridColor = System.Drawing.Color.DimGray;
@@ -163,33 +152,33 @@
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmpleados.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpleados.Size = new System.Drawing.Size(580, 315);
             this.dgvEmpleados.TabIndex = 25;
             this.dgvEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             this.dgvEmpleados.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
-            // idEmpleadoDataGridViewTextBoxColumn
+            // idEmpDataGridViewTextBoxColumn
             // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            this.idEmpleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp";
+            this.idEmpDataGridViewTextBoxColumn.HeaderText = "idEmp";
+            this.idEmpDataGridViewTextBoxColumn.Name = "idEmpDataGridViewTextBoxColumn";
+            this.idEmpDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rFCDataGridViewTextBoxColumn
             // 
@@ -250,22 +239,12 @@
             // vEmpleadosBindingSource
             // 
             this.vEmpleadosBindingSource.DataMember = "vEmpleados";
-            this.vEmpleadosBindingSource.DataSource = this.dbCrumarDataSetBindingSource;
+            this.vEmpleadosBindingSource.DataSource = this.cRUMARpvDataSet;
             // 
-            // dbCrumarDataSetBindingSource
+            // cRUMARpvDataSet
             // 
-            this.dbCrumarDataSetBindingSource.DataSource = this.dbCrumarDataSet;
-            this.dbCrumarDataSetBindingSource.Position = 0;
-            // 
-            // dbCrumarDataSet
-            // 
-            this.dbCrumarDataSet.DataSetName = "dbCrumarDataSet";
-            this.dbCrumarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbEmpleadosBindingSource
-            // 
-            this.tbEmpleadosBindingSource.DataMember = "tbEmpleados";
-            this.tbEmpleadosBindingSource.DataSource = this.dbCrumarDataSetBindingSource;
+            this.cRUMARpvDataSet.DataSetName = "CRUMARpvDataSet";
+            this.cRUMARpvDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uBtnNuevo
             // 
@@ -299,16 +278,6 @@
             this.uBtnEliminar.Text = "Eliminar";
             this.uBtnEliminar.UseVisualStyleBackColor = false;
             this.uBtnEliminar.Click += new System.EventHandler(this.uBtnEliminar_Click);
-            // 
-            // tbProductosBindingSource
-            // 
-            this.tbProductosBindingSource.DataMember = "tbProductos";
-            this.tbProductosBindingSource.DataSource = this.dbEmpresaWXDataSet;
-            // 
-            // dbEmpresaWXDataSet
-            // 
-            this.dbEmpresaWXDataSet.DataSetName = "dbEmpresaWXDataSet";
-            this.dbEmpresaWXDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uTbNombres
             // 
@@ -553,19 +522,6 @@
             this.uBtnLimpiar.UseVisualStyleBackColor = false;
             this.uBtnLimpiar.Click += new System.EventHandler(this.uBtnLimpiar_Click);
             // 
-            // tbEmpleadosTableAdapter
-            // 
-            this.tbEmpleadosTableAdapter.ClearBeforeFill = true;
-            // 
-            // vEmpleadosTableAdapter
-            // 
-            this.vEmpleadosTableAdapter.ClearBeforeFill = true;
-            // 
-            // vEmpleadosBindingSource4
-            // 
-            this.vEmpleadosBindingSource4.DataMember = "vEmpleados";
-            this.vEmpleadosBindingSource4.DataSource = this.dbCrumarDataSetBindingSource;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
@@ -633,6 +589,10 @@
             this.pictureBox7.TabIndex = 55;
             this.pictureBox7.TabStop = false;
             // 
+            // vEmpleadosTableAdapter
+            // 
+            this.vEmpleadosTableAdapter.ClearBeforeFill = true;
+            // 
             // GestionarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,12 +636,7 @@
             this.Load += new System.EventHandler(this.gestionInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEmpleadosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCrumarDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCrumarDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbEmpleadosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbProductosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vEmpleadosBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cRUMARpvDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -697,15 +652,8 @@
         #endregion
         private System.Windows.Forms.Button uBtnEditar;
         private System.Windows.Forms.DataGridView dgvEmpleados;
-        private dbEmpresaWXDataSet dbEmpresaWXDataSet;
-        private System.Windows.Forms.BindingSource tbProductosBindingSource;
         private System.Windows.Forms.Button uBtnNuevo;
         private System.Windows.Forms.Button uBtnEliminar;
-        private System.Windows.Forms.BindingSource dbCrumarDataSetBindingSource;
-        private dbCrumarDataSet dbCrumarDataSet;
-        private System.Windows.Forms.BindingSource tbEmpleadosBindingSource;
-        private dbCrumarDataSetTableAdapters.tbEmpleadosTableAdapter tbEmpleadosTableAdapter;
-        private dbCrumarDataSetTableAdapters.vEmpleadosTableAdapter vEmpleadosTableAdapter;
         private System.Windows.Forms.TextBox uTbNombres;
         private System.Windows.Forms.TextBox uTbApellidos;
         private System.Windows.Forms.TextBox uTbContra;
@@ -726,9 +674,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox uTbId;
         private System.Windows.Forms.Button uBtnLimpiar;
-        private System.Windows.Forms.BindingSource vEmpleadosBindingSource4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private CRUMARpvDataSet cRUMARpvDataSet;
         private System.Windows.Forms.BindingSource vEmpleadosBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
+        private CRUMARpvDataSetTableAdapters.vEmpleadosTableAdapter vEmpleadosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rFCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
@@ -737,12 +693,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contraseñaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

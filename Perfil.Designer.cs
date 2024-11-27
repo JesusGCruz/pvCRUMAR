@@ -58,13 +58,13 @@
             this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FaceAngry;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SquarePen;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 70;
-            this.iconButton1.Location = new System.Drawing.Point(12, 12);
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 40;
+            this.iconButton1.Location = new System.Drawing.Point(144, 78);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(109, 93);
+            this.iconButton1.Size = new System.Drawing.Size(33, 30);
             this.iconButton1.TabIndex = 3;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -192,7 +192,7 @@
             this.pLblRol.AutoSize = true;
             this.pLblRol.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pLblRol.ForeColor = System.Drawing.Color.White;
-            this.pLblRol.Location = new System.Drawing.Point(116, 59);
+            this.pLblRol.Location = new System.Drawing.Point(379, 45);
             this.pLblRol.Name = "pLblRol";
             this.pLblRol.Size = new System.Drawing.Size(36, 28);
             this.pLblRol.TabIndex = 52;
@@ -221,7 +221,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(116, 31);
+            this.label1.Location = new System.Drawing.Point(376, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 28);
             this.label1.TabIndex = 54;
@@ -314,21 +314,20 @@
             // fPanelContenedor
             // 
             this.fPanelContenedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fPanelContenedor.Location = new System.Drawing.Point(0, 1);
+            this.fPanelContenedor.Location = new System.Drawing.Point(0, 344);
             this.fPanelContenedor.Name = "fPanelContenedor";
-            this.fPanelContenedor.Size = new System.Drawing.Size(580, 609);
+            this.fPanelContenedor.Size = new System.Drawing.Size(116, 266);
             this.fPanelContenedor.TabIndex = 61;
             this.fPanelContenedor.Visible = false;
             // 
             // pPbUsuario
             // 
-            this.pPbUsuario.Location = new System.Drawing.Point(428, 12);
+            this.pPbUsuario.Location = new System.Drawing.Point(12, 9);
             this.pPbUsuario.Name = "pPbUsuario";
             this.pPbUsuario.Size = new System.Drawing.Size(130, 93);
             this.pPbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pPbUsuario.TabIndex = 0;
             this.pPbUsuario.TabStop = false;
-            this.pPbUsuario.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pPbUsuario_MouseUp);
             // 
             // Perfil
             // 

@@ -15,6 +15,7 @@ namespace LoginCRUMAR
     {
         static private string usuario;
         ConexionUsuarios coBD = new ConexionUsuarios();
+        string imagePath = @"C:\Users\jgarr\source\repos\LoginCRUMAR\EmpleadosFotos\";
         public Perfil(string uss)
         {
             InitializeComponent();
@@ -24,7 +25,19 @@ namespace LoginCRUMAR
             pTbApellidos.Text = coBD.getDatosPerfil(usuario)[1].ToString();
             pTbUsuario.Text = coBD.getDatosPerfil(usuario)[2].ToString();
             pTbPassActual.Text = coBD.getDatosPerfil(usuario)[3].ToString();
-            pPbUsuario.Image = Image.FromFile(@"C:\Users\jgarr\source\repos\LoginCRUMAR\EmpleadosFotos\" + usuario + ".jpeg");
+            cargarImg();
+        }
+
+        private void cargarImg()
+        {
+            try
+            {
+                pPbUsuario.Image = Image.FromFile(imagePath + usuario + ".jpeg");
+            }
+            catch (Exception)
+            {
+                pPbUsuario.Image = null;
+            }
         }
 
 
@@ -77,9 +90,15 @@ namespace LoginCRUMAR
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            fPanelContenedor.Visible = true;
             pPbUsuario.Image = null;
-            abrirFormHija(new CapturarFoto(usuario, fPanelContenedor, pPbUsuario));
+            CapturarFoto editInven = new CapturarFoto(usuario,pPbUsuario);
+            AddOwnedForm(editInven);
+            editInven.TopLevel = false;
+            editInven.Dock = DockStyle.Fill;
+            this.Controls.Add(editInven);
+            this.Tag = editInven;
+            editInven.BringToFront();
+            editInven.Show();
         }
 
         private void abrirFormHija(object formHija)
@@ -94,11 +113,6 @@ namespace LoginCRUMAR
             this.fPanelContenedor.Controls.Add(fh);
             this.fPanelContenedor.Tag = fh;
             fh.Show();
-        }
-
-        private void pPbUsuario_MouseUp(object sender, MouseEventArgs e)
-        {
-            
         }
     }
 }

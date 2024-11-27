@@ -69,23 +69,10 @@
       <DependentUpon>CapturarFoto.cs</DependentUpon>
     </Compile>
     <Compile Include="ConexionUsuarios.cs" />
-    <Compile Include="dbCrumarDataSet.cs">
-      <DependentUpon>dbCrumarDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dbCrumarDataSet.Designer.cs">
+    <Compile Include="CRUMARpvDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dbCrumarDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dbEmpresaWXDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbEmpresaWXDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dbEmpresaWXDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
+      <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="EditarUsuarios.cs">
       <SubType>Form</SubType>
@@ -98,12 +85,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionarUsuarios.cs">
       <SubType>Form</SubType>
@@ -146,9 +127,6 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GestionarUsuarios.resx">
       <DependentUpon>GestionarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,38 +152,16 @@
     <EmbeddedResource Include="Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="dbCrumarDataSet.xsc">
-      <DependentUpon>dbCrumarDataSet.xsd</DependentUpon>
+    <None Include="CRUMARpvDataSet.xsc">
+      <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
     </None>
-    <None Include="dbCrumarDataSet.xsd">
+    <None Include="CRUMARpvDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbCrumarDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>CRUMARpvDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dbCrumarDataSet.xss">
-      <DependentUpon>dbCrumarDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbEmpresaWXDataSet.xsc">
-      <DependentUpon>dbEmpresaWXDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbEmpresaWXDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbEmpresaWXDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbEmpresaWXDataSet.xss">
-      <DependentUpon>dbEmpresaWXDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbEmpresaWXDataSet1.xsc">
-      <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="dbEmpresaWXDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbEmpresaWXDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbEmpresaWXDataSet1.xss">
-      <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
+    <None Include="CRUMARpvDataSet.xss">
+      <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
