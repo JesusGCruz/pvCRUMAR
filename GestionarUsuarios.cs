@@ -26,7 +26,7 @@ namespace LoginCRUMAR
 
         private void limpiarEmpleados()
         {
-            vEmpleadosTableAdapter.Fill(dbCrumarDataSet.vEmpleados);
+            this.vEmpleadosTableAdapter.Fill(this.cRUMARpvDataSet.vEmpleados);
             uTbId.Clear();
             uTbRFC.Clear();
             uTbNombres.Clear();
@@ -42,16 +42,8 @@ namespace LoginCRUMAR
         
         private void gestionInventario_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dbCrumarDataSet.vEmpleados' Puede moverla o quitarla según sea necesario.
-            this.vEmpleadosTableAdapter.Fill(this.dbCrumarDataSet.vEmpleados);
-            // TODO: esta línea de código carga datos en la tabla 'dbCrumarDataSet.vEmpleados' Puede moverla o quitarla según sea necesario.
-            this.vEmpleadosTableAdapter.Fill(this.dbCrumarDataSet.vEmpleados);
-            // TODO: esta línea de código carga datos en la tabla 'dbCrumarDataSet.vEmpleados' Puede moverla o quitarla según sea necesario.
-            this.vEmpleadosTableAdapter.Fill(this.dbCrumarDataSet.vEmpleados);
-            // TODO: esta línea de código carga datos en la tabla 'dbCrumarDataSet.tbEmpleados' Puede moverla o quitarla según sea necesario.
-            this.tbEmpleadosTableAdapter.Fill(this.dbCrumarDataSet.tbEmpleados);
-            // TODO: esta línea de código carga datos en la tabla 'dbEmpresaWXDataSet.tbProductos' Puede moverla o quitarla según sea necesario.
-            //this.tbProductosTableAdapter.Fill(this.dbEmpresaWXDataSet.tbProductos);
+            // TODO: esta línea de código carga datos en la tabla 'cRUMARpvDataSet.vEmpleados' Puede moverla o quitarla según sea necesario.
+            this.vEmpleadosTableAdapter.Fill(this.cRUMARpvDataSet.vEmpleados);
 
         }
 
@@ -158,7 +150,7 @@ namespace LoginCRUMAR
                         uTbRFC.Text.Trim(),
                         uTbNombres.Text.Trim(),
                         uTbApellidos.Text.Trim(),
-                        Convert.ToInt32(uTbId.Text.Trim()),
+                        //Convert.ToInt32(uTbId.Text.Trim()),
                         uTbHorario.Text.Trim(),
                         cbRoles.Text.Trim(),
                         uTbUsuario.Text.Trim(),

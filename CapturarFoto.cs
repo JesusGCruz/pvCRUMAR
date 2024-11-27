@@ -10,13 +10,14 @@ using System.Threading.Tasks;
 using AForge.Video.DirectShow;
 using AForge.Video;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.IO;
 
 namespace LoginCRUMAR
 {
     public partial class CapturarFoto : Form
     {
 
-        private bool hayDispositivos;
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice miWebCAm;
         //pictureBox2.Image = Image.FromFile(@"C:\Users\jgarr\source\repos\WebCam\WebCamSave\usuario.jpeg");
@@ -33,6 +34,15 @@ namespace LoginCRUMAR
             misDispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             ActivarCamara();
             this.panelCont = panelCont;
+            this.pic = pb;
+        }
+
+        public CapturarFoto(string usuario, PictureBox pb)
+        {
+            InitializeComponent();
+            this.usuario = usuario;
+            misDispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            ActivarCamara();
             this.pic = pb;
         }
 
@@ -79,9 +89,26 @@ namespace LoginCRUMAR
         {
             if (img != null)
             {
-                img.Save(path + usuario +".jpeg", ImageFormat.Jpeg);
+                try
+                {
+                    if (File.Exists(path + usuario + ".jpeg"))
+                    { // Elimina el archivo File.Delete(imagePath);
+                        //File.Delete(path + usuario + ".jpeg");
+                        img.Save(path + usuario + ".jpeg", ImageFormat.Jpeg);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\n" +ex.GetType());
+                }
                 pic.Image = img;
-                panelCont.Hide();
+                if(panelCont != null)
+                    panelCont.Hide();
+                else
+                {
+                    Perfil per = Owner as Perfil;
+                    this.Close();
+                }
             }    
         }
 

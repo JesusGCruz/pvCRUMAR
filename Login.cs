@@ -9,7 +9,6 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace LoginCRUMAR
 {
@@ -80,7 +79,7 @@ namespace LoginCRUMAR
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dbEmpresaWXDataSet1.tbUsuarios' Puede moverla o quitarla según sea necesario.
-            this.tbUsuariosTableAdapter.Fill(this.dbEmpresaWXDataSet1.tbUsuarios);
+            //this.tbUsuariosTableAdapter.Fill(this.dbEmpresaWXDataSet1.tbUsuarios);
 
         }
 
