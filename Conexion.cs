@@ -268,7 +268,7 @@ namespace LoginCRUMAR
             }
         }
         #endregion
-        public bool agregarproveedor(int idprovee, string nombre, string numtelefono, int ladapais, string correo, bool activo, DataGridView dgv)
+        public bool agregarproveedor( string nombre, string numtelefono, int ladapais, string correo, bool activo, DataGridView dgv)
         {
             try
             {
@@ -279,7 +279,7 @@ namespace LoginCRUMAR
 
                 // Agregar parámetros al comando
                 comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@idproveedor", idprovee);
+               
                 comando.Parameters.AddWithValue("@nombre", nombre);
                 comando.Parameters.AddWithValue("@numTelefono", numtelefono);
                 comando.Parameters.AddWithValue("@ladaPais", ladapais);
@@ -288,7 +288,7 @@ namespace LoginCRUMAR
 
                 // Ejecutar el comando
                 int filasAfectadas = comando.ExecuteNonQuery();
-                actualizarGrid(dgv);
+               
                 return filasAfectadas > 0;
             }
             catch (Exception ex)
@@ -332,6 +332,37 @@ namespace LoginCRUMAR
 
             }
         }
+        public DataTable obtenerProveedores2(string idpro)
+        {
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                try
+                {
+                    DataTable dt = new DataTable();
+                    using (SqlCommand cmd = new SqlCommand("sp_ObtenerProveedoresContactos3", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Agregar parámetro al procedimiento almacenado
+                        cmd.Parameters.AddWithValue("@idpro", idpro);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            conn.Open();
+                            adapter.Fill(dt);
+                        }
+                    }
+
+                    return dt; // Retorna el DataTable con los datos
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al obtener proveedores: {ex.Message}");
+                    return null;
+                }
+            }
+        }
+
 
 
         public bool actualizarProveedor(int idprovee, string nombre, string numtelefono, string ladapais, string correo, bool activo, DataGridView dgv)
@@ -352,7 +383,7 @@ namespace LoginCRUMAR
                 comando.Parameters.AddWithValue("@activo", activo);
 
                 int filasAfectadas = comando.ExecuteNonQuery();
-                actualizarGrid(dgv);
+                
                 return filasAfectadas > 0;
             }
             catch (Exception ex)
@@ -381,7 +412,7 @@ namespace LoginCRUMAR
 
                 if (filasAfectadas > 0)
                 {
-                    actualizarGrid(dgv);
+                  
                     return true;
                 }
                 return false;
@@ -399,15 +430,8 @@ namespace LoginCRUMAR
 
 
         // Método privado para actualizar el grid
-        private void actualizarGrid(DataGridView dgv)
-        {
-            DataTable dt = obtenerProveedores();
-            if (dt != null)
-            {
-                dgv.DataSource = dt;
-            }
-        }
-
+        // Método que actualiza el DataGridView
+      
 
     }
 

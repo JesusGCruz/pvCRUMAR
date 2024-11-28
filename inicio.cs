@@ -16,5 +16,10 @@ namespace LoginCRUMAR
         {
             InitializeComponent();
         }
+
+        private void inicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

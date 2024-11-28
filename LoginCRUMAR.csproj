@@ -78,16 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="dbEmpresaWXDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbEmpresaWXDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dbEmpresaWXDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="db_CRUMARDataSet.cs">
       <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
     </Compile>
@@ -96,17 +86,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EditarInventario.cs">
+    <Compile Include="editarfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarInventario.Designer.cs">
-      <DependentUpon>EditarInventario.cs</DependentUpon>
+    <Compile Include="editarfrm.Designer.cs">
+      <DependentUpon>editarfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="gestionVentas.cs">
+    <Compile Include="eliminarfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="gestionVentas.Designer.cs">
-      <DependentUpon>gestionVentas.cs</DependentUpon>
+    <Compile Include="eliminarfrm.Designer.cs">
+      <DependentUpon>eliminarfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guardar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guardar.Designer.cs">
+      <DependentUpon>guardar.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -119,30 +115,6 @@
     </Compile>
     <Compile Include="provedores.Designer.cs">
       <DependentUpon>provedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="prueba.Designer.cs">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gestionInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gestionInventario.Designer.cs">
-      <DependentUpon>gestionInventario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gestionEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gestionEmpleados.Designer.cs">
-      <DependentUpon>gestionEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
@@ -159,29 +131,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utilidades\OpcionCombo.cs" />
-    <EmbeddedResource Include="EditarInventario.resx">
-      <DependentUpon>EditarInventario.cs</DependentUpon>
+    <EmbeddedResource Include="editarfrm.resx">
+      <DependentUpon>editarfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gestionVentas.resx">
-      <DependentUpon>gestionVentas.cs</DependentUpon>
+    <EmbeddedResource Include="eliminarfrm.resx">
+      <DependentUpon>eliminarfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guardar.resx">
+      <DependentUpon>guardar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="provedores.resx">
       <DependentUpon>provedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="prueba.resx">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gestionInventario.resx">
-      <DependentUpon>gestionInventario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gestionEmpleados.resx">
-      <DependentUpon>gestionEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -199,28 +162,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="dbEmpresaWXDataSet.xsc">
-      <DependentUpon>dbEmpresaWXDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbEmpresaWXDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbEmpresaWXDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbEmpresaWXDataSet.xss">
-      <DependentUpon>dbEmpresaWXDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbEmpresaWXDataSet1.xsc">
-      <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="dbEmpresaWXDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbEmpresaWXDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbEmpresaWXDataSet1.xss">
-      <DependentUpon>dbEmpresaWXDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="db_CRUMARDataSet.xsc">
       <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
     </None>

@@ -15,6 +15,8 @@ using iTextSharp.text.pdf;
 using iTextSharp.text;
 using LoginCRUMAR.utilidades;
 using iTextSharp.text.pdf.draw;
+using iTextSharp.text.pdf.codec.wmf;
+using System.Diagnostics;
 
 
 
@@ -27,6 +29,7 @@ namespace LoginCRUMAR
         public provedores()
         {
             InitializeComponent();
+            CargarProveedores();
         }
 
 
@@ -78,136 +81,40 @@ namespace LoginCRUMAR
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtidpro.Text))
-            {
-                if (MessageBox.Show("¿Está seguro de eliminar este proveedor?", "Confirmar eliminación",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    int idProveedor = Convert.ToInt32(txtidpro.Text);
-                    bool resultado = coBD.eliminarProveedor(idProveedor, dgvdata);
-
-                    if (resultado)
-                    {
-                        MessageBox.Show("Proveedor eliminado exitosamente.", "Éxito",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        limpiar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al eliminar el proveedor.", "Error",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione un proveedor para eliminar.", "Advertencia",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+           
         }
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            if (ValidarDatos())
-            {
-                int idProveedor = Convert.ToInt32(txtidpro.Text);
-                string nombre = txtnombrepro.Text;
-                string numTelefono = txtnnumpro.Text;
-                string ladaPais = txtladapro.Text;
-                string correo = txtcorreopro.Text;
-                bool activo = rbactivo.Checked;
-
-                bool resultado = coBD.actualizarProveedor(idProveedor, nombre, numTelefono,
-                                                                     ladaPais, correo, activo, dgvdata);
-
-                if (resultado)
-                {
-                    MessageBox.Show("Proveedor actualizado exitosamente.", "Éxito",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiar();
-                }
-                else
-                {
-                    MessageBox.Show("Error al actualizar el proveedor.", "Error",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvdata.Columns[e.ColumnIndex].Name == "selec")
-            {
-                int indi = e.RowIndex;
-                if (indi >= 0)
-                {
-                    txtidpro.Text = dgvdata.Rows[indi].Cells["idPro"].Value.ToString();
-                    txtidpro.ReadOnly = true; // Deshabilitar la edición
-                    txtnombrepro.Text = dgvdata.Rows[indi].Cells["nomb"].Value.ToString();
-                    txtnnumpro.Text = dgvdata.Rows[indi].Cells["numTel"].Value.ToString();
-                    txtladapro.Text = dgvdata.Rows[indi].Cells["ladaP"].Value.ToString();
-                    txtcorreopro.Text = dgvdata.Rows[indi].Cells["correoElec"].Value.ToString();
-                    // Obtener el valor de "activ" como bool
-                    bool isActive = Convert.ToBoolean(dgvdata.Rows[indi].Cells["activ"].Value);
+            //if (dgvdata.Columns[e.ColumnIndex].Name == "selec")
+            //{
+            //    int indi = e.RowIndex;
+            //    if (indi >= 0)
+            //    {
+            //        txtidpro.Text = dgvdata.Rows[indi].Cells["idPro"].Value.ToString();
+            //        txtidpro.ReadOnly = true; // Deshabilitar la edición
+            //        txtnombrepro.Text = dgvdata.Rows[indi].Cells["nomb"].Value.ToString();
+            //        txtnnumpro.Text = dgvdata.Rows[indi].Cells["numTel"].Value.ToString();
+            //        txtladapro.Text = dgvdata.Rows[indi].Cells["ladaP"].Value.ToString();
+            //        txtcorreopro.Text = dgvdata.Rows[indi].Cells["correoElec"].Value.ToString();
+            //        // Obtener el valor de "activ" como bool
+            //        bool isActive = Convert.ToBoolean(dgvdata.Rows[indi].Cells["activ"].Value);
 
-                    // Configurar los RadioButton
-                    rbactivo.Checked = isActive;      // Si está activo, marcar rbactivo
-                    rbnoact.Checked = !isActive;      // Si no está activo, marcar rbnoac
-
-
-                }
-            }
+            //        // Configurar los RadioButton
+            //        rbactivo.Checked = isActive;      // Si está activo, marcar rbactivo
+            //        rbnoact.Checked = !isActive;      // Si no está activo, marcar rbnoac
 
 
+            //    }
+            //}
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnguardar_Click(object sender, EventArgs e)
-        {
-            if (ValidarDatos())
-            {
-                // Obtener los datos del formulario
-                int idProveedor = Convert.ToInt32(txtidpro.Text);
-                string nombre = txtnombrepro.Text;
-                string numTelefono = txtnnumpro.Text;
-                int ladaPais =int.Parse (txtladapro.Text);
-                string correo = txtcorreopro.Text;
-                bool activo = rbactivo.Checked; // Un CheckBox para marcar si está activo
-                bool noactivo = rbnoact.Checked;
-                // Llamar al método para insertar el proveedor
-                bool resultado = coBD.agregarproveedor(idProveedor, nombre, numTelefono, ladaPais, correo, activo, dgvdata);
-
-                // Mostrar el resultado al usuario
-                if (resultado)
-                {
-                    MessageBox.Show("Proveedor guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiar();
-                }
-                else
-                {
-                    MessageBox.Show("Error al guardar el proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-
-
-        private void limpiar()
-        {
-
-            txtidpro.Text = "";
-            txtnnumpro.Text = "";
-            txtcorreopro.Text = "";
-            txtnombrepro.Text = "";
-            txtladapro.Text = "";
-            rbactivo.Checked = false;
-            txtidpro.ReadOnly = false; // Deshabilitar la edición
-        }
 
         private void dgvdata_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
@@ -234,6 +141,11 @@ namespace LoginCRUMAR
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            
+        }
+        
+public void CargarProveedores()
+        {
             try
             {
                 DataTable dt = coBD.obtenerProveedores();
@@ -244,27 +156,16 @@ namespace LoginCRUMAR
                 else
                 {
                     MessageBox.Show("No se pudieron obtener los datos.", "Advertencia",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al actualizar la tabla: {ex.Message}", "Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private bool ValidarDatos()
-        {
-            if (string.IsNullOrEmpty(txtidpro.Text) ||
-                string.IsNullOrEmpty(txtnombrepro.Text) ||
-                string.IsNullOrEmpty(txtnnumpro.Text))
-            {
-                MessageBox.Show("Por favor, complete los campos obligatorios.", "Advertencia",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;
-        }
+
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
@@ -322,23 +223,9 @@ namespace LoginCRUMAR
 
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
-            prueba prueba = new prueba();
-            prueba.Visible = true;
+           
         }
 
-
-
-
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Limpia_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
 
         private void iconButton1_Click_2(object sender, EventArgs e)
         {
@@ -379,7 +266,7 @@ namespace LoginCRUMAR
                     Paragraph infoEmpresa = new Paragraph();
                     infoEmpresa.Alignment = Element.ALIGN_RIGHT;
                     infoEmpresa.Add(new Chunk("TIENDA DE ABARROTES CRUMAR\n", fontTitle));
-                    infoEmpresa.Add(new Chunk("La puta casa del chucho\n", fontNormal));
+                    infoEmpresa.Add(new Chunk("Santa Dora,Juan Escutia\n", fontNormal));
                     infoEmpresa.Add(new Chunk("Teléfono: (776) 120-9157\n", fontNormal));
                     infoEmpresa.Add(new Chunk("Email: contacto@tuempresa.com\n", fontNormal));
                     infoEmpresa.SpacingAfter = 20f;
@@ -464,25 +351,16 @@ namespace LoginCRUMAR
             }
         }
 
-        private void txtnnumpro_TextChanged(object sender, EventArgs e)
+        private void btlim_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void txtcorreopro_TextChanged(object sender, EventArgs e)
+        private void cboBusqueda_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtidpro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

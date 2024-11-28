@@ -32,8 +32,7 @@
             this.txtUss = new System.Windows.Forms.TextBox();
             this.btnAcc = new System.Windows.Forms.Button();
             this.tbUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbEmpresaWXDataSet1 = new LoginCRUMAR.dbEmpresaWXDataSet1();
-            this.tbUsuariosTableAdapter = new LoginCRUMAR.dbEmpresaWXDataSet1TableAdapters.tbUsuariosTableAdapter();
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,8 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.tbUsuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -81,19 +78,11 @@
             this.btnAcc.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbUsuariosBindingSource
-            // 
-            this.tbUsuariosBindingSource.DataMember = "tbUsuarios";
-            this.tbUsuariosBindingSource.DataSource = this.dbEmpresaWXDataSet1;
-            // 
-            // dbEmpresaWXDataSet1
-            // 
-            this.dbEmpresaWXDataSet1.DataSetName = "dbEmpresaWXDataSet1";
-            this.dbEmpresaWXDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // tbUsuariosTableAdapter
             // 
-            this.tbUsuariosTableAdapter.ClearBeforeFill = true;
-            // 
+            
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -200,8 +189,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.tbUsuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSet1)).EndInit();
+
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -212,9 +200,8 @@
         #endregion
         private System.Windows.Forms.TextBox txtUss;
         private System.Windows.Forms.Button btnAcc;
-        private dbEmpresaWXDataSet1 dbEmpresaWXDataSet1;
+       
         private System.Windows.Forms.BindingSource tbUsuariosBindingSource;
-        private dbEmpresaWXDataSet1TableAdapters.tbUsuariosTableAdapter tbUsuariosTableAdapter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
