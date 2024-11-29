@@ -20,13 +20,14 @@ namespace LoginCRUMAR
         {
             InitializeComponent();
             coBD = new ConexionUsuarios();
-            cbRoles.DataSource = coBD.getRoles();
+            //cbRoles.DataSource = coBD.getRoles();
             
         }
 
-        private void limpiarEmpleados()
+        public void limpiarEmpleados()
         {
             this.vEmpleadosTableAdapter.Fill(this.cRUMARpvDataSet.vEmpleados);
+            /*
             uTbId.Clear();
             uTbRFC.Clear();
             uTbNombres.Clear();
@@ -37,6 +38,37 @@ namespace LoginCRUMAR
             uRbSi.Checked = false;
             uRbNo.Checked = false;
             cbRoles.SelectedIndex = 1;
+             */
+        }
+
+        private void abrirEditor()
+        {
+            EditarUsuarios editUss = new EditarUsuarios();
+
+            editUss.uTbRFC.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
+            editUss.uTbNombres.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
+            editUss.uTbApellidos.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
+            editUss.uTbHorario.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
+            editUss.cbRoles.SelectedItem = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
+            editUss.uTbUsuario.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
+            editUss.uTbContra.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
+            bool activo = bool.Parse(dgvEmpleados.CurrentRow.Cells[8].Value.ToString());
+            if (activo)
+            {
+                editUss.uRbSi.Checked = true;
+            }
+            else
+            {
+                editUss.uRbNo.Checked = true;
+            }
+
+            AddOwnedForm(editUss);
+            editUss.TopLevel = false;
+            editUss.Dock = DockStyle.Fill;
+            this.Controls.Add(editUss);
+            this.Tag = editUss;
+            editUss.BringToFront();
+            editUss.Show();
         }
 
         
@@ -49,17 +81,20 @@ namespace LoginCRUMAR
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            EditarUsuarios editInven = Owner as EditarUsuarios;
+            abrirEditor();
+
+            //EditarUsuarios editInven = Owner as EditarUsuarios;
             //editInven.tbIdFab.Text =      dgvProductos.CurrentRow.Cells[0].Value.ToString();
             //editInven.tbIdProducto.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
             //editInven.tbDescrip.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
             //editInven.tbPrecio.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
             //editInven.tbExis.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
-            this.Close();
+            //this.Close();
         }
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             uTbId.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();
             uTbRFC.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
             uTbNombres.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
@@ -77,10 +112,12 @@ namespace LoginCRUMAR
             {
                 uRbNo.Checked = true;
             }
+             */
         }
 
         private void uBtnEditar_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 if (coBD.Existente(uTbRFC.Text.Trim()))
@@ -127,11 +164,13 @@ namespace LoginCRUMAR
             {
                 MessageBox.Show("Error de SQL: " + ex.Message);
             }
+             */
                 
         }
 
         private void uBtnNuevo_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 if (MessageBox.Show("¿Desea registrar un nuevo empleado?", "Confirmar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -172,15 +211,17 @@ namespace LoginCRUMAR
             {
                 MessageBox.Show("Error de SQL: " + ex.Message);
             }
+             */
         }
 
         private void uBtnLimpiar_Click(object sender, EventArgs e)
         {
-            limpiarEmpleados();
+            abrirEditor();
         }
 
         private void uBtnEliminar_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 if (coBD.Existente(uTbRFC.Text.Trim()))
@@ -209,6 +250,12 @@ namespace LoginCRUMAR
             {
                 MessageBox.Show("Error de SQL: " + ex.Message);
             }
+             */
+        }
+
+        private void GestionarUsuarios_VisibleChanged(object sender, EventArgs e)
+        {
+            limpiarEmpleados();
         }
     }
 }

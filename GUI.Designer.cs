@@ -53,6 +53,8 @@
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -130,6 +132,8 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.menuVertical.Controls.Add(this.panel4);
+            this.menuVertical.Controls.Add(this.button1);
             this.menuVertical.Controls.Add(this.panelPerfil);
             this.menuVertical.Controls.Add(this.btnUser);
             this.menuVertical.Controls.Add(this.subMenuEliminar);
@@ -237,7 +241,7 @@
             this.subMenuEliminar.Controls.Add(this.btnDeleteData);
             this.subMenuEliminar.Controls.Add(this.panel5);
             this.subMenuEliminar.Controls.Add(this.btnDeleteUs);
-            this.subMenuEliminar.Location = new System.Drawing.Point(57, 232);
+            this.subMenuEliminar.Location = new System.Drawing.Point(57, 373);
             this.subMenuEliminar.Name = "subMenuEliminar";
             this.subMenuEliminar.Size = new System.Drawing.Size(163, 64);
             this.subMenuEliminar.TabIndex = 7;
@@ -298,7 +302,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(0, 194);
+            this.panel3.Location = new System.Drawing.Point(0, 237);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 6;
@@ -313,11 +317,11 @@
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(3, 194);
+            this.btnDelete.Location = new System.Drawing.Point(3, 237);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(217, 32);
             this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Ventas";
+            this.btnDelete.Text = "Actualizar Empleado";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -344,7 +348,7 @@
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(217, 32);
             this.btnInventario.TabIndex = 3;
-            this.btnInventario.Text = "Inventario";
+            this.btnInventario.Text = "Nuevo Empleado";
             this.btnInventario.UseVisualStyleBackColor = false;
             this.btnInventario.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -370,7 +374,7 @@
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(217, 32);
             this.btnInsert.TabIndex = 1;
-            this.btnInsert.Text = "Empleados";
+            this.btnInsert.Text = "Consultar Empleados";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -394,6 +398,32 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(580, 610);
             this.panelContenedor.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel4.Location = new System.Drawing.Point(-1, 197);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 32);
+            this.panel4.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(2, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(217, 32);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Eliminar Empleado";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // GUI
             // 
@@ -448,5 +478,7 @@
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
     }
 }
