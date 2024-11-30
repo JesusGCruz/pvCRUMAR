@@ -32,15 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvdata = new System.Windows.Forms.DataGridView();
-            this.idPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCont = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LadaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoElec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.selec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.spObtenerProveedoresContactos2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_CRUMARDataSet = new LoginCRUMAR.db_CRUMARDataSet();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,6 +50,13 @@
             this.sp_ObtenerProveedoresContactos2TableAdapter = new LoginCRUMAR.db_CRUMARDataSetTableAdapters.sp_ObtenerProveedoresContactos2TableAdapter();
             this.btlim = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
+            this.idPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCont = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LadaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoElec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spObtenerProveedoresContactos2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_CRUMARDataSet)).BeginInit();
@@ -68,24 +68,20 @@
             // dgvdata
             // 
             this.dgvdata.AllowUserToAddRows = false;
-            this.dgvdata.AllowUserToDeleteRows = false;
-            this.dgvdata.AllowUserToOrderColumns = true;
-            this.dgvdata.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvdata.AutoGenerateColumns = false;
             this.dgvdata.BackgroundColor = System.Drawing.Color.Black;
             this.dgvdata.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdata.ColumnHeadersHeight = 34;
+            this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPro,
             this.nomb,
@@ -93,8 +89,7 @@
             this.numTel,
             this.LadaP,
             this.correoElec,
-            this.activ,
-            this.selec});
+            this.activ});
             this.dgvdata.DataSource = this.spObtenerProveedoresContactos2BindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -106,98 +101,32 @@
             this.dgvdata.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvdata.GridColor = System.Drawing.Color.DimGray;
             this.dgvdata.Location = new System.Drawing.Point(1, 255);
-            this.dgvdata.MultiSelect = false;
             this.dgvdata.Name = "dgvdata";
             this.dgvdata.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvdata.RowHeadersVisible = false;
             this.dgvdata.RowHeadersWidth = 62;
-            this.dgvdata.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvdata.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvdata.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Orange;
-            this.dgvdata.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvdata.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
+            this.dgvdata.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvdata.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvdata.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgvdata.RowTemplate.Height = 28;
             this.dgvdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvdata.Size = new System.Drawing.Size(917, 394);
             this.dgvdata.TabIndex = 17;
             this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
-            // 
-            // idPro
-            // 
-            this.idPro.DataPropertyName = "idProvedor";
-            this.idPro.HeaderText = "idProvedor";
-            this.idPro.MinimumWidth = 8;
-            this.idPro.Name = "idPro";
-            this.idPro.ReadOnly = true;
-            this.idPro.Width = 112;
-            // 
-            // nomb
-            // 
-            this.nomb.DataPropertyName = "nombre";
-            this.nomb.HeaderText = "nombre";
-            this.nomb.MinimumWidth = 8;
-            this.nomb.Name = "nomb";
-            this.nomb.ReadOnly = true;
-            this.nomb.Width = 130;
-            // 
-            // idCont
-            // 
-            this.idCont.DataPropertyName = "idContacto";
-            this.idCont.HeaderText = "idContacto";
-            this.idCont.MinimumWidth = 8;
-            this.idCont.Name = "idCont";
-            this.idCont.ReadOnly = true;
-            this.idCont.Width = 112;
-            // 
-            // numTel
-            // 
-            this.numTel.DataPropertyName = "numTelefono";
-            this.numTel.HeaderText = "numTelefono";
-            this.numTel.MinimumWidth = 8;
-            this.numTel.Name = "numTel";
-            this.numTel.ReadOnly = true;
-            this.numTel.Width = 130;
-            // 
-            // LadaP
-            // 
-            this.LadaP.DataPropertyName = "ladaPais";
-            this.LadaP.HeaderText = "Lada";
-            this.LadaP.MinimumWidth = 8;
-            this.LadaP.Name = "LadaP";
-            this.LadaP.ReadOnly = true;
-            this.LadaP.Width = 70;
-            // 
-            // correoElec
-            // 
-            this.correoElec.DataPropertyName = "correoElectronico";
-            this.correoElec.HeaderText = "correoElectronico";
-            this.correoElec.MinimumWidth = 8;
-            this.correoElec.Name = "correoElec";
-            this.correoElec.ReadOnly = true;
-            this.correoElec.Width = 170;
-            // 
-            // activ
-            // 
-            this.activ.DataPropertyName = "activo";
-            this.activ.HeaderText = "activo";
-            this.activ.MinimumWidth = 8;
-            this.activ.Name = "activ";
-            this.activ.ReadOnly = true;
-            this.activ.Width = 80;
-            // 
-            // selec
-            // 
-            this.selec.HeaderText = "";
-            this.selec.MinimumWidth = 8;
-            this.selec.Name = "selec";
-            this.selec.ReadOnly = true;
-            this.selec.Width = 30;
             // 
             // spObtenerProveedoresContactos2BindingSource
             // 
@@ -359,6 +288,70 @@
             this.label8.TabIndex = 109;
             this.label8.Text = "PROVEEDORES";
             // 
+            // idPro
+            // 
+            this.idPro.DataPropertyName = "idProvedor";
+            this.idPro.HeaderText = "idProvedor";
+            this.idPro.MinimumWidth = 8;
+            this.idPro.Name = "idPro";
+            this.idPro.ReadOnly = true;
+            this.idPro.Width = 120;
+            // 
+            // nomb
+            // 
+            this.nomb.DataPropertyName = "nombre";
+            this.nomb.HeaderText = "nombre";
+            this.nomb.MinimumWidth = 8;
+            this.nomb.Name = "nomb";
+            this.nomb.ReadOnly = true;
+            this.nomb.Width = 160;
+            // 
+            // idCont
+            // 
+            this.idCont.DataPropertyName = "idContacto";
+            this.idCont.HeaderText = "idContacto";
+            this.idCont.MinimumWidth = 8;
+            this.idCont.Name = "idCont";
+            this.idCont.ReadOnly = true;
+            this.idCont.Width = 112;
+            // 
+            // numTel
+            // 
+            this.numTel.DataPropertyName = "numTelefono";
+            this.numTel.HeaderText = "numTelefono";
+            this.numTel.MinimumWidth = 8;
+            this.numTel.Name = "numTel";
+            this.numTel.ReadOnly = true;
+            this.numTel.Width = 150;
+            // 
+            // LadaP
+            // 
+            this.LadaP.DataPropertyName = "ladaPais";
+            this.LadaP.FillWeight = 68.7773F;
+            this.LadaP.HeaderText = "Lada";
+            this.LadaP.MinimumWidth = 8;
+            this.LadaP.Name = "LadaP";
+            this.LadaP.ReadOnly = true;
+            this.LadaP.Width = 70;
+            // 
+            // correoElec
+            // 
+            this.correoElec.DataPropertyName = "correoElectronico";
+            this.correoElec.HeaderText = "correoElectronico";
+            this.correoElec.MinimumWidth = 8;
+            this.correoElec.Name = "correoElec";
+            this.correoElec.ReadOnly = true;
+            this.correoElec.Width = 180;
+            // 
+            // activ
+            // 
+            this.activ.DataPropertyName = "activo";
+            this.activ.HeaderText = "activo";
+            this.activ.MinimumWidth = 8;
+            this.activ.Name = "activ";
+            this.activ.ReadOnly = true;
+            this.activ.Width = 80;
+            // 
             // provedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -391,7 +384,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvdata;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboBusqueda;
@@ -411,7 +403,9 @@
         private System.Windows.Forms.BindingSource spObtenerProveedoresContactos2BindingSource;
         private db_CRUMARDataSetTableAdapters.sp_ObtenerProveedoresContactos2TableAdapter sp_ObtenerProveedoresContactos2TableAdapter;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.DataGridViewButtonColumn selec;
+        private FontAwesome.Sharp.IconButton btlim;
+        public System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dgvdata;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPro;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomb;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCont;
@@ -419,7 +413,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LadaP;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoElec;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activ;
-        private FontAwesome.Sharp.IconButton btlim;
-        public System.Windows.Forms.Label label8;
     }
 }

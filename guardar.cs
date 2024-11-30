@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,14 +24,14 @@ namespace LoginCRUMAR
             txtnnumprogu.ForeColor = Color.DimGray;
             lblnum.Visible = false;
 
-            // Configuración para nombre (ya existente)
+            
             this.txtnombrepro.Enter += new System.EventHandler(this.txtnombrepro_Enter);
             this.txtnombrepro.Leave += new System.EventHandler(this.txtnombrepro_Leave);
             txtnombrepro.Text = "Nombre Completo";
             txtnombrepro.ForeColor = Color.DimGray;
             lblnom.Visible = false;
 
-            // Configuración para correo
+           
             this.txtcorreopro.Enter += new System.EventHandler(this.txtcorreopro_Enter);
             this.txtcorreopro.Leave += new System.EventHandler(this.txtcorreopro_Leave);
             txtcorreopro.Text = "Correo Electronico";
@@ -47,34 +48,39 @@ namespace LoginCRUMAR
 
             private void btnguardar_Click(object sender, EventArgs e)
         {
-            if (ValidarDatos())
+            try
             {
                 // Obtener los datos del formulario
-                
+
                 string nombre = txtnombrepro.Text;
                 string numTelefono = txtnnumprogu.Text;
                 int ladaPais = int.Parse(txtladapro.Text);
                 string correo = txtcorreopro.Text;
-                bool activo = rbactivo.Checked; // Un CheckBox para marcar si está activo
+                bool activo = rbactivo.Checked; 
                 bool noactivo = rbnoact.Checked;
                 // Llamar al método para insertar el proveedor
-                bool resultado = coBD.agregarproveedor( nombre, numTelefono, ladaPais, correo, activo, null);
+                bool resultado = coBD.agregarproveedor(nombre, numTelefono, ladaPais, correo, activo, null);
 
                 // Mostrar el resultado al usuario
                 if (resultado)
                 {
-                    
+
                     MessageBox.Show("Proveedor guardado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     OnProveedorGuardado?.Invoke();
                     limpiar();
-                    
+
                 }
                 else
                 {
                     MessageBox.Show("Error al guardar el proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            catch (Exception )
+            {
+                MessageBox.Show("Por favor, complete los campos obligatorios.", "Advertencia");
+            }
         }
+        
 
         private void limpiar()
         {
@@ -101,13 +107,19 @@ namespace LoginCRUMAR
         private bool ValidarDatos()
         {
             if (
-                string.IsNullOrEmpty(txtnombrepro.Text) ||
-                string.IsNullOrEmpty(txtnnumprogu.Text))
+                string.IsNullOrEmpty(txtnombrepro.Text) || string.IsNullOrEmpty(txtnnumprogu.Text) ||
+                string.IsNullOrEmpty(txtcorreopro.Text))
+                
+                
+
+
             {
                 MessageBox.Show("Por favor, complete los campos obligatorios.", "Advertencia",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
+           
             return true;
         }
 
@@ -152,7 +164,7 @@ namespace LoginCRUMAR
         {
             if (string.IsNullOrWhiteSpace(txtnombrepro.Text))
             {
-                txtnombrepro.Text = "Nombre Completo"; // Corregido el texto
+                txtnombrepro.Text = "Nombre Completo"; 
                 txtnombrepro.ForeColor = Color.DimGray;
                 lblnom.Visible = false;
             }

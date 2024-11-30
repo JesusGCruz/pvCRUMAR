@@ -24,28 +24,28 @@ namespace LoginCRUMAR
             txtnnumprogu.ForeColor = Color.White;
             lblnum.Visible = false;
 
-            // Configuración para nombre (ya existente)
+         
             this.txtnombrepro.Enter += new System.EventHandler(this.txtnombrepro_Enter);
             this.txtnombrepro.Leave += new System.EventHandler(this.txtnombrepro_Leave);
             txtnombrepro.Text = "Nombre Completo";
             txtnombrepro.ForeColor = Color. White;
             lblnom.Visible = false;
 
-            // Configuración para correo
+            
             this.txtcorreopro.Enter += new System.EventHandler(this.txtcorreopro_Enter);
             this.txtcorreopro.Leave += new System.EventHandler(this.txtcorreopro_Leave);
             txtcorreopro.Text = "Correo Electronico";
             txtcorreopro.ForeColor = Color.White;
             lblco.Visible = false;
 
-            // Configuración para lada
+            
             this.txtladapro.Enter += new System.EventHandler(this.txtladapro_Enter);
             this.txtladapro.Leave += new System.EventHandler(this.txtladapro_Leave);
             txtladapro.Text = "Lada";
             txtladapro.ForeColor = Color.White;
             lblla.Visible = false;
 
-            // Configuración para lada
+            
             this.txtidpro.Enter += new System.EventHandler(this.txtidpro_Enter_1);
             this.txtidpro.Leave += new System.EventHandler(this.txtidpro_Leave_1);
             txtidpro.Text = "Id Proveedor";
@@ -56,7 +56,7 @@ namespace LoginCRUMAR
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            if (ValidarDatos())
+            try
             {
                 int idProveedor = Convert.ToInt32(txtidpro.Text);
                 string nombre = txtnombrepro.Text;
@@ -80,6 +80,11 @@ namespace LoginCRUMAR
                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor, complete los campos obligatorios.", "Advertencia");
+            
+        }
         }
 
         private void limpiar()
@@ -93,7 +98,7 @@ namespace LoginCRUMAR
             txtidpro.Text = "Id Proveedor";
             rbactivo.Checked = false;
 
-            // Restaurar colores y visibilidad
+            
             txtnnumprogu.ForeColor = Color.White;
             txtcorreopro.ForeColor = Color.White;
             txtnombrepro.ForeColor = Color.White;
@@ -146,30 +151,30 @@ namespace LoginCRUMAR
                     // Asignar valores desde la primera fila
                     DataRow fila = producto.Rows[0];
 
-                    txtidpro.Text = fila["idProvedor"].ToString(); // Ajustar nombre del campo según tu base de datos
+                    txtidpro.Text = fila["idProvedor"].ToString(); 
                     txtnombrepro.Text = fila["nombre"].ToString();
-                    txtnnumprogu.Text = fila["numTelefono"].ToString(); // Convertir a decimal para asignar
+                    txtnnumprogu.Text = fila["numTelefono"].ToString(); 
                     txtladapro.Text = fila["ladaPais"].ToString();
                     txtcorreopro.Text = fila["correoElectronico"].ToString();
                     txtidpro.ReadOnly = true;
 
-                    // Asignar el estado activo/inactivo
+                    
                     bool isActive = Convert.ToBoolean(fila["activo"]);
 
                     // Configurar los RadioButton
-                    rbactivo.Checked = isActive;      // Si está activo, marcar rbactivo
-                    rbnoact.Checked = !isActive;      // Si no está activo, marcar rbnoac
+                    rbactivo.Checked = isActive;      
+                    rbnoact.Checked = !isActive;      
 
                 }
                 else
                 {
-                    MessageBox.Show("Producto no encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    limpiar(); // Limpia los campos si no se encuentra el producto
+                    MessageBox.Show("Proveedor no encontrado verificarla información.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    limpiar(); 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al buscar producto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al buscar proveedor: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

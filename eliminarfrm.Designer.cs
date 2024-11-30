@@ -68,7 +68,7 @@
             this.btnbusque.IconColor = System.Drawing.Color.White;
             this.btnbusque.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnbusque.IconSize = 20;
-            this.btnbusque.Location = new System.Drawing.Point(326, 211);
+            this.btnbusque.Location = new System.Drawing.Point(647, 241);
             this.btnbusque.Name = "btnbusque";
             this.btnbusque.Size = new System.Drawing.Size(63, 35);
             this.btnbusque.TabIndex = 138;
@@ -79,7 +79,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Location = new System.Drawing.Point(113, 550);
+            this.pictureBox5.Location = new System.Drawing.Point(208, 714);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(256, 3);
             this.pictureBox5.TabIndex = 137;
@@ -88,7 +88,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Location = new System.Drawing.Point(524, 414);
+            this.pictureBox4.Location = new System.Drawing.Point(727, 490);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(256, 3);
             this.pictureBox4.TabIndex = 136;
@@ -97,7 +97,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Location = new System.Drawing.Point(528, 548);
+            this.pictureBox3.Location = new System.Drawing.Point(727, 712);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(256, 3);
             this.pictureBox3.TabIndex = 135;
@@ -106,7 +106,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(113, 397);
+            this.pictureBox2.Location = new System.Drawing.Point(204, 489);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(256, 3);
             this.pictureBox2.TabIndex = 134;
@@ -115,7 +115,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 243);
+            this.pictureBox1.Location = new System.Drawing.Point(359, 273);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(256, 3);
             this.pictureBox1.TabIndex = 133;
@@ -127,7 +127,7 @@
             this.rbnoact.BackColor = System.Drawing.Color.Transparent;
             this.rbnoact.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbnoact.ForeColor = System.Drawing.Color.White;
-            this.rbnoact.Location = new System.Drawing.Point(450, 654);
+            this.rbnoact.Location = new System.Drawing.Point(598, 765);
             this.rbnoact.Name = "rbnoact";
             this.rbnoact.Size = new System.Drawing.Size(160, 36);
             this.rbnoact.TabIndex = 132;
@@ -141,7 +141,7 @@
             this.rbactivo.BackColor = System.Drawing.Color.Transparent;
             this.rbactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbactivo.ForeColor = System.Drawing.Color.White;
-            this.rbactivo.Location = new System.Drawing.Point(318, 653);
+            this.rbactivo.Location = new System.Drawing.Point(466, 764);
             this.rbactivo.Name = "rbactivo";
             this.rbactivo.Size = new System.Drawing.Size(117, 36);
             this.rbactivo.TabIndex = 131;
@@ -156,7 +156,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(261, 21);
+            this.label8.Location = new System.Drawing.Point(452, 19);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(336, 49);
             this.label8.TabIndex = 130;
@@ -169,7 +169,7 @@
             this.txtcorreopro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcorreopro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreopro.ForeColor = System.Drawing.Color.White;
-            this.txtcorreopro.Location = new System.Drawing.Point(113, 503);
+            this.txtcorreopro.Location = new System.Drawing.Point(208, 667);
             this.txtcorreopro.Multiline = true;
             this.txtcorreopro.Name = "txtcorreopro";
             this.txtcorreopro.Size = new System.Drawing.Size(260, 50);
@@ -181,7 +181,7 @@
             this.txtladapro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtladapro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtladapro.ForeColor = System.Drawing.Color.White;
-            this.txtladapro.Location = new System.Drawing.Point(528, 503);
+            this.txtladapro.Location = new System.Drawing.Point(727, 667);
             this.txtladapro.Multiline = true;
             this.txtladapro.Name = "txtladapro";
             this.txtladapro.Size = new System.Drawing.Size(260, 50);
@@ -194,7 +194,7 @@
             this.txtnnumprogu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtnnumprogu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnnumprogu.ForeColor = System.Drawing.Color.White;
-            this.txtnnumprogu.Location = new System.Drawing.Point(524, 367);
+            this.txtnnumprogu.Location = new System.Drawing.Point(727, 443);
             this.txtnnumprogu.Multiline = true;
             this.txtnnumprogu.Name = "txtnnumprogu";
             this.txtnnumprogu.Size = new System.Drawing.Size(260, 50);
@@ -207,7 +207,7 @@
             this.txtnombrepro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtnombrepro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombrepro.ForeColor = System.Drawing.Color.White;
-            this.txtnombrepro.Location = new System.Drawing.Point(113, 351);
+            this.txtnombrepro.Location = new System.Drawing.Point(204, 443);
             this.txtnombrepro.Multiline = true;
             this.txtnombrepro.Name = "txtnombrepro";
             this.txtnombrepro.Size = new System.Drawing.Size(260, 50);
@@ -219,7 +219,7 @@
             this.txtidpro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtidpro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtidpro.ForeColor = System.Drawing.Color.Transparent;
-            this.txtidpro.Location = new System.Drawing.Point(38, 196);
+            this.txtidpro.Location = new System.Drawing.Point(359, 226);
             this.txtidpro.Multiline = true;
             this.txtidpro.Name = "txtidpro";
             this.txtidpro.Size = new System.Drawing.Size(260, 50);
@@ -232,7 +232,7 @@
             this.lblid.BackColor = System.Drawing.Color.Transparent;
             this.lblid.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblid.ForeColor = System.Drawing.Color.White;
-            this.lblid.Location = new System.Drawing.Point(39, 161);
+            this.lblid.Location = new System.Drawing.Point(360, 191);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(124, 23);
             this.lblid.TabIndex = 124;
@@ -245,7 +245,7 @@
             this.lblco.BackColor = System.Drawing.Color.Transparent;
             this.lblco.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblco.ForeColor = System.Drawing.Color.White;
-            this.lblco.Location = new System.Drawing.Point(109, 468);
+            this.lblco.Location = new System.Drawing.Point(204, 632);
             this.lblco.Name = "lblco";
             this.lblco.Size = new System.Drawing.Size(174, 23);
             this.lblco.TabIndex = 123;
@@ -257,7 +257,7 @@
             this.lblla.BackColor = System.Drawing.Color.Transparent;
             this.lblla.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblla.ForeColor = System.Drawing.Color.White;
-            this.lblla.Location = new System.Drawing.Point(524, 466);
+            this.lblla.Location = new System.Drawing.Point(723, 630);
             this.lblla.Name = "lblla";
             this.lblla.Size = new System.Drawing.Size(54, 23);
             this.lblla.TabIndex = 122;
@@ -269,7 +269,7 @@
             this.lblnum.BackColor = System.Drawing.Color.Transparent;
             this.lblnum.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnum.ForeColor = System.Drawing.Color.White;
-            this.lblnum.Location = new System.Drawing.Point(520, 332);
+            this.lblnum.Location = new System.Drawing.Point(723, 408);
             this.lblnum.Name = "lblnum";
             this.lblnum.Size = new System.Drawing.Size(182, 23);
             this.lblnum.TabIndex = 121;
@@ -281,7 +281,7 @@
             this.lblnom.BackColor = System.Drawing.Color.Transparent;
             this.lblnom.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnom.ForeColor = System.Drawing.Color.White;
-            this.lblnom.Location = new System.Drawing.Point(109, 316);
+            this.lblnom.Location = new System.Drawing.Point(200, 408);
             this.lblnom.Name = "lblnom";
             this.lblnom.Size = new System.Drawing.Size(165, 23);
             this.lblnom.TabIndex = 120;
@@ -301,7 +301,7 @@
             this.btnguardar.IconColor = System.Drawing.Color.White;
             this.btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnguardar.IconSize = 20;
-            this.btnguardar.Location = new System.Drawing.Point(267, 730);
+            this.btnguardar.Location = new System.Drawing.Point(429, 840);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(359, 69);
             this.btnguardar.TabIndex = 119;
@@ -323,7 +323,7 @@
             this.btlim.IconColor = System.Drawing.Color.White;
             this.btlim.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btlim.IconSize = 20;
-            this.btlim.Location = new System.Drawing.Point(419, 211);
+            this.btlim.Location = new System.Drawing.Point(740, 241);
             this.btlim.Name = "btlim";
             this.btlim.Size = new System.Drawing.Size(63, 35);
             this.btlim.TabIndex = 139;
@@ -336,7 +336,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(912, 938);
+            this.ClientSize = new System.Drawing.Size(1231, 1037);
             this.Controls.Add(this.btlim);
             this.Controls.Add(this.btnbusque);
             this.Controls.Add(this.pictureBox5);

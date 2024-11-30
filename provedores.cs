@@ -91,27 +91,7 @@ namespace LoginCRUMAR
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (dgvdata.Columns[e.ColumnIndex].Name == "selec")
-            //{
-            //    int indi = e.RowIndex;
-            //    if (indi >= 0)
-            //    {
-            //        txtidpro.Text = dgvdata.Rows[indi].Cells["idPro"].Value.ToString();
-            //        txtidpro.ReadOnly = true; // Deshabilitar la edición
-            //        txtnombrepro.Text = dgvdata.Rows[indi].Cells["nomb"].Value.ToString();
-            //        txtnnumpro.Text = dgvdata.Rows[indi].Cells["numTel"].Value.ToString();
-            //        txtladapro.Text = dgvdata.Rows[indi].Cells["ladaP"].Value.ToString();
-            //        txtcorreopro.Text = dgvdata.Rows[indi].Cells["correoElec"].Value.ToString();
-            //        // Obtener el valor de "activ" como bool
-            //        bool isActive = Convert.ToBoolean(dgvdata.Rows[indi].Cells["activ"].Value);
-
-            //        // Configurar los RadioButton
-            //        rbactivo.Checked = isActive;      // Si está activo, marcar rbactivo
-            //        rbnoact.Checked = !isActive;      // Si no está activo, marcar rbnoac
-
-
-            //    }
-            //}
+   
 
         }
 
@@ -180,8 +160,8 @@ public void CargarProveedores()
             string columnafiltro = ((OpcionCombo)cboBusqueda.SelectedItem).valor.ToString();
 
             // Suspender temporalmente el enlace
-            dgvdata.CurrentCell = null; // Esto desconecta la celda seleccionada
-            dgvdata.SuspendLayout();    // Suspende el diseño para evitar errores gráficos
+            dgvdata.CurrentCell = null; 
+            dgvdata.SuspendLayout();    
 
             try
             {
