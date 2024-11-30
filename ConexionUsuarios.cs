@@ -17,8 +17,6 @@ namespace LoginCRUMAR
 
         SqlCommand comando;
 
-        SqlDataReader lector;
-
         string sentencia = "";
         public ConexionUsuarios()
         {

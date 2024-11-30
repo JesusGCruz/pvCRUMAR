@@ -78,5 +78,24 @@ namespace LoginCRUMAR
                 MessageBox.Show("Error de SQL: " + ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                
+            if (uTbUsuario.Text != "") { 
+            CapturarFoto editInven = new CapturarFoto(uTbUsuario.Text);
+            AddOwnedForm(editInven);
+            editInven.TopLevel = false;
+            editInven.Dock = DockStyle.Fill;
+            this.Controls.Add(editInven);
+            this.Tag = editInven;
+            editInven.BringToFront();
+            editInven.Show();
+            }
+            else
+            {
+                MessageBox.Show("Agrega el usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

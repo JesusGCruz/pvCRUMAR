@@ -32,6 +32,7 @@
             this.fPbFoto = new System.Windows.Forms.PictureBox();
             this.fBtnGuardar = new System.Windows.Forms.Button();
             this.fBtnReintentar = new System.Windows.Forms.Button();
+            this.pBtnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fPbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             this.fBtnCapturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fBtnCapturar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBtnCapturar.ForeColor = System.Drawing.Color.White;
-            this.fBtnCapturar.Location = new System.Drawing.Point(38, 483);
+            this.fBtnCapturar.Location = new System.Drawing.Point(38, 466);
             this.fBtnCapturar.Name = "fBtnCapturar";
             this.fBtnCapturar.Size = new System.Drawing.Size(247, 34);
             this.fBtnCapturar.TabIndex = 27;
@@ -70,7 +71,7 @@
             this.fBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fBtnGuardar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.fBtnGuardar.Location = new System.Drawing.Point(38, 533);
+            this.fBtnGuardar.Location = new System.Drawing.Point(38, 516);
             this.fBtnGuardar.Name = "fBtnGuardar";
             this.fBtnGuardar.Size = new System.Drawing.Size(500, 34);
             this.fBtnGuardar.TabIndex = 30;
@@ -87,13 +88,30 @@
             this.fBtnReintentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fBtnReintentar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBtnReintentar.ForeColor = System.Drawing.Color.White;
-            this.fBtnReintentar.Location = new System.Drawing.Point(311, 483);
+            this.fBtnReintentar.Location = new System.Drawing.Point(311, 466);
             this.fBtnReintentar.Name = "fBtnReintentar";
             this.fBtnReintentar.Size = new System.Drawing.Size(227, 34);
             this.fBtnReintentar.TabIndex = 31;
             this.fBtnReintentar.Text = "Reintentar";
             this.fBtnReintentar.UseVisualStyleBackColor = false;
             this.fBtnReintentar.Click += new System.EventHandler(this.fBtnReintentar_Click);
+            // 
+            // pBtnCancelar
+            // 
+            this.pBtnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pBtnCancelar.BackColor = System.Drawing.Color.Black;
+            this.pBtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.pBtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pBtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pBtnCancelar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.pBtnCancelar.Location = new System.Drawing.Point(38, 564);
+            this.pBtnCancelar.Name = "pBtnCancelar";
+            this.pBtnCancelar.Size = new System.Drawing.Size(500, 34);
+            this.pBtnCancelar.TabIndex = 32;
+            this.pBtnCancelar.Text = "Cancelar";
+            this.pBtnCancelar.UseVisualStyleBackColor = false;
+            this.pBtnCancelar.Click += new System.EventHandler(this.pBtnCancelar_Click);
             // 
             // CapturarFoto
             // 
@@ -102,6 +120,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(580, 610);
+            this.Controls.Add(this.pBtnCancelar);
             this.Controls.Add(this.fBtnReintentar);
             this.Controls.Add(this.fBtnGuardar);
             this.Controls.Add(this.fPbFoto);
@@ -121,5 +140,6 @@
         private System.Windows.Forms.PictureBox fPbFoto;
         private System.Windows.Forms.Button fBtnGuardar;
         private System.Windows.Forms.Button fBtnReintentar;
+        private System.Windows.Forms.Button pBtnCancelar;
     }
 }

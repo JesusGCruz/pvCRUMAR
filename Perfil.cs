@@ -91,7 +91,7 @@ namespace LoginCRUMAR
         private void iconButton1_Click(object sender, EventArgs e)
         {
             pPbUsuario.Image = null;
-            CapturarFoto editInven = new CapturarFoto(usuario,pPbUsuario);
+            CapturarFoto editInven = new CapturarFoto(usuario);
             AddOwnedForm(editInven);
             editInven.TopLevel = false;
             editInven.Dock = DockStyle.Fill;

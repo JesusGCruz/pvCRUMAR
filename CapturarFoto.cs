@@ -37,6 +37,14 @@ namespace LoginCRUMAR
             this.pic = pb;
         }
 
+        public CapturarFoto(string usuario)
+        {
+            InitializeComponent();
+            this.usuario = usuario;
+            misDispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            ActivarCamara();
+        }
+
         public CapturarFoto(string usuario, PictureBox pb)
         {
             InitializeComponent();
@@ -44,7 +52,7 @@ namespace LoginCRUMAR
             misDispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             ActivarCamara();
             this.pic = pb;
-        }
+        } 
 
         private void ActivarCamara()
         {
@@ -91,19 +99,24 @@ namespace LoginCRUMAR
             {
                 try
                 {
+                    img.Save(path + usuario + ".jpeg", ImageFormat.Jpeg);
                     if (File.Exists(path + usuario + ".jpeg"))
                     { // Elimina el archivo File.Delete(imagePath);
                         //File.Delete(path + usuario + ".jpeg");
-                        img.Save(path + usuario + ".jpeg", ImageFormat.Jpeg);
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message + "\n" +ex.GetType());
                 }
-                pic.Image = img;
-                if(panelCont != null)
-                    panelCont.Hide();
+                if(pic != null)
+                {
+                    pic.Image = img;
+                    if(panelCont != null)
+                    {
+                        panelCont.Hide();
+                    }
+                }
                 else
                 {
                     Perfil per = Owner as Perfil;
@@ -120,6 +133,13 @@ namespace LoginCRUMAR
         private void CapturarFoto_FormClosed(object sender, FormClosedEventArgs e)
         {
             CerrarWebCam();
+        }
+
+        private void pBtnCancelar_Click(object sender, EventArgs e)
+        {
+            CerrarWebCam();
+            Perfil per= Owner as Perfil;
+            this.Hide();
         }
     }
 }

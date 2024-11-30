@@ -24,51 +24,54 @@ namespace LoginCRUMAR
             
         }
 
-        public void limpiarEmpleados()
+        public void extraerEmpleados()
         {
             this.vEmpleadosTableAdapter.Fill(this.cRUMARpvDataSet.vEmpleados);
-            /*
-            uTbId.Clear();
-            uTbRFC.Clear();
-            uTbNombres.Clear();
-            uTbApellidos.Clear();
-            uTbHorario.Clear();
-            uTbUsuario.Clear();
-            uTbContra.Clear();
-            uRbSi.Checked = false;
-            uRbNo.Checked = false;
-            cbRoles.SelectedIndex = 1;
-             */
         }
 
         private void abrirEditor()
         {
-            EditarUsuarios editUss = new EditarUsuarios();
-
-            editUss.uTbRFC.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
-            editUss.uTbNombres.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
-            editUss.uTbApellidos.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
-            editUss.uTbHorario.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
-            editUss.cbRoles.SelectedItem = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
-            editUss.uTbUsuario.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
-            editUss.uTbContra.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
-            bool activo = bool.Parse(dgvEmpleados.CurrentRow.Cells[8].Value.ToString());
-            if (activo)
+            try
             {
-                editUss.uRbSi.Checked = true;
-            }
-            else
-            {
-                editUss.uRbNo.Checked = true;
-            }
+                if (dgvEmpleados.CurrentRow != null)
+                {
 
-            AddOwnedForm(editUss);
-            editUss.TopLevel = false;
-            editUss.Dock = DockStyle.Fill;
-            this.Controls.Add(editUss);
-            this.Tag = editUss;
-            editUss.BringToFront();
-            editUss.Show();
+                    EditarUsuarios editUss = new EditarUsuarios();
+
+                    editUss.uTbRFC.Text = dgvEmpleados.CurrentRow.Cells[1].Value.ToString();
+                    editUss.uTbNombres.Text = dgvEmpleados.CurrentRow.Cells[2].Value.ToString();
+                    editUss.uTbApellidos.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
+                    editUss.uTbHorario.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
+                    editUss.cbRoles.SelectedItem = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
+                    editUss.uTbUsuario.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
+                    editUss.uTbContra.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
+                    bool activo = bool.Parse(dgvEmpleados.CurrentRow.Cells[8].Value.ToString());
+                    if (activo)
+                    {
+                        editUss.uRbSi.Checked = true;
+                    }
+                    else
+                    {
+                        editUss.uRbNo.Checked = true;
+                    }
+
+                    AddOwnedForm(editUss);
+                    editUss.TopLevel = false;
+                    editUss.Dock = DockStyle.Fill;
+                    this.Controls.Add(editUss);
+                    this.Tag = editUss;
+                    editUss.BringToFront();
+                    editUss.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona una fila.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         
@@ -76,20 +79,23 @@ namespace LoginCRUMAR
         {
             // TODO: esta línea de código carga datos en la tabla 'cRUMARpvDataSet.vEmpleados' Puede moverla o quitarla según sea necesario.
             this.vEmpleadosTableAdapter.Fill(this.cRUMARpvDataSet.vEmpleados);
+            foreach (DataGridViewColumn columna in dgvEmpleados.Columns)
+            {
+                if (columna.Visible == true && columna.Name != "selec")
+                {
+                    cboBusqueda.Items.Add(columna.HeaderText);
+                }
+
+            }
+            cboBusqueda.DisplayMember = "Text";
+            cboBusqueda.ValueMember = "Valor";
+            cboBusqueda.SelectedIndex = 0;
 
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             abrirEditor();
-
-            //EditarUsuarios editInven = Owner as EditarUsuarios;
-            //editInven.tbIdFab.Text =      dgvProductos.CurrentRow.Cells[0].Value.ToString();
-            //editInven.tbIdProducto.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
-            //editInven.tbDescrip.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
-            //editInven.tbPrecio.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
-            //editInven.tbExis.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
-            //this.Close();
         }
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -115,147 +121,77 @@ namespace LoginCRUMAR
              */
         }
 
-        private void uBtnEditar_Click(object sender, EventArgs e)
-        {
-            /*
-            try
-            {
-                if (coBD.Existente(uTbRFC.Text.Trim()))
-                {
-                    if (MessageBox.Show("¿Desea guardar los datos editados?", "Confirmar Actualización", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        bool activo = false;
-                        if (uRbSi.Checked)
-                        {
-                            activo = true;
-                        }
-                        if (uRbNo.Checked)
-                        {
-                            activo = false;
-                        }
-
-                        bool res = coBD.actualizarUsuario(
-                            uTbRFC.Text.Trim(),
-                            uTbNombres.Text.Trim(),
-                            uTbApellidos.Text.Trim(),
-                            uTbHorario.Text.Trim(),
-                            cbRoles.Text.Trim(),
-                            uTbUsuario.Text.Trim(),
-                            uTbContra.Text.Trim(),
-                            activo);
-
-                        if (res)
-                        {
-                            limpiarEmpleados();
-                            MessageBox.Show("Usuario Actualizado");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Fallo la operacion");
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("RFC de empleado no encontrado.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error de SQL: " + ex.Message);
-            }
-             */
-                
-        }
-
-        private void uBtnNuevo_Click(object sender, EventArgs e)
-        {
-            /*
-            try
-            {
-                if (MessageBox.Show("¿Desea registrar un nuevo empleado?", "Confirmar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    bool activo = false;
-                    if (uRbSi.Checked)
-                    {
-                        activo = true;
-                    }
-                    if (uRbNo.Checked)
-                    {
-                        activo = false;
-                    }
-
-                    bool res = coBD.agregarUsuario(
-                        uTbRFC.Text.Trim(),
-                        uTbNombres.Text.Trim(),
-                        uTbApellidos.Text.Trim(),
-                        //Convert.ToInt32(uTbId.Text.Trim()),
-                        uTbHorario.Text.Trim(),
-                        cbRoles.Text.Trim(),
-                        uTbUsuario.Text.Trim(),
-                        uTbContra.Text.Trim(),
-                        activo);
-
-                    if (res)
-                    {
-                        limpiarEmpleados();
-                        MessageBox.Show("Empleado Registrado");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Fallo la operacion");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error de SQL: " + ex.Message);
-            }
-             */
-        }
-
         private void uBtnLimpiar_Click(object sender, EventArgs e)
         {
             abrirEditor();
         }
 
-        private void uBtnEliminar_Click(object sender, EventArgs e)
-        {
-            /*
-            try
-            {
-                if (coBD.Existente(uTbRFC.Text.Trim()))
-                {
-                    if (MessageBox.Show("¿Desea eliminar el empleado seleccionado?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        bool res = coBD.eliminarUsuario(uTbRFC.Text);
-                        if (res)
-                        {
-                            limpiarEmpleados();
-                            MessageBox.Show("Empleado Eliminado");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Fallo la operacion");
-                        }
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("RFC de empleado no encontrado.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error de SQL: " + ex.Message);
-            }
-             */
-        }
+        
 
         private void GestionarUsuarios_VisibleChanged(object sender, EventArgs e)
         {
-            limpiarEmpleados();
+            extraerEmpleados();
+        }
+
+        private void btnbusque_Click(object sender, EventArgs e)
+        {
+            if (cboBusqueda.SelectedItem == null || string.IsNullOrWhiteSpace(txtbusque.Text))
+            {
+                MessageBox.Show("Por favor, selecciona un filtro y escribe un texto para buscar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                buscarGrid(dgvEmpleados,cboBusqueda.SelectedIndex);
+            }
+
+        }
+
+        private void buscarGrid(DataGridView d, int col)
+        {
+            string valor = "";
+            d.CurrentCell = null; // Esto desconecta la celda seleccionada
+            d.SuspendLayout();    // Suspende el diseño para evitar errores gráficos
+            for (int i = 0; i < d.Rows.Count - 1; i++)
+            {
+                valor = d.Rows[i].Cells[col].Value.ToString();
+                if (valor.Contains(txtbusque.Text.Trim()))
+                {
+                    d.Rows[i].Visible = true;
+                }
+                else
+                {
+                    d.Rows[i].Visible = false;
+                }
+            }
+        }
+
+        private void btlim_Click(object sender, EventArgs e)
+        {
+            limpiarBuscador();
+        }
+
+        private void limpiarBuscador()
+        {
+            for (int i = 0; i < dgvEmpleados.Rows.Count - 1; i++)
+            {
+                dgvEmpleados.Rows[i].Visible = true;
+            }
+            dgvEmpleados.ResumeLayout(); // Reanudar el diseño después de procesar
+            txtbusque.Clear();
+            cboBusqueda.SelectedIndex = 0;
+            dgvEmpleados.Rows[0].Selected = true;
+        }
+
+        private void txtbusque_TextChanged(object sender, EventArgs e)
+        {
+            if (cboBusqueda.SelectedItem == null || string.IsNullOrWhiteSpace(txtbusque.Text))
+            {
+                limpiarBuscador();
+            }
+            else
+            {
+                buscarGrid(dgvEmpleados, cboBusqueda.SelectedIndex);
+            }
         }
     }
 }

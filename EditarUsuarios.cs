@@ -21,6 +21,7 @@ namespace LoginCRUMAR
             cbRoles.DataSource = coBD.getRoles();
         }
 
+
         private void limpiarCampos()
         {
             //uTbId.Clear();
@@ -66,6 +67,7 @@ namespace LoginCRUMAR
                         if (res)
                         {
                             MessageBox.Show("Usuario Actualizado");
+                            
                             limpiarCampos();
                             cerrarForm();
                         }
@@ -94,6 +96,7 @@ namespace LoginCRUMAR
         private void cerrarForm()
         {
             GestionarUsuarios editInven = Owner as GestionarUsuarios;
+            editInven.extraerEmpleados();
             this.Hide();
         }
 
