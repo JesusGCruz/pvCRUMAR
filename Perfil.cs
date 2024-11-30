@@ -20,7 +20,7 @@ namespace LoginCRUMAR
         {
             InitializeComponent();
             usuario = uss;
-            pLblRol.Text = coBD.getDatosPerfil(usuario)[0].ToString();
+            pLblName.Text = coBD.getDatosPerfil(usuario)[0].ToString();
             pTbNombre.Text = coBD.getDatosPerfil(usuario)[0].ToString();
             pTbApellidos.Text = coBD.getDatosPerfil(usuario)[1].ToString();
             pTbUsuario.Text = coBD.getDatosPerfil(usuario)[2].ToString();
@@ -71,8 +71,40 @@ namespace LoginCRUMAR
 
         private void uBtnLimpiar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Actualizar datos en proceso.");
+            try
+            {
+                    if (MessageBox.Show("¿Desea guardar los datos editados?", "Confirmar Actualización", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (pTbPass.Text == pTbConfirmarPass.Text)
+                        {
+                            bool res = coBD.actualizarPerfil(
+                                pTbNombre.Text.Trim(),
+                                pTbApellidos.Text.Trim(),
+                                pTbUsuario.Text.Trim(),
+                                pTbPass.Text.Trim()
+                                );
+
+                            if (res)
+                            {
+                                MessageBox.Show("Cambios guardados.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Fallo la operacion");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Las contraseñas no coinciden.");
+                        }
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error de SQL: " + ex.Message);
+            }
         }
+
 
         private void pBtnEyeActual_Click(object sender, EventArgs e)
         {
@@ -99,20 +131,6 @@ namespace LoginCRUMAR
             this.Tag = editInven;
             editInven.BringToFront();
             editInven.Show();
-        }
-
-        private void abrirFormHija(object formHija)
-        {
-            if (this.fPanelContenedor.Controls.Count > 0)
-            {
-                this.fPanelContenedor.Controls.RemoveAt(0);
-            }
-            Form fh = formHija as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.fPanelContenedor.Controls.Add(fh);
-            this.fPanelContenedor.Tag = fh;
-            fh.Show();
         }
     }
 }

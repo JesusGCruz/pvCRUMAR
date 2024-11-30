@@ -68,6 +68,44 @@ namespace LoginCRUMAR
             }
             return false;
         }
+        
+        
+        public bool actualizarPerfil(string nombres, string apellidos, string usuario, string contrasenha)
+        {
+            try
+            {
+                sentencia = "spActualizarPerfil";
+                comando = new SqlCommand(sentencia,conexion);
+                conexion.Open();
+
+
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Nombres", nombres);
+                comando.Parameters.AddWithValue("@Apellidos", apellidos);
+                comando.Parameters.AddWithValue("@Usuario", usuario);
+                comando.Parameters.AddWithValue("@Contrasenha", contrasenha);
+
+                if (comando.ExecuteNonQuery() != -1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                comando.Parameters.Clear();
+                conexion.Close();
+            }
+            return false;
+        }
 
         public bool eliminarUsuario(string rfc)
         {

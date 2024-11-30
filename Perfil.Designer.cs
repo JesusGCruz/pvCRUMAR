@@ -39,7 +39,7 @@
             this.pTbUsuario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pTbConfirmarPass = new System.Windows.Forms.TextBox();
-            this.pLblRol = new System.Windows.Forms.Label();
+            this.pLblName = new System.Windows.Forms.Label();
             this.uBtnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,7 +48,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pTbPassActual = new System.Windows.Forms.TextBox();
             this.pBtnEyeActual = new FontAwesome.Sharp.IconButton();
-            this.fPanelContenedor = new System.Windows.Forms.Panel();
             this.pPbUsuario = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pPbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -156,6 +155,7 @@
             this.pTbUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pTbUsuario.BackColor = System.Drawing.Color.DarkGray;
             this.pTbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pTbUsuario.Enabled = false;
             this.pTbUsuario.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pTbUsuario.Location = new System.Drawing.Point(140, 272);
             this.pTbUsuario.Name = "pTbUsuario";
@@ -186,17 +186,17 @@
             this.pTbConfirmarPass.TabIndex = 50;
             this.pTbConfirmarPass.UseSystemPasswordChar = true;
             // 
-            // pLblRol
+            // pLblName
             // 
-            this.pLblRol.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pLblRol.AutoSize = true;
-            this.pLblRol.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pLblRol.ForeColor = System.Drawing.Color.White;
-            this.pLblRol.Location = new System.Drawing.Point(379, 45);
-            this.pLblRol.Name = "pLblRol";
-            this.pLblRol.Size = new System.Drawing.Size(36, 28);
-            this.pLblRol.TabIndex = 52;
-            this.pLblRol.Text = "---";
+            this.pLblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pLblName.AutoSize = true;
+            this.pLblName.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pLblName.ForeColor = System.Drawing.Color.White;
+            this.pLblName.Location = new System.Drawing.Point(379, 45);
+            this.pLblName.Name = "pLblName";
+            this.pLblName.Size = new System.Drawing.Size(36, 28);
+            this.pLblName.TabIndex = 52;
+            this.pLblName.Text = "---";
             // 
             // uBtnLimpiar
             // 
@@ -311,15 +311,6 @@
             this.pBtnEyeActual.UseVisualStyleBackColor = false;
             this.pBtnEyeActual.Click += new System.EventHandler(this.pBtnEyeActual_Click);
             // 
-            // fPanelContenedor
-            // 
-            this.fPanelContenedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fPanelContenedor.Location = new System.Drawing.Point(0, 344);
-            this.fPanelContenedor.Name = "fPanelContenedor";
-            this.fPanelContenedor.Size = new System.Drawing.Size(116, 266);
-            this.fPanelContenedor.TabIndex = 61;
-            this.fPanelContenedor.Visible = false;
-            // 
             // pPbUsuario
             // 
             this.pPbUsuario.Location = new System.Drawing.Point(12, 9);
@@ -335,7 +326,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(580, 610);
-            this.Controls.Add(this.fPanelContenedor);
             this.Controls.Add(this.pPbUsuario);
             this.Controls.Add(this.pBtnEyeActual);
             this.Controls.Add(this.label7);
@@ -345,7 +335,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uBtnLimpiar);
-            this.Controls.Add(this.pLblRol);
+            this.Controls.Add(this.pLblName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pTbConfirmarPass);
             this.Controls.Add(this.label3);
@@ -378,7 +368,7 @@
         private System.Windows.Forms.TextBox pTbUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox pTbConfirmarPass;
-        private System.Windows.Forms.Label pLblRol;
+        private System.Windows.Forms.Label pLblName;
         private System.Windows.Forms.Button uBtnLimpiar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
@@ -387,7 +377,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox pTbPassActual;
         private FontAwesome.Sharp.IconButton pBtnEyeActual;
-        private System.Windows.Forms.Panel fPanelContenedor;
         private System.Windows.Forms.PictureBox pPbUsuario;
     }
 }
