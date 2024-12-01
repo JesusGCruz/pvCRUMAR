@@ -240,7 +240,6 @@ namespace LoginCRUMAR
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-
             abrirFormHija(new guardar());
             hideSubMenu();
 
@@ -283,6 +282,17 @@ namespace LoginCRUMAR
         {
    
             showSubMenu(panbtnin);
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            abrirFormHija(new NuevoUsuario());
+            hideSubMenu();
         }
     }
 }
