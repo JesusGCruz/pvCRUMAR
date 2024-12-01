@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginCRUMAR", "LoginCRUMAR.csproj", "{BE8ED641-6731-4084-8143-08DF2B7BD15A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUMARAdmin", "CRUMARAdmin.csproj", "{BE8ED641-6731-4084-8143-08DF2B7BD15A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapturistaCRUMAR", "..\LoginCRUMAR\CapturistaCRUMAR.csproj", "{2F3EB7AC-7D59-4370-93AB-87727B224960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adCRUMAR", "..\pvCRUMAR\adCRUMAR.csproj", "{7431C04F-F159-4DFA-906C-3AF25A38946D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginCRUMAR", "..\productos-y-pedidos\LoginCRUMAR.csproj", "{1812B771-FDE6-433A-BB68-572FECE45F19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{BE8ED641-6731-4084-8143-08DF2B7BD15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE8ED641-6731-4084-8143-08DF2B7BD15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE8ED641-6731-4084-8143-08DF2B7BD15A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F3EB7AC-7D59-4370-93AB-87727B224960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3EB7AC-7D59-4370-93AB-87727B224960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3EB7AC-7D59-4370-93AB-87727B224960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3EB7AC-7D59-4370-93AB-87727B224960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7431C04F-F159-4DFA-906C-3AF25A38946D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7431C04F-F159-4DFA-906C-3AF25A38946D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7431C04F-F159-4DFA-906C-3AF25A38946D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7431C04F-F159-4DFA-906C-3AF25A38946D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1812B771-FDE6-433A-BB68-572FECE45F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1812B771-FDE6-433A-BB68-572FECE45F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1812B771-FDE6-433A-BB68-572FECE45F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1812B771-FDE6-433A-BB68-572FECE45F19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
