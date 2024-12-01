@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using System.Net.Http;
+using iTextSharp.tool.xml.html;
 
 
 
@@ -28,14 +29,19 @@ namespace LoginCRUMAR
         private const int ANIMATION_STEP = 8; // Velocidad de la animación
         private const int ANIMATION_INTERVAL = 10; // Suavidad de la animación
         private Dictionary<Panel, int> panelHeights = new Dictionary<Panel, int>();
-        public GUI()
+        private string usuario;
+
+        public GUI(string uss)
         {
             InitializeComponent();
             abrirFormHija(new inicio());
             SetupAnimation();
             customizeDesing();
-
+            
+            usuario = uss;
         }
+
+
         private void SetupAnimation()
         {
             // Inicializar el timer para la animación
@@ -194,8 +200,8 @@ namespace LoginCRUMAR
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-           
             showSubMenu(panbtnem);
+            
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -283,6 +289,16 @@ namespace LoginCRUMAR
         {
    
             showSubMenu(panbtnin);
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            abrirFormHija(new GestionarUsuarios());
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            abrirFormHija(new NuevoUsuario());
         }
     }
 }
