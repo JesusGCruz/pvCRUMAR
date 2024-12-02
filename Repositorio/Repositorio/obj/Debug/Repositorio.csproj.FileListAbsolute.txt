@@ -1,0 +1,28 @@
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.csproj.AssemblyReference.cache
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.Form1.resources
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.Properties.Resources.resources
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.csproj.GenerateResource.cache
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\bin\Debug\Repositorio.exe.config
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\bin\Debug\Repositorio.exe
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.exe
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.pdb
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.Menu.resources
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Repositorio.test.resources
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\bin\Debug\FontAwesome.Sharp.Pro.dll
+C:\Users\Guadalupe\source\repos\Repositorio\Repositorio\obj\Debug\Reposito.F4C96B80.Up2Date
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\bin\Debug\Repositorio.exe.config
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\bin\Debug\Repositorio.exe
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.csproj.AssemblyReference.cache
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.Form1.resources
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.Menu.resources
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.Properties.Resources.resources
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.test.resources
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.csproj.GenerateResource.cache
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Reposito.F4C96B80.Up2Date
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.exe
+C:\Users\Alan\Documents\proyectooo partes\Nueva carpeta\Repositorio\Repositorio\obj\Debug\Repositorio.pdb
