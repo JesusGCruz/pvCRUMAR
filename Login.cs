@@ -59,10 +59,10 @@ namespace LoginCRUMAR
                 }
                 else if (rol == 3)
                 {
-                    //MessageBox.Show("Bienvenido Capturista", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    GUIProductos gui = new GUIProductos();
-                    this.Hide();
-                    gui.ShowDialog();
+                    MessageBox.Show("Bienvenido Capturista", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    //GUIProductos gui = new GUIProductos();
+                    //this.Hide();
+                    //gui.ShowDialog();
                 }
                 else if (rol == 4)
                 {

@@ -42,7 +42,7 @@
             this.activ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.selec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.spObtenerProveedoresContactos2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.db_CRUMARDataSet = new LoginCRUMAR.db_CRUMARDataSet();
+            this.db_CRUMARDataSet = new LoginCRUMAR.CRUMARpvDataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cboBusqueda = new System.Windows.Forms.ComboBox();
@@ -52,9 +52,9 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.tbProveedoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tbProveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbProveedoresTableAdapter = new LoginCRUMAR.db_CRUMARDataSetTableAdapters.tbProveedoresTableAdapter();
+            this.tbProveedoresTableAdapter = new LoginCRUMAR.CRUMARpvDataSetTableAdapters.tbProveedoresTableAdapter();
             this.dbCRUMARDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sp_ObtenerProveedoresContactos2TableAdapter = new LoginCRUMAR.db_CRUMARDataSetTableAdapters.sp_ObtenerProveedoresContactos2TableAdapter();
+            this.sp_ObtenerProveedoresContactos2TableAdapter = new LoginCRUMAR.CRUMARpvDataSetTableAdapters.sp_ObtenerProveedoresContactos2TableAdapter();
             this.btlim = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
@@ -105,7 +105,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvdata.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvdata.GridColor = System.Drawing.Color.DimGray;
-            this.dgvdata.Location = new System.Drawing.Point(1, 255);
+            this.dgvdata.Location = new System.Drawing.Point(1, 170);
+            this.dgvdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvdata.MultiSelect = false;
             this.dgvdata.Name = "dgvdata";
             this.dgvdata.ReadOnly = true;
@@ -123,7 +124,7 @@
             this.dgvdata.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvdata.RowTemplate.Height = 28;
             this.dgvdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvdata.Size = new System.Drawing.Size(917, 394);
+            this.dgvdata.Size = new System.Drawing.Size(611, 263);
             this.dgvdata.TabIndex = 17;
             this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
@@ -213,9 +214,10 @@
             // 
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(5, 126);
+            this.label9.Location = new System.Drawing.Point(3, 84);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(913, 90);
+            this.label9.Size = new System.Drawing.Size(609, 60);
             this.label9.TabIndex = 18;
             // 
             // label7
@@ -224,9 +226,10 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(10, 130);
+            this.label7.Location = new System.Drawing.Point(7, 87);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 32);
+            this.label7.Size = new System.Drawing.Size(117, 24);
             this.label7.TabIndex = 21;
             this.label7.Text = "Buscar por:";
             // 
@@ -237,10 +240,11 @@
             this.cboBusqueda.DropDownWidth = 260;
             this.cboBusqueda.ForeColor = System.Drawing.Color.White;
             this.cboBusqueda.FormattingEnabled = true;
-            this.cboBusqueda.ItemHeight = 20;
-            this.cboBusqueda.Location = new System.Drawing.Point(185, 154);
+            this.cboBusqueda.ItemHeight = 13;
+            this.cboBusqueda.Location = new System.Drawing.Point(123, 103);
+            this.cboBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboBusqueda.Name = "cboBusqueda";
-            this.cboBusqueda.Size = new System.Drawing.Size(260, 28);
+            this.cboBusqueda.Size = new System.Drawing.Size(175, 21);
             this.cboBusqueda.TabIndex = 22;
             this.cboBusqueda.UseWaitCursor = true;
             this.cboBusqueda.SelectedIndexChanged += new System.EventHandler(this.cboBusqueda_SelectedIndexChanged);
@@ -249,10 +253,11 @@
             // 
             this.txtbusque.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtbusque.ForeColor = System.Drawing.Color.White;
-            this.txtbusque.Location = new System.Drawing.Point(465, 154);
+            this.txtbusque.Location = new System.Drawing.Point(310, 103);
+            this.txtbusque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbusque.Multiline = true;
             this.txtbusque.Name = "txtbusque";
-            this.txtbusque.Size = new System.Drawing.Size(190, 35);
+            this.txtbusque.Size = new System.Drawing.Size(128, 25);
             this.txtbusque.TabIndex = 23;
             // 
             // btnbusque
@@ -267,9 +272,10 @@
             this.btnbusque.IconColor = System.Drawing.Color.White;
             this.btnbusque.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnbusque.IconSize = 20;
-            this.btnbusque.Location = new System.Drawing.Point(687, 154);
+            this.btnbusque.Location = new System.Drawing.Point(458, 103);
+            this.btnbusque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnbusque.Name = "btnbusque";
-            this.btnbusque.Size = new System.Drawing.Size(63, 35);
+            this.btnbusque.Size = new System.Drawing.Size(42, 23);
             this.btnbusque.TabIndex = 24;
             this.btnbusque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnbusque.UseVisualStyleBackColor = false;
@@ -294,9 +300,10 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(327, 778);
+            this.iconButton1.Location = new System.Drawing.Point(218, 519);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(232, 39);
+            this.iconButton1.Size = new System.Drawing.Size(155, 26);
             this.iconButton1.TabIndex = 28;
             this.iconButton1.Text = "Descargar PDF";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -338,9 +345,10 @@
             this.btlim.IconColor = System.Drawing.Color.White;
             this.btlim.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btlim.IconSize = 20;
-            this.btlim.Location = new System.Drawing.Point(771, 154);
+            this.btlim.Location = new System.Drawing.Point(514, 103);
+            this.btlim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btlim.Name = "btlim";
-            this.btlim.Size = new System.Drawing.Size(63, 35);
+            this.btlim.Size = new System.Drawing.Size(42, 23);
             this.btlim.TabIndex = 75;
             this.btlim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btlim.UseVisualStyleBackColor = false;
@@ -353,18 +361,19 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(307, 36);
+            this.label8.Location = new System.Drawing.Point(205, 24);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(268, 49);
+            this.label8.Size = new System.Drawing.Size(179, 33);
             this.label8.TabIndex = 109;
             this.label8.Text = "PROVEEDORES";
             // 
             // provedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(912, 938);
+            this.ClientSize = new System.Drawing.Size(608, 525);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btlim);
             this.Controls.Add(this.iconButton1);
@@ -376,6 +385,7 @@
             this.Controls.Add(this.dgvdata);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "provedores";
             this.Text = "provedores";
             this.Load += new System.EventHandler(this.provedores_Load);
@@ -397,9 +407,9 @@
         private System.Windows.Forms.ComboBox cboBusqueda;
         private System.Windows.Forms.TextBox txtbusque;
         private FontAwesome.Sharp.IconButton btnbusque;
-        private db_CRUMARDataSet db_CRUMARDataSet;
+        private CRUMARpvDataSet db_CRUMARDataSet;
         private System.Windows.Forms.BindingSource tbProveedoresBindingSource;
-        private db_CRUMARDataSetTableAdapters.tbProveedoresTableAdapter tbProveedoresTableAdapter;
+        private CRUMARpvDataSetTableAdapters.tbProveedoresTableAdapter tbProveedoresTableAdapter;
         private System.Windows.Forms.BindingSource tbProveedoresBindingSource1;
         private System.Windows.Forms.BindingSource dbCRUMARDataSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProvedor;
@@ -409,7 +419,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn correo;
         private System.Windows.Forms.DataGridViewButtonColumn select;
         private System.Windows.Forms.BindingSource spObtenerProveedoresContactos2BindingSource;
-        private db_CRUMARDataSetTableAdapters.sp_ObtenerProveedoresContactos2TableAdapter sp_ObtenerProveedoresContactos2TableAdapter;
+        private CRUMARpvDataSetTableAdapters.sp_ObtenerProveedoresContactos2TableAdapter sp_ObtenerProveedoresContactos2TableAdapter;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.DataGridViewButtonColumn selec;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPro;

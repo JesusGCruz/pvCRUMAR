@@ -48,8 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+      <HintPath>packages\BouncyCastle.Cryptography.2.5.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -77,8 +86,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapturarFoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapturarFoto.Designer.cs">
+      <DependentUpon>CapturarFoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="ConexionUsuarios.cs" />
+    <Compile Include="CRUMARpvDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="db_CRUMARDataSet.cs">
       <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
     </Compile>
@@ -93,29 +113,29 @@
     <Compile Include="editarfrm.Designer.cs">
       <DependentUpon>editarfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUsuarios.Designer.cs">
+      <DependentUpon>EditarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="eliminarfrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="eliminarfrm.Designer.cs">
       <DependentUpon>eliminarfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarUsuarios.Designer.cs">
+      <DependentUpon>GestionarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="guardar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="guardar.Designer.cs">
       <DependentUpon>guardar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUICap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUICap.Designer.cs">
-      <DependentUpon>GUICap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUIProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUIProductos.Designer.cs">
-      <DependentUpon>GUIProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -128,6 +148,12 @@
     </Compile>
     <Compile Include="NuevoUsuario.Designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil.Designer.cs">
+      <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
     <Compile Include="provedores.cs">
       <SubType>Form</SubType>
@@ -150,26 +176,32 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utilidades\OpcionCombo.cs" />
+    <EmbeddedResource Include="CapturarFoto.resx">
+      <DependentUpon>CapturarFoto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editarfrm.resx">
       <DependentUpon>editarfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarUsuarios.resx">
+      <DependentUpon>EditarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eliminarfrm.resx">
       <DependentUpon>eliminarfrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionarUsuarios.resx">
+      <DependentUpon>GestionarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="guardar.resx">
       <DependentUpon>guardar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUICap.resx">
-      <DependentUpon>GUICap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUIProductos.resx">
-      <DependentUpon>GUIProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil.resx">
+      <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="provedores.resx">
       <DependentUpon>provedores.cs</DependentUpon>
@@ -190,6 +222,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="CRUMARpvDataSet.xsc">
+      <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CRUMARpvDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRUMARpvDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRUMARpvDataSet.xss">
+      <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
+    </None>
     <None Include="db_CRUMARDataSet.xsc">
       <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
     </None>

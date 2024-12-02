@@ -36,6 +36,17 @@ namespace LoginCRUMAR
             customizeDesing();
 
         }
+
+        static private string usuario;
+        public GUI(string uss)
+        {
+            InitializeComponent();
+            abrirFormHija(new inicio());
+            SetupAnimation();
+            customizeDesing();
+            usuario = uss;
+        }
+
         private void SetupAnimation()
         {
             // Inicializar el timer para la animación
@@ -286,7 +297,8 @@ namespace LoginCRUMAR
 
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
-
+            abrirFormHija(new GestionarUsuarios());
+            hideSubMenu();
         }
 
         private void iconButton2_Click_1(object sender, EventArgs e)
