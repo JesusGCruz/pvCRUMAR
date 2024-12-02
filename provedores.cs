@@ -57,7 +57,7 @@ namespace LoginCRUMAR
             {
                 if (columna.Visible == true && columna.Name != "selec")
                 {
-                    cboBusqueda.Items.Add(new OpcionCombo() { valor = columna.Name, Text = columna.HeaderText });
+                    cboBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
 
                 }
 
@@ -177,7 +177,7 @@ public void CargarProveedores()
             }
 
             // Obtener la columna a filtrar
-            string columnafiltro = ((OpcionCombo)cboBusqueda.SelectedItem).valor.ToString();
+            string columnafiltro = ((OpcionCombo)cboBusqueda.SelectedItem).Valor.ToString();
 
             // Suspender temporalmente el enlace
             dgvdata.CurrentCell = null; // Esto desconecta la celda seleccionada

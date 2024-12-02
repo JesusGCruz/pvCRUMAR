@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Repositorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,13 +61,16 @@ namespace LoginCRUMAR
                 else if (rol == 3)
                 {
                     MessageBox.Show("Bienvenido Capturista", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    //GUIProductos gui = new GUIProductos();
-                    //this.Hide();
-                    //gui.ShowDialog();
+                    GUIProductos gui = new GUIProductos();
+                    this.Hide();
+                    gui.ShowDialog();
                 }
                 else if (rol == 4)
                 {
                     MessageBox.Show("Bienvenido Repositor", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    test gui = new test();
+                    this.Hide();
+                    gui.ShowDialog();
                 }
             }
             catch (Exception ex)

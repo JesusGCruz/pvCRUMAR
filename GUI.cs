@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using System.Net.Http;
+using Repositorio;
 
 
 
@@ -291,7 +292,7 @@ namespace LoginCRUMAR
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-   
+            //abrirFormHija(new test());
             showSubMenu(panbtnin);
         }
 
@@ -304,6 +305,54 @@ namespace LoginCRUMAR
         private void iconButton2_Click_1(object sender, EventArgs e)
         {
             abrirFormHija(new NuevoUsuario());
+            hideSubMenu();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new AgregarProductos());
+            hideSubMenu();
+        }
+
+        private void btnAgregarP_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new AgregarPedidos());
+            hideSubMenu();
+        }
+
+        private void btnEditarP_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new EditarPedidos());
+            hideSubMenu();
+        }
+
+        private void EliminarP_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new EliminarPedido());
+            hideSubMenu();
+        }
+
+        private void btnBusquedaP_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new BucarPedido());
+            hideSubMenu();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new EditarProducto());
+            hideSubMenu();
+        }
+
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            abrirFormHija(new EliminarProducto());
+            hideSubMenu();
+        }
+
+        private void btnBuscarP_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new BudquedaProduto());
             hideSubMenu();
         }
     }
