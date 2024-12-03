@@ -23,11 +23,19 @@ namespace LoginCRUMAR
         private int panelHeight = 181;
         private bool panelVisible = false;
         private int animationSpeed = 20;
+        private string usuario;
  
         public GUIProductos()
         {
             InitializeComponent();
             abrirFormHija(new inicio());
+        }
+
+        public GUIProductos(string usuario)
+        {
+            InitializeComponent();
+            abrirFormHija(new inicio());
+            this.usuario = usuario;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -158,7 +166,6 @@ namespace LoginCRUMAR
         private void btnInsert_Click(object sender, EventArgs e)
         {
             bajarbtoton();
-           
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -168,7 +175,14 @@ namespace LoginCRUMAR
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ajustes de usuario.");
+            if (panelPerfil.Visible == false)
+            {
+                panelPerfil.Visible = true;
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
         }
 
 
@@ -249,6 +263,26 @@ namespace LoginCRUMAR
         {
             pMenupedidos.Visible = false;
             abrirFormHija(new EditarPedidos());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Cerrar sesión en su perfil?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                this.Hide();
+                login.ShowDialog();
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelPerfil.Visible = false;
+            abrirFormHija(new Perfil(usuario));
         }
     }
 }

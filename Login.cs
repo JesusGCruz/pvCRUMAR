@@ -61,7 +61,7 @@ namespace LoginCRUMAR
                 else if (rol == 3)
                 {
                     MessageBox.Show("Bienvenido Capturista", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    GUIProductos gui = new GUIProductos();
+                    GUIProductos gui = new GUIProductos(txtUss.Text);
                     this.Hide();
                     gui.ShowDialog();
                 }
@@ -174,6 +174,11 @@ namespace LoginCRUMAR
                 txtPass.UseSystemPasswordChar = true;
                 lBtnEye.IconChar = FontAwesome.Sharp.IconChar.Eye;
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Pues acuerdate");
         }
     }
 }

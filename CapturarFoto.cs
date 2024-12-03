@@ -21,7 +21,9 @@ namespace LoginCRUMAR
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice miWebCAm;
         //pictureBox2.Image = Image.FromFile(@"C:\Users\jgarr\source\repos\WebCam\WebCamSave\usuario.jpeg");
-        private string path = @"C:\Users\jgarr\source\repos\LoginCRUMAR\EmpleadosFotos\";
+        //private string path = @"C:\Users\jgarr\source\repos\LoginCRUMAR\EmpleadosFotos\";
+        private string path = @"C:\Users\jgarr\Source\Repos\CRUMARtest\EmpleadosFotos\";
+        
         private string usuario;
         private Image img;
         private Panel panelCont;

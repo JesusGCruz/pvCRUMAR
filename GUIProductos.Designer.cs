@@ -60,6 +60,11 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panelPerfil = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -68,6 +73,7 @@
             this.pMenupedidos.SuspendLayout();
             this.pMenuProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
+            this.panelPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -137,6 +143,7 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.Black;
+            this.menuVertical.Controls.Add(this.panelPerfil);
             this.menuVertical.Controls.Add(this.pMenupedidos);
             this.menuVertical.Controls.Add(this.pPanelP);
             this.menuVertical.Controls.Add(this.pMenuProductos);
@@ -161,8 +168,8 @@
             this.pMenupedidos.Controls.Add(this.panel7);
             this.pMenupedidos.Controls.Add(this.btnAgregarP);
             this.pMenupedidos.Controls.Add(this.panel8);
-            this.pMenupedidos.Location = new System.Drawing.Point(42, 322);
-            this.pMenupedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pMenupedidos.Location = new System.Drawing.Point(51, 188);
+            this.pMenupedidos.Margin = new System.Windows.Forms.Padding(2);
             this.pMenupedidos.Name = "pMenupedidos";
             this.pMenupedidos.Size = new System.Drawing.Size(173, 121);
             this.pMenupedidos.TabIndex = 38;
@@ -183,7 +190,7 @@
             this.EliminarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.EliminarP.IconSize = 30;
             this.EliminarP.Location = new System.Drawing.Point(7, 60);
-            this.EliminarP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EliminarP.Margin = new System.Windows.Forms.Padding(2);
             this.EliminarP.Name = "EliminarP";
             this.EliminarP.Size = new System.Drawing.Size(175, 33);
             this.EliminarP.TabIndex = 37;
@@ -216,7 +223,7 @@
             this.btnBusquedaP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBusquedaP.IconSize = 30;
             this.btnBusquedaP.Location = new System.Drawing.Point(7, 91);
-            this.btnBusquedaP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBusquedaP.Margin = new System.Windows.Forms.Padding(2);
             this.btnBusquedaP.Name = "btnBusquedaP";
             this.btnBusquedaP.Size = new System.Drawing.Size(167, 33);
             this.btnBusquedaP.TabIndex = 43;
@@ -249,7 +256,7 @@
             this.btnEditarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditarP.IconSize = 30;
             this.btnEditarP.Location = new System.Drawing.Point(7, 30);
-            this.btnEditarP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarP.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarP.Name = "btnEditarP";
             this.btnEditarP.Size = new System.Drawing.Size(167, 33);
             this.btnEditarP.TabIndex = 35;
@@ -282,7 +289,7 @@
             this.btnAgregarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarP.IconSize = 30;
             this.btnAgregarP.Location = new System.Drawing.Point(7, 0);
-            this.btnAgregarP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarP.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarP.Name = "btnAgregarP";
             this.btnAgregarP.Size = new System.Drawing.Size(167, 33);
             this.btnAgregarP.TabIndex = 33;
@@ -319,7 +326,7 @@
             this.pMenuProductos.Controls.Add(this.btnBuscarP);
             this.pMenuProductos.Controls.Add(this.panel2);
             this.pMenuProductos.Location = new System.Drawing.Point(61, 156);
-            this.pMenuProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pMenuProductos.Margin = new System.Windows.Forms.Padding(2);
             this.pMenuProductos.Name = "pMenuProductos";
             this.pMenuProductos.Size = new System.Drawing.Size(160, 123);
             this.pMenuProductos.TabIndex = 9;
@@ -340,7 +347,7 @@
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
             this.btnEliminar.Location = new System.Drawing.Point(7, 60);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(156, 33);
             this.btnEliminar.TabIndex = 37;
@@ -373,7 +380,7 @@
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 30;
             this.btnActualizar.Location = new System.Drawing.Point(7, 30);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(156, 33);
             this.btnActualizar.TabIndex = 35;
@@ -406,7 +413,7 @@
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
             this.btnGuardar.Location = new System.Drawing.Point(7, 0);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(156, 33);
             this.btnGuardar.TabIndex = 33;
@@ -439,7 +446,7 @@
             this.btnBuscarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarP.IconSize = 30;
             this.btnBuscarP.Location = new System.Drawing.Point(7, 90);
-            this.btnBuscarP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarP.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarP.Name = "btnBuscarP";
             this.btnBuscarP.Size = new System.Drawing.Size(156, 33);
             this.btnBuscarP.TabIndex = 39;
@@ -460,7 +467,7 @@
             // btnUser
             // 
             this.btnUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnUser.BackColor = System.Drawing.Color.Black;
             this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnUser.FlatAppearance.BorderSize = 0;
@@ -469,7 +476,7 @@
             this.btnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUser.IconSize = 45;
-            this.btnUser.Location = new System.Drawing.Point(12, 425);
+            this.btnUser.Location = new System.Drawing.Point(19, 417);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(48, 47);
             this.btnUser.TabIndex = 8;
@@ -542,6 +549,72 @@
             this.panelContenedor.Size = new System.Drawing.Size(704, 484);
             this.panelContenedor.TabIndex = 2;
             // 
+            // panelPerfil
+            // 
+            this.panelPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelPerfil.Controls.Add(this.panel9);
+            this.panelPerfil.Controls.Add(this.btnCerrarSesion);
+            this.panelPerfil.Controls.Add(this.panel10);
+            this.panelPerfil.Controls.Add(this.button2);
+            this.panelPerfil.Location = new System.Drawing.Point(62, 408);
+            this.panelPerfil.Name = "panelPerfil";
+            this.panelPerfil.Size = new System.Drawing.Size(152, 64);
+            this.panelPerfil.TabIndex = 13;
+            this.panelPerfil.Visible = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel9.Location = new System.Drawing.Point(136, 34);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 29);
+            this.panel9.TabIndex = 11;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.AutoSize = true;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 34);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(143, 29);
+            this.btnCerrarSesion.TabIndex = 10;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel10.Location = new System.Drawing.Point(136, 1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(10, 28);
+            this.panel10.TabIndex = 9;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(3, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 29);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Editar Perfil";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // GUIProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -565,6 +638,8 @@
             this.pMenupedidos.ResumeLayout(false);
             this.pMenuProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
+            this.panelPerfil.ResumeLayout(false);
+            this.panelPerfil.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -602,6 +677,11 @@
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnBusquedaP;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panelPerfil;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button button2;
         //private dbEmpresaWXDataSetTableAdapters.vendedores_EsteTableAdapter vendedores_EsteTableAdapter1;
         //private dbEmpresaWXDataSetTableAdapters.vendedores_EsteTableAdapter vendedores_EsteTableAdapter2;
     }

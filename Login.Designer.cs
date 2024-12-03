@@ -41,7 +41,6 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lBtnEye = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.tbUsuariosBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dbEmpresaWXDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,9 +82,6 @@
             // 
             this.tbUsuariosBindingSource.DataMember = "tbUsuarios";
             // 
-            
-            // 
-            
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -170,6 +166,7 @@
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Olvidé la contraseña";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // lBtnEye
             // 

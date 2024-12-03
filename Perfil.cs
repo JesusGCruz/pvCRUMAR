@@ -15,7 +15,7 @@ namespace LoginCRUMAR
     {
         static private string usuario;
         ConexionUsuarios coBD = new ConexionUsuarios();
-        string imagePath = @"C:\Users\jgarr\source\repos\LoginCRUMAR\EmpleadosFotos\";
+        string imagePath = @"C:\Users\jgarr\Source\Repos\CRUMARtest\EmpleadosFotos\";
         public Perfil(string uss)
         {
             InitializeComponent();
