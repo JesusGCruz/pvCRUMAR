@@ -48,26 +48,28 @@ namespace LoginCRUMAR
                 }
                 else if (rol == 1)
                 {
-                    MessageBox.Show("Bienvenido Admin", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    //GUI gui = new GUI(txtUss.Text);
-                    GUI gui = new GUI();
+                    //MessageBox.Show("Bienvenido Admin", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    GUI gui = new GUI(txtUss.Text);
                     this.Hide();
                     gui.ShowDialog();
                 }
                 else if (rol == 2)
                 {
-                    MessageBox.Show("Bienvenido Cajero", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    //MessageBox.Show("Bienvenido Cajero", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    GUIVentas gui = new GUIVentas(txtUss.Text);
+                    this.Hide();
+                    gui.ShowDialog();
                 }
                 else if (rol == 3)
                 {
-                    MessageBox.Show("Bienvenido Capturista", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    //MessageBox.Show("Bienvenido Capturista", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     GUIProductos gui = new GUIProductos(txtUss.Text);
                     this.Hide();
                     gui.ShowDialog();
                 }
                 else if (rol == 4)
                 {
-                    MessageBox.Show("Bienvenido Repositor", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    //MessageBox.Show("Bienvenido Repositor", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     GUIRep gui = new GUIRep(txtUss.Text);
                     this.Hide();
                     gui.ShowDialog();

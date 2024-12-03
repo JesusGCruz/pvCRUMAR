@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using System.Net.Http;
 using Repositorio;
+using nenita.Forms;
 
 
 
@@ -217,7 +218,14 @@ namespace LoginCRUMAR
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ajustes de usuario.");
+            if (panelPerfil.Visible == false)
+            {
+                panelPerfil.Visible = true;
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
         }
 
 
@@ -354,6 +362,32 @@ namespace LoginCRUMAR
         {
             abrirFormHija(new BudquedaProduto());
             hideSubMenu();
+        }
+
+        private void btnve_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new FrmRegistrarVenta());
+            hideSubMenu();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelPerfil.Visible = false;
+            abrirFormHija(new Perfil(usuario));
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Cerrar sesión en su perfil?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                this.Hide();
+                login.ShowDialog();
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
         }
     }
 }

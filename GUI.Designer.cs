@@ -38,6 +38,11 @@
             this.btnUser = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnve = new FontAwesome.Sharp.IconButton();
+            this.panbtnpe = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAgregarP = new FontAwesome.Sharp.IconButton();
+            this.btnEditarP = new FontAwesome.Sharp.IconButton();
+            this.EliminarP = new FontAwesome.Sharp.IconButton();
+            this.btnBusquedaP = new FontAwesome.Sharp.IconButton();
             this.btnpe = new FontAwesome.Sharp.IconButton();
             this.panbtnpro = new System.Windows.Forms.FlowLayoutPanel();
             this.btnguardar = new FontAwesome.Sharp.IconButton();
@@ -46,32 +51,33 @@
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnpro = new FontAwesome.Sharp.IconButton();
             this.panbtnin = new System.Windows.Forms.FlowLayoutPanel();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.btnActualizar = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnBuscarP = new FontAwesome.Sharp.IconButton();
             this.btnin = new FontAwesome.Sharp.IconButton();
             this.panbtnem = new System.Windows.Forms.FlowLayoutPanel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
-            this.btnAgregarP = new FontAwesome.Sharp.IconButton();
-            this.panbtnpe = new System.Windows.Forms.FlowLayoutPanel();
-            this.EliminarP = new FontAwesome.Sharp.IconButton();
-            this.btnBusquedaP = new FontAwesome.Sharp.IconButton();
-            this.btnEditarP = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.btnActualizar = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.btnBuscarP = new FontAwesome.Sharp.IconButton();
+            this.panelPerfil = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.menuVertical.SuspendLayout();
+            this.panbtnpe.SuspendLayout();
             this.panbtnpro.SuspendLayout();
             this.panbtnin.SuspendLayout();
             this.panbtnem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
-            this.panbtnpe.SuspendLayout();
+            this.panelPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -143,6 +149,7 @@
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.menuVertical.Controls.Add(this.btnUser);
+            this.menuVertical.Controls.Add(this.panelPerfil);
             this.menuVertical.Controls.Add(this.panel2);
             this.menuVertical.Controls.Add(this.btnve);
             this.menuVertical.Controls.Add(this.panbtnpe);
@@ -157,7 +164,7 @@
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVertical.Location = new System.Drawing.Point(0, 41);
             this.menuVertical.Name = "menuVertical";
-            this.menuVertical.Size = new System.Drawing.Size(192, 536);
+            this.menuVertical.Size = new System.Drawing.Size(192, 500);
             this.menuVertical.TabIndex = 1;
             this.menuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.menuVertical_Paint);
             // 
@@ -173,9 +180,9 @@
             this.btnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUser.IconSize = 45;
-            this.btnUser.Location = new System.Drawing.Point(0, 473);
+            this.btnUser.Location = new System.Drawing.Point(2, 424);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(192, 63);
+            this.btnUser.Size = new System.Drawing.Size(59, 54);
             this.btnUser.TabIndex = 8;
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.UseVisualStyleBackColor = false;
@@ -211,6 +218,124 @@
             this.btnve.Text = "Venta";
             this.btnve.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnve.UseVisualStyleBackColor = true;
+            this.btnve.Click += new System.EventHandler(this.btnve_Click);
+            // 
+            // panbtnpe
+            // 
+            this.panbtnpe.Controls.Add(this.btnAgregarP);
+            this.panbtnpe.Controls.Add(this.btnEditarP);
+            this.panbtnpe.Controls.Add(this.EliminarP);
+            this.panbtnpe.Controls.Add(this.btnBusquedaP);
+            this.panbtnpe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panbtnpe.Location = new System.Drawing.Point(0, 634);
+            this.panbtnpe.Margin = new System.Windows.Forms.Padding(2);
+            this.panbtnpe.Name = "panbtnpe";
+            this.panbtnpe.Size = new System.Drawing.Size(192, 149);
+            this.panbtnpe.TabIndex = 61;
+            // 
+            // btnAgregarP
+            // 
+            this.btnAgregarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAgregarP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarP.FlatAppearance.BorderSize = 0;
+            this.btnAgregarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAgregarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAgregarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarP.ForeColor = System.Drawing.Color.LightGray;
+            this.btnAgregarP.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.btnAgregarP.IconColor = System.Drawing.Color.White;
+            this.btnAgregarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarP.IconSize = 30;
+            this.btnAgregarP.Location = new System.Drawing.Point(2, 2);
+            this.btnAgregarP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarP.Name = "btnAgregarP";
+            this.btnAgregarP.Size = new System.Drawing.Size(167, 33);
+            this.btnAgregarP.TabIndex = 33;
+            this.btnAgregarP.Text = "Agregar Pedido";
+            this.btnAgregarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarP.UseVisualStyleBackColor = false;
+            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
+            // 
+            // btnEditarP
+            // 
+            this.btnEditarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnEditarP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditarP.FlatAppearance.BorderSize = 0;
+            this.btnEditarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnEditarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEditarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarP.ForeColor = System.Drawing.Color.LightGray;
+            this.btnEditarP.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnEditarP.IconColor = System.Drawing.Color.White;
+            this.btnEditarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditarP.IconSize = 30;
+            this.btnEditarP.Location = new System.Drawing.Point(2, 39);
+            this.btnEditarP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarP.Name = "btnEditarP";
+            this.btnEditarP.Size = new System.Drawing.Size(167, 33);
+            this.btnEditarP.TabIndex = 35;
+            this.btnEditarP.Text = "Editar Pedido";
+            this.btnEditarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditarP.UseVisualStyleBackColor = false;
+            this.btnEditarP.Click += new System.EventHandler(this.btnEditarP_Click);
+            // 
+            // EliminarP
+            // 
+            this.EliminarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.EliminarP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EliminarP.FlatAppearance.BorderSize = 0;
+            this.EliminarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.EliminarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.EliminarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarP.ForeColor = System.Drawing.Color.LightGray;
+            this.EliminarP.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.EliminarP.IconColor = System.Drawing.Color.White;
+            this.EliminarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EliminarP.IconSize = 30;
+            this.EliminarP.Location = new System.Drawing.Point(2, 76);
+            this.EliminarP.Margin = new System.Windows.Forms.Padding(2);
+            this.EliminarP.Name = "EliminarP";
+            this.EliminarP.Size = new System.Drawing.Size(175, 33);
+            this.EliminarP.TabIndex = 37;
+            this.EliminarP.Text = "Eliminar Pedido";
+            this.EliminarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EliminarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EliminarP.UseVisualStyleBackColor = false;
+            this.EliminarP.Click += new System.EventHandler(this.EliminarP_Click);
+            // 
+            // btnBusquedaP
+            // 
+            this.btnBusquedaP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnBusquedaP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBusquedaP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBusquedaP.FlatAppearance.BorderSize = 0;
+            this.btnBusquedaP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnBusquedaP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBusquedaP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusquedaP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusquedaP.ForeColor = System.Drawing.Color.LightGray;
+            this.btnBusquedaP.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBusquedaP.IconColor = System.Drawing.Color.White;
+            this.btnBusquedaP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBusquedaP.IconSize = 30;
+            this.btnBusquedaP.Location = new System.Drawing.Point(2, 113);
+            this.btnBusquedaP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBusquedaP.Name = "btnBusquedaP";
+            this.btnBusquedaP.Size = new System.Drawing.Size(167, 33);
+            this.btnBusquedaP.TabIndex = 43;
+            this.btnBusquedaP.Text = "Busqueda de Pedido";
+            this.btnBusquedaP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBusquedaP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBusquedaP.UseVisualStyleBackColor = false;
+            this.btnBusquedaP.Click += new System.EventHandler(this.btnBusquedaP_Click);
             // 
             // btnpe
             // 
@@ -389,6 +514,110 @@
             this.panbtnin.Size = new System.Drawing.Size(192, 148);
             this.panbtnin.TabIndex = 61;
             // 
+            // iconButton4
+            // 
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.Color.LightGray;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 30;
+            this.iconButton4.Location = new System.Drawing.Point(2, 2);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(156, 33);
+            this.iconButton4.TabIndex = 33;
+            this.iconButton4.Text = "Agregar Producto";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnActualizar.IconColor = System.Drawing.Color.White;
+            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualizar.IconSize = 30;
+            this.btnActualizar.Location = new System.Drawing.Point(2, 39);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(156, 33);
+            this.btnActualizar.TabIndex = 35;
+            this.btnActualizar.Text = "Editar Producto";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.LightGray;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 30;
+            this.iconButton3.Location = new System.Drawing.Point(2, 76);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(156, 33);
+            this.iconButton3.TabIndex = 37;
+            this.iconButton3.Text = "Eliminar Producto";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click_1);
+            // 
+            // btnBuscarP
+            // 
+            this.btnBuscarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnBuscarP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuscarP.FlatAppearance.BorderSize = 0;
+            this.btnBuscarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnBuscarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBuscarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarP.ForeColor = System.Drawing.Color.LightGray;
+            this.btnBuscarP.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarP.IconColor = System.Drawing.Color.White;
+            this.btnBuscarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarP.IconSize = 30;
+            this.btnBuscarP.Location = new System.Drawing.Point(2, 113);
+            this.btnBuscarP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarP.Name = "btnBuscarP";
+            this.btnBuscarP.Size = new System.Drawing.Size(156, 33);
+            this.btnBuscarP.TabIndex = 39;
+            this.btnBuscarP.Text = "Busqueda de Producto";
+            this.btnBuscarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarP.UseVisualStyleBackColor = false;
+            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
+            // 
             // btnin
             // 
             this.btnin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -508,242 +737,87 @@
             this.btnInicio.TabStop = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // btnAgregarP
-            // 
-            this.btnAgregarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnAgregarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregarP.FlatAppearance.BorderSize = 0;
-            this.btnAgregarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnAgregarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAgregarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarP.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAgregarP.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.btnAgregarP.IconColor = System.Drawing.Color.White;
-            this.btnAgregarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregarP.IconSize = 30;
-            this.btnAgregarP.Location = new System.Drawing.Point(2, 2);
-            this.btnAgregarP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgregarP.Name = "btnAgregarP";
-            this.btnAgregarP.Size = new System.Drawing.Size(167, 33);
-            this.btnAgregarP.TabIndex = 33;
-            this.btnAgregarP.Text = "Agregar Pedido";
-            this.btnAgregarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarP.UseVisualStyleBackColor = false;
-            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
-            // 
-            // panbtnpe
-            // 
-            this.panbtnpe.Controls.Add(this.btnAgregarP);
-            this.panbtnpe.Controls.Add(this.btnEditarP);
-            this.panbtnpe.Controls.Add(this.EliminarP);
-            this.panbtnpe.Controls.Add(this.btnBusquedaP);
-            this.panbtnpe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panbtnpe.Location = new System.Drawing.Point(0, 634);
-            this.panbtnpe.Margin = new System.Windows.Forms.Padding(2);
-            this.panbtnpe.Name = "panbtnpe";
-            this.panbtnpe.Size = new System.Drawing.Size(192, 149);
-            this.panbtnpe.TabIndex = 61;
-            // 
-            // EliminarP
-            // 
-            this.EliminarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.EliminarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.EliminarP.FlatAppearance.BorderSize = 0;
-            this.EliminarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.EliminarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.EliminarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarP.ForeColor = System.Drawing.Color.LightGray;
-            this.EliminarP.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.EliminarP.IconColor = System.Drawing.Color.White;
-            this.EliminarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EliminarP.IconSize = 30;
-            this.EliminarP.Location = new System.Drawing.Point(2, 76);
-            this.EliminarP.Margin = new System.Windows.Forms.Padding(2);
-            this.EliminarP.Name = "EliminarP";
-            this.EliminarP.Size = new System.Drawing.Size(175, 33);
-            this.EliminarP.TabIndex = 37;
-            this.EliminarP.Text = "Eliminar Pedido";
-            this.EliminarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EliminarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.EliminarP.UseVisualStyleBackColor = false;
-            this.EliminarP.Click += new System.EventHandler(this.EliminarP_Click);
-            // 
-            // btnBusquedaP
-            // 
-            this.btnBusquedaP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnBusquedaP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBusquedaP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBusquedaP.FlatAppearance.BorderSize = 0;
-            this.btnBusquedaP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnBusquedaP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBusquedaP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusquedaP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusquedaP.ForeColor = System.Drawing.Color.LightGray;
-            this.btnBusquedaP.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBusquedaP.IconColor = System.Drawing.Color.White;
-            this.btnBusquedaP.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBusquedaP.IconSize = 30;
-            this.btnBusquedaP.Location = new System.Drawing.Point(2, 113);
-            this.btnBusquedaP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBusquedaP.Name = "btnBusquedaP";
-            this.btnBusquedaP.Size = new System.Drawing.Size(167, 33);
-            this.btnBusquedaP.TabIndex = 43;
-            this.btnBusquedaP.Text = "Busqueda de Pedido";
-            this.btnBusquedaP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBusquedaP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBusquedaP.UseVisualStyleBackColor = false;
-            this.btnBusquedaP.Click += new System.EventHandler(this.btnBusquedaP_Click);
-            // 
-            // btnEditarP
-            // 
-            this.btnEditarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnEditarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditarP.FlatAppearance.BorderSize = 0;
-            this.btnEditarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnEditarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnEditarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarP.ForeColor = System.Drawing.Color.LightGray;
-            this.btnEditarP.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditarP.IconColor = System.Drawing.Color.White;
-            this.btnEditarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditarP.IconSize = 30;
-            this.btnEditarP.Location = new System.Drawing.Point(2, 39);
-            this.btnEditarP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditarP.Name = "btnEditarP";
-            this.btnEditarP.Size = new System.Drawing.Size(167, 33);
-            this.btnEditarP.TabIndex = 35;
-            this.btnEditarP.Text = "Editar Pedido";
-            this.btnEditarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditarP.UseVisualStyleBackColor = false;
-            this.btnEditarP.Click += new System.EventHandler(this.btnEditarP_Click);
-            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(192, 41);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(608, 536);
+            this.panelContenedor.Size = new System.Drawing.Size(608, 500);
             this.panelContenedor.TabIndex = 2;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
-            // iconButton3
+            // panelPerfil
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.LightGray;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(2, 76);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(156, 33);
-            this.iconButton3.TabIndex = 37;
-            this.iconButton3.Text = "Eliminar Producto";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click_1);
+            this.panelPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelPerfil.Controls.Add(this.panel7);
+            this.panelPerfil.Controls.Add(this.btnCerrarSesion);
+            this.panelPerfil.Controls.Add(this.panel8);
+            this.panelPerfil.Controls.Add(this.button2);
+            this.panelPerfil.Location = new System.Drawing.Point(55, 424);
+            this.panelPerfil.Name = "panelPerfil";
+            this.panelPerfil.Size = new System.Drawing.Size(152, 64);
+            this.panelPerfil.TabIndex = 13;
+            this.panelPerfil.Visible = false;
             // 
-            // btnActualizar
+            // panel7
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnActualizar.IconColor = System.Drawing.Color.White;
-            this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnActualizar.IconSize = 30;
-            this.btnActualizar.Location = new System.Drawing.Point(2, 39);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(156, 33);
-            this.btnActualizar.TabIndex = 35;
-            this.btnActualizar.Text = "Editar Producto";
-            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(136, 34);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 29);
+            this.panel7.TabIndex = 11;
             // 
-            // iconButton4
+            // btnCerrarSesion
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.LightGray;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
-            this.iconButton4.Location = new System.Drawing.Point(2, 2);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(156, 33);
-            this.iconButton4.TabIndex = 33;
-            this.iconButton4.Text = "Agregar Producto";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.btnCerrarSesion.AutoSize = true;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 34);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(146, 29);
+            this.btnCerrarSesion.TabIndex = 10;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // btnBuscarP
+            // panel8
             // 
-            this.btnBuscarP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnBuscarP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBuscarP.FlatAppearance.BorderSize = 0;
-            this.btnBuscarP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnBuscarP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnBuscarP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarP.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarP.ForeColor = System.Drawing.Color.LightGray;
-            this.btnBuscarP.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarP.IconColor = System.Drawing.Color.White;
-            this.btnBuscarP.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarP.IconSize = 30;
-            this.btnBuscarP.Location = new System.Drawing.Point(2, 113);
-            this.btnBuscarP.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarP.Name = "btnBuscarP";
-            this.btnBuscarP.Size = new System.Drawing.Size(156, 33);
-            this.btnBuscarP.TabIndex = 39;
-            this.btnBuscarP.Text = "Busqueda de Producto";
-            this.btnBuscarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarP.UseVisualStyleBackColor = false;
-            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel8.Location = new System.Drawing.Point(136, 1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 28);
+            this.panel8.TabIndex = 9;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(3, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 29);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Editar Perfil";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(800, 577);
+            this.ClientSize = new System.Drawing.Size(800, 541);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.menuVertical);
             this.Controls.Add(this.barraTitulo);
@@ -758,11 +832,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.menuVertical.ResumeLayout(false);
+            this.panbtnpe.ResumeLayout(false);
             this.panbtnpro.ResumeLayout(false);
             this.panbtnin.ResumeLayout(false);
             this.panbtnem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
-            this.panbtnpe.ResumeLayout(false);
+            this.panelPerfil.ResumeLayout(false);
+            this.panelPerfil.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -802,5 +878,10 @@
         private FontAwesome.Sharp.IconButton btnActualizar;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton btnBuscarP;
+        private System.Windows.Forms.Panel panelPerfil;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button button2;
     }
 }

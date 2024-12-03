@@ -35,6 +35,11 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMax = new System.Windows.Forms.PictureBox();
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.panelPerfil = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pMenupedidos = new System.Windows.Forms.Panel();
             this.EliminarP = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -60,20 +65,15 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panelPerfil = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             this.menuVertical.SuspendLayout();
+            this.panelPerfil.SuspendLayout();
             this.pMenupedidos.SuspendLayout();
             this.pMenuProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
-            this.panelPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -157,6 +157,72 @@
             this.menuVertical.Name = "menuVertical";
             this.menuVertical.Size = new System.Drawing.Size(220, 484);
             this.menuVertical.TabIndex = 1;
+            // 
+            // panelPerfil
+            // 
+            this.panelPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelPerfil.Controls.Add(this.panel9);
+            this.panelPerfil.Controls.Add(this.btnCerrarSesion);
+            this.panelPerfil.Controls.Add(this.panel10);
+            this.panelPerfil.Controls.Add(this.button2);
+            this.panelPerfil.Location = new System.Drawing.Point(62, 408);
+            this.panelPerfil.Name = "panelPerfil";
+            this.panelPerfil.Size = new System.Drawing.Size(152, 64);
+            this.panelPerfil.TabIndex = 13;
+            this.panelPerfil.Visible = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel9.Location = new System.Drawing.Point(136, 34);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 29);
+            this.panel9.TabIndex = 11;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.AutoSize = true;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 34);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(143, 29);
+            this.btnCerrarSesion.TabIndex = 10;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel10.Location = new System.Drawing.Point(136, 1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(10, 28);
+            this.panel10.TabIndex = 9;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(3, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 29);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Editar Perfil";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pMenupedidos
             // 
@@ -476,7 +542,7 @@
             this.btnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUser.IconSize = 45;
-            this.btnUser.Location = new System.Drawing.Point(19, 417);
+            this.btnUser.Location = new System.Drawing.Point(12, 417);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(48, 47);
             this.btnUser.TabIndex = 8;
@@ -549,72 +615,6 @@
             this.panelContenedor.Size = new System.Drawing.Size(704, 484);
             this.panelContenedor.TabIndex = 2;
             // 
-            // panelPerfil
-            // 
-            this.panelPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelPerfil.Controls.Add(this.panel9);
-            this.panelPerfil.Controls.Add(this.btnCerrarSesion);
-            this.panelPerfil.Controls.Add(this.panel10);
-            this.panelPerfil.Controls.Add(this.button2);
-            this.panelPerfil.Location = new System.Drawing.Point(62, 408);
-            this.panelPerfil.Name = "panelPerfil";
-            this.panelPerfil.Size = new System.Drawing.Size(152, 64);
-            this.panelPerfil.TabIndex = 13;
-            this.panelPerfil.Visible = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel9.Location = new System.Drawing.Point(136, 34);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 29);
-            this.panel9.TabIndex = 11;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.AutoSize = true;
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 34);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(143, 29);
-            this.btnCerrarSesion.TabIndex = 10;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel10.Location = new System.Drawing.Point(136, 1);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 28);
-            this.panel10.TabIndex = 9;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 29);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Editar Perfil";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // GUIProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -635,11 +635,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             this.menuVertical.ResumeLayout(false);
+            this.panelPerfil.ResumeLayout(false);
+            this.panelPerfil.PerformLayout();
             this.pMenupedidos.ResumeLayout(false);
             this.pMenuProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
-            this.panelPerfil.ResumeLayout(false);
-            this.panelPerfil.PerformLayout();
             this.ResumeLayout(false);
 
         }

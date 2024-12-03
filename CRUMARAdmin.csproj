@@ -212,6 +212,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="data\DBConnection.cs" />
+    <Compile Include="data\ProductoDAL.cs" />
+    <Compile Include="data\VentaDAL.cs" />
     <Compile Include="editarfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +257,18 @@
     <Compile Include="EliminarProducto.Designer.cs">
       <DependentUpon>EliminarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="formsCajero\FrmRegistrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formsCajero\FrmRegistrarVenta.Designer.cs">
+      <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formsCajero\GUIVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formsCajero\GUIVentas.Designer.cs">
+      <DependentUpon>GUIVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +300,9 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\DetalleVenta.cs" />
+    <Compile Include="models\Producto.cs" />
+    <Compile Include="models\Venta.cs" />
     <Compile Include="NuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +379,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarProducto.resx">
       <DependentUpon>EliminarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formsCajero\FrmRegistrarVenta.resx">
+      <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formsCajero\GUIVentas.resx">
+      <DependentUpon>GUIVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarUsuarios.resx">
       <DependentUpon>GestionarUsuarios.cs</DependentUpon>
