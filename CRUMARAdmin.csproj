@@ -212,14 +212,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="db_CRUMARDataSet.cs">
-      <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="db_CRUMARDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="editarfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +271,12 @@
     </Compile>
     <Compile Include="GUIProductos.Designer.cs">
       <DependentUpon>GUIProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIRep.Designer.cs">
+      <DependentUpon>GUIRep.cs</DependentUpon>
     </Compile>
     <Compile Include="ImpresionTicket.cs" />
     <Compile Include="Login.cs">
@@ -373,6 +371,9 @@
     <EmbeddedResource Include="GUIProductos.resx">
       <DependentUpon>GUIProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUIRep.resx">
+      <DependentUpon>GUIRep.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -414,17 +415,6 @@
     </None>
     <None Include="CRUMARpvDataSet.xss">
       <DependentUpon>CRUMARpvDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="db_CRUMARDataSet.xsc">
-      <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="db_CRUMARDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_CRUMARDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="db_CRUMARDataSet.xss">
-      <DependentUpon>db_CRUMARDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

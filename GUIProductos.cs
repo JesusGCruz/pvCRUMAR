@@ -191,8 +191,6 @@ namespace LoginCRUMAR
             pMenuProductos.Visible = false;
             bajarbtoton();
             abrirFormHija(new AgregarProductos());
-            
-
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

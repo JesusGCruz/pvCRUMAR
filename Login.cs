@@ -68,7 +68,7 @@ namespace LoginCRUMAR
                 else if (rol == 4)
                 {
                     MessageBox.Show("Bienvenido Repositor", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    test gui = new test();
+                    GUIRep gui = new GUIRep(txtUss.Text);
                     this.Hide();
                     gui.ShowDialog();
                 }

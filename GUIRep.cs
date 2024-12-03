@@ -7,100 +7,66 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using iTextSharp.tool.xml.html;
+using Repositorio;
 
-namespace Repositorio
+namespace LoginCRUMAR
 {
     public partial class GUIRep : Form
     {
-        private Timer animationTimer;
-        private Panel panelToAnimate;
-        private int targetHeight;
-        private const int ANIMATION_STEP = 8; // Velocidad de la animación
-        private const int ANIMATION_INTERVAL = 10; // Suavidad de la animación
-        private Dictionary<Panel, int> panelHeights = new Dictionary<Panel, int>();
-
-        public GUIRep()
+        static private string usuario;
+        public GUIRep(string uss)
         {
             InitializeComponent();
-            SetupAnimation();
-            customizeDesing();
+            abrirFormHija(new inicio());
+            usuario = uss;
         }
-        private void SetupAnimation()
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            // Inicializar el timer para la animación
-            animationTimer = new Timer();
-            animationTimer.Interval = ANIMATION_INTERVAL;
-            animationTimer.Tick += AnimationTimer_Tick;
-
-            // Guardar las alturas originales de los paneles
-            panelHeights[subMenuSearch] = subMenuSearch.Height;
-            
+            Application.Exit();
         }
 
-        private void AnimationTimer_Tick(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (panelToAnimate == null) return;
-
-            if (panelToAnimate.Height < targetHeight)
-            {
-                panelToAnimate.Height += ANIMATION_STEP;
-                if (panelToAnimate.Height >= targetHeight)
-                {
-                    panelToAnimate.Height = targetHeight;
-                    animationTimer.Stop();
-                }
-            }
-            else
-            {
-                panelToAnimate.Height -= ANIMATION_STEP;
-                if (panelToAnimate.Height <= 0)
-                {
-                    panelToAnimate.Height = 0;
-                    panelToAnimate.Visible = false;
-                    animationTimer.Stop();
-                }
-            }
+            this.WindowState = FormWindowState.Maximized;
+            btnMax.Visible = false;
+            btnRestaurar.Visible = true;
         }
-        private void customizeDesing()
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            subMenuSearch.Visible = false;
-            
-
+            this.WindowState= FormWindowState.Minimized;
         }
-        private void hideSubMenu()
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            foreach (Panel panel in new[] { subMenuSearch})
-            {
-                if (panel.Visible)
-                {
-                    panelToAnimate = panel;
-                    targetHeight = 0;
-                    animationTimer.Start();
-                }
-            }
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMax.Visible = true;
         }
 
-        private void showSubMenu(Panel subMenu)
+        private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
+            ReleaseCapture();
 
-                // Iniciar animación de mostrar
-                subMenu.Height = 0;
-                subMenu.Visible = true;
-                panelToAnimate = subMenu;
-                targetHeight = panelHeights[subMenu];
-                animationTimer.Start();
-            }
-            else
-            {
-                // Iniciar animación de ocultar
-                panelToAnimate = subMenu;
-                targetHeight = 0;
-                animationTimer.Start();
-            }
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        
+
+        
+
+        
 
         private void abrirFormHija(object formHija)
         {
@@ -116,26 +82,57 @@ namespace Repositorio
             fh.Show();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnInsert_Click(object sender, EventArgs e)
         {
-            showSubMenu(subMenuSearch);
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        // Evento para el botón que abre el formulario test
-
-        private void btnProductos_Click_1(object sender, EventArgs e)
-        {
-            abrirFormHija(new test()); // Cargar en el panel
+            //abrirFormHija(new test());
+            abrirFormHija(new GestionarUsuarios());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
+            abrirFormHija(new inicio());
+        }
 
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            if (panelPerfil.Visible == false)
+            {
+                panelPerfil.Visible = true;
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new NuevoUsuario());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelPerfil.Visible = false;
+            abrirFormHija(new Perfil(usuario));
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Cerrar sesión en su perfil?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                this.Hide();
+                login.ShowDialog();
+            }
+            else
+            {
+                panelPerfil.Visible = false;
+            }
+        }
+
+        private void rBtnProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new test());
         }
     }
 }
