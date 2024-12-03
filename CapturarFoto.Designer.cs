@@ -45,7 +45,7 @@
             this.fBtnCapturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fBtnCapturar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBtnCapturar.ForeColor = System.Drawing.Color.White;
-            this.fBtnCapturar.Location = new System.Drawing.Point(38, 466);
+            this.fBtnCapturar.Location = new System.Drawing.Point(52, 377);
             this.fBtnCapturar.Name = "fBtnCapturar";
             this.fBtnCapturar.Size = new System.Drawing.Size(247, 34);
             this.fBtnCapturar.TabIndex = 27;
@@ -56,9 +56,9 @@
             // fPbFoto
             // 
             this.fPbFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fPbFoto.Location = new System.Drawing.Point(38, 32);
+            this.fPbFoto.Location = new System.Drawing.Point(52, 32);
             this.fPbFoto.Name = "fPbFoto";
-            this.fPbFoto.Size = new System.Drawing.Size(500, 400);
+            this.fPbFoto.Size = new System.Drawing.Size(500, 313);
             this.fPbFoto.TabIndex = 29;
             this.fPbFoto.TabStop = false;
             // 
@@ -71,7 +71,7 @@
             this.fBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fBtnGuardar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.fBtnGuardar.Location = new System.Drawing.Point(38, 516);
+            this.fBtnGuardar.Location = new System.Drawing.Point(52, 427);
             this.fBtnGuardar.Name = "fBtnGuardar";
             this.fBtnGuardar.Size = new System.Drawing.Size(500, 34);
             this.fBtnGuardar.TabIndex = 30;
@@ -88,7 +88,7 @@
             this.fBtnReintentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fBtnReintentar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBtnReintentar.ForeColor = System.Drawing.Color.White;
-            this.fBtnReintentar.Location = new System.Drawing.Point(311, 466);
+            this.fBtnReintentar.Location = new System.Drawing.Point(325, 377);
             this.fBtnReintentar.Name = "fBtnReintentar";
             this.fBtnReintentar.Size = new System.Drawing.Size(227, 34);
             this.fBtnReintentar.TabIndex = 31;
@@ -105,7 +105,7 @@
             this.pBtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pBtnCancelar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pBtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.pBtnCancelar.Location = new System.Drawing.Point(38, 564);
+            this.pBtnCancelar.Location = new System.Drawing.Point(52, 475);
             this.pBtnCancelar.Name = "pBtnCancelar";
             this.pBtnCancelar.Size = new System.Drawing.Size(500, 34);
             this.pBtnCancelar.TabIndex = 32;
@@ -119,7 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(580, 610);
+            this.ClientSize = new System.Drawing.Size(608, 536);
             this.Controls.Add(this.pBtnCancelar);
             this.Controls.Add(this.fBtnReintentar);
             this.Controls.Add(this.fBtnGuardar);
