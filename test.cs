@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
-namespace Repositorio
+namespace LoginCRUMAR
 {
     public partial class test : Form
     {

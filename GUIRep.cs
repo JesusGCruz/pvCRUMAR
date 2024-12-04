@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using iTextSharp.tool.xml.html;
-using Repositorio;
 
 namespace LoginCRUMAR
 {

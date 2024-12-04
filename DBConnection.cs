@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nenita.Data
+namespace LoginCRUMAR
 {
     internal class DBConnection
     {

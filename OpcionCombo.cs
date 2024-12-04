@@ -8,7 +8,7 @@ namespace LoginCRUMAR
 {
     public class OpcionCombo
     {
-        public string Valor { get; set; }
-        public string Texto { get; set; }
+        public string Text { get; set; }
+        public object valor { get; set; }
     }
 }

@@ -10,8 +10,6 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using System.Net.Http;
-using Repositorio;
-using nenita.Forms;
 
 
 

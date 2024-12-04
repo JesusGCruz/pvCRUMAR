@@ -1,6 +1,4 @@
-﻿using LoginCRUMAR;
-
-namespace Repositorio
+﻿namespace LoginCRUMAR
 {
     partial class test
     {

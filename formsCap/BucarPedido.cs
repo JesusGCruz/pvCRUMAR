@@ -87,7 +87,7 @@ namespace LoginCRUMAR
         {
             try
             {
-                string columnaFiltro = ((OpcionCombo)cboBusqueda.SelectedItem).valor.ToString();
+                string columnaFiltro = ((OpcionCombo)cboBusqueda.SelectedItem).Valor.ToString();
                 string textoBuscar = txtBuscar.Text.Trim().ToUpper();
 
                 foreach (DataGridViewRow row in dgvPedidos.Rows)
@@ -117,7 +117,7 @@ namespace LoginCRUMAR
             {
                 if (column.Visible == true)
                 {
-                    cboBusqueda.Items.Add(new OpcionCombo() { valor = column.Name, Text = column.HeaderText });
+                    cboBusqueda.Items.Add(new OpcionCombo() { Valor = column.Name, Texto = column.HeaderText });
 
                 }
 

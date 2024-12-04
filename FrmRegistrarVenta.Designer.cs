@@ -1,4 +1,4 @@
-﻿namespace nenita.Forms
+﻿namespace LoginCRUMAR
 {
     partial class FrmRegistrarVenta
     {
