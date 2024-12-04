@@ -10652,7 +10652,7 @@ SELECT idContacto, numTelefono, ladaPais, correoElectronico FROM tbContactos WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -11029,7 +11029,7 @@ SELECT horario, rol, RFC, usuario, contrasenha, activo, idEmp FROM tbEmpleados W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -11467,7 +11467,7 @@ SELECT RFC, nombres, apellidos FROM tbPersonas WHERE (RFC = @RFC)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -11862,7 +11862,7 @@ SELECT codigoBarras, nombre, marca, iva, existencia, precioCompra, precioVenta, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -12282,7 +12282,7 @@ SELECT idProductoProve, idProveedor, codigpBarras, fecha, cantidadProducto FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -12626,7 +12626,7 @@ SELECT idProducVenta, idVenta, codigoBarras FROM tbProductos_Ventas WHERE (idPro
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -12936,7 +12936,7 @@ SELECT idProvedor, nombre, idContacto FROM tbProveedores WHERE (idProvedor = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -13261,7 +13261,7 @@ SELECT idProvedor, nombre, idContacto FROM tbProveedores WHERE (idProvedor = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -13601,7 +13601,7 @@ SELECT idVenta, descuento, iva, monto, fecha FROM tbVentas WHERE (idVenta = @idV
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -13944,7 +13944,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -14232,7 +14232,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -14408,7 +14408,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -14592,7 +14592,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -14777,7 +14777,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -14963,7 +14963,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -15150,7 +15150,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -15332,7 +15332,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -15520,7 +15520,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -15689,7 +15689,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -15865,7 +15865,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -16040,7 +16040,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            this._connection.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                 "e;TrustServerCertificate=True";
         }
         
@@ -16109,7 +16109,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.IDbCommand[19];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.spActualizarEmpleado";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16123,14 +16123,14 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contrasenha", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.spEliminarEmpleado";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RFC", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.spRegistrarEmpleado";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16144,21 +16144,21 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contrasenha", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.consultarCaducidad";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@coBarras", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandText = "dbo.fEmpleadoExis";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.ReturnValue, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RFC", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandText = "dbo.spAutenticarUsuario";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16166,14 +16166,14 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usuario", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contra", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandText = "dbo.EliminarProveedoryContacto";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idproveedor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).CommandText = "dbo.InsertarProveedorYContacto";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16184,7 +16184,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correoElectronico", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).CommandText = "dbo.sp_ActualizarProveedorYContacto";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16196,7 +16196,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correoElectronico", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@activo", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).CommandText = "dbo.sp_AgregarProductoVenta";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16205,7 +16205,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoBarras", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cantidad", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).CommandText = "dbo.sp_CalcularCambio";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16214,14 +16214,14 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pago", global::System.Data.SqlDbType.Money, 8, global::System.Data.ParameterDirection.Input, 19, 4, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cambio", global::System.Data.SqlDbType.Money, 8, global::System.Data.ParameterDirection.InputOutput, 19, 4, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).CommandText = "dbo.sp_CancelarVenta";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).CommandText = "dbo.sp_RegistrarVentaEmpleado";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16229,7 +16229,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idVenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idEmpleado", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[13] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).CommandText = "dbo.spActualizarPerfil";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16239,7 +16239,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Usuario", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contrasenha", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[14] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).CommandText = "dbo.spActualizarProducto";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16253,7 +16253,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precioVenta", global::System.Data.SqlDbType.Money, 8, global::System.Data.ParameterDirection.Input, 19, 4, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaCaducidad", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[15] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).CommandText = "dbo.spActualizarProductoProveedor";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16264,7 +16264,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProductoProve", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cantidadProducto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[16] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).CommandText = "dbo.spInsertarProducto";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16278,7 +16278,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precioVenta", global::System.Data.SqlDbType.Money, 8, global::System.Data.ParameterDirection.Input, 19, 4, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaCaducidad", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[17] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).CommandText = "dbo.spInsertarProductoProveedor";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).CommandType = global::System.Data.CommandType.StoredProcedure;
@@ -16288,7 +16288,7 @@ SELECT idVentaEple, idVenta, idEmpleado FROM tbVentas_Empleados WHERE (idVentaEp
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cantidadProducto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[18] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=JESUSCRUZ\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=CRUMARpv;Integrated Security=Tru" +
                     "e;TrustServerCertificate=True");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).CommandText = "dbo.usp_RegistrarVenta";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).CommandType = global::System.Data.CommandType.StoredProcedure;
